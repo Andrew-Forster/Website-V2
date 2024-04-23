@@ -1,0 +1,244 @@
+<!--Andrew Forster
+CST-120
+09/12/23
+Milestone 2
+Sources:
+- https://stackoverflow.com/questions/35877994/font-awesome-is-loading-very-slow
+-->
+
+<!-- TODO:
+    -
+    -
+    -
+    -
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- For Favicon -->
+    <link rel="icon" type="image/jpg" href="/Images/icon.jpg">
+    <!-- JQUERY LINKING -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/JavaScript/buttons.js"></script>
+    <!-- END OF JQUERY LINKING -->
+
+    <!-- NAVBAR CSS CODE LINKING -->
+    <link rel="stylesheet" type="text/css" href="/CSS/navbar.css">
+    <!-- END OF NAVBAR CSS CODE LINKING -->
+
+    <!-- CSS STYLING -->
+    <link rel="stylesheet" type="text/css" href="/CSS/universal.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/bg.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/Pages/about.css">
+    <!-- END OF CSS STYLING -->
+
+    <!-- Creates mega fast loading for Font awesome -->
+    <script
+        type="text/javascript"> (function () { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("/HTML/Universals/main-navbar.html",
+                function () {
+                    $(".sidenavbar a:contains('About')").addClass("active");
+                });
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+
+    <!-- Background Animation -->
+    <div id="bga-placeholder"></div>
+    <script>
+        $(function () {
+            $("#bga-placeholder").load("/HTML/Universals/bga.html");
+        });
+    </script>
+    <!-- End of Background Animation -->
+
+    <!-- ABOUT SECTION -->
+
+    <div class="aboutsec">
+
+        <div class="flexsection1">
+            <img class="skillsimg" src="/Images/clip.png">
+
+            <!-- Skills Bar -->
+            <div class="skills" id="skills">
+
+
+                <div class="tag1 skillshift">
+                    <h3>SKILLS</h3>
+
+                    <div class="tagele1"></div>
+                    <div class="tagele2"></div>
+                </div>
+
+                <div class="skillsflex">
+                    <div class="skillsdivider">
+                        <h6 class="skill">Problem Solving</h6>
+                        <div class="sobject">
+                            <div class="sbar1"></div>
+                        </div>
+                    </div>
+
+                    <div class="skillsdivider">
+                        <h6 class="skill">Collaboration</h6>
+                        <div class="sobject">
+                            <div class="sbar2"></div>
+                        </div>
+                    </div>
+
+                    <div class="skillsdivider">
+                        <h6 class="skill">Communication</h6>
+                        <div class="sobject">
+                            <div class="sbar3"></div>
+                        </div>
+                    </div>
+
+                    <div class="skillsdivider">
+                        <h6 class="skill">Patience</h6>
+                        <div class="sobject">
+                            <div class="sbar4"></div>
+                        </div>
+                    </div>
+
+                    <div class="skillsdivider">
+                        <h6 class="skill">Creativity</h6>
+                        <div class="sobject">
+                            <div class="sbar5"></div>
+                        </div>
+                    </div>
+
+                    <div class="skillsdivider">
+                        <h6 class="skill">Critical Thinking</h6>
+                        <div class="sobject">
+                            <div class="sbar6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Skills bar -->
+
+        <!-- About Section -->
+        <div class="flexsection2">
+            <div class="about asection" id="about">
+                <div class="tag2">
+                    <h3>ABOUT</h3>
+                    <div class="atagele1"></div>
+                    <div class="atagele2"></div>
+                </div>
+                <p>I am Andrew, a dedicated freshman at Grand Canyon University, where I am passionately pursuing a
+                    degree in Software Development, with a minor in Cybersecurity. My academic journey has been marked
+                    by a commitment to excellence, reflected in my consistently high GPA.</p>
+                <p>
+                    What sets me apart is not only my proficiency in coding but also my innate talent for
+                    problem-solving, coupled with a deep level of patience. I believe these qualities make me
+                    well-suited for the ever-evolving world of technology, where adaptability and resilience are key. I
+                    am excited to embark on this exciting journey of learning and growth, and I am committed to making a
+                    significant impact in the field of software development and cybersecurity.</p>
+            </div>
+
+            <div class="education asection">
+                <div class="tag3">
+                    <h3>EDUCATION</h3>
+                    <div class="atagele1"></div>
+                    <div class="atagele2"></div>
+                </div>
+
+                <div class="eblock eblock1 closed" id="eblock1" onclick="Education1()">
+                    <i class="fa-solid fa-caret-down"></i>
+                    <h5>West Linn High School <b>(Diploma)     </b></h5>
+
+                    <p><b>Location:</b> West Linn, Oregon <br><br>
+                        <b>GPA:</b> 3.1 <br><br>
+                        <b>Graduated:</b> Summer 2023 <br><br>
+                        <!-- <b>State District Ranking:</b> #3 <a class="schoolsource"
+                            href="https://www.niche.com/k12/search/best-school-districts/s/oregon/"
+                            target="_blank">Source</a><br><br> -->
+
+                    </p>
+
+                </div>
+                <div class="eblock eblock2 closed" id="eblock2" onclick="Education2()">
+                    <i class="fa-solid fa-caret-down"></i>
+                    <h5>Grand Canyon University <b>[Attending]</b></h5>
+                    <div class="eduflex">
+                        <p><b>Location:</b> Phoenix, Arizona <br><br>
+                            <b>GPA:</b> 4.0 <br><br>
+                            <b>Year:</b> Freshman <br><br>
+                            <b>Expected Grad:</b> Fall of 2026 <br><br>
+                            <b>Major:</b> Software Development <br><br>
+                            <b>Minor:</b> Cyber Security <br><br>
+                            <!-- <b>State District Ranking:</b> #3 <a class="schoolsource"
+                            href="https://www.niche.com/k12/search/best-school-districts/s/oregon/"
+                            target="_blank">Source</a><br><br> -->
+                        </p>
+                        <img src="/Images/gculogo.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="lang asection">
+
+                <div class="tag4">
+                    <h3>LANGUAGES</h3>
+                    <div class="atagele1"></div>
+                    <div class="atagele2"></div>
+                </div>
+
+                <div class="sobject clang">
+                    <div class="sbar7">
+                        <i class="fa-brands fa-html5"></i>
+                        <h6>HTML</h6>
+                    </div>
+                </div>
+                <div class="sobject clang">
+                    <div class="sbar8">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <h6>CSS</h6>
+                    </div>
+                </div>
+                <div class="sobject clang">
+                    <div class="sbar9">
+                        <i class="fa-brands fa-square-js"></i>
+                        <h6>Javascript</h6>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="portfolio asection">
+                <!-- <h3>PORTFOLIO</h3> -->
+            </div>
+            <div class="footernote">
+                <p>© 2023 Andrew Forster</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    switchElements()
+});
+
+    </script>
+</body>
+
+</html>

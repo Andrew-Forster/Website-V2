@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Source Code</title>
+  <!-- For Favicon -->
+  <link rel="icon" type="image/jpg" href="/Images/icon.jpg">
+  <!-- JQUERY LINKING -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- END OF JQUERY LINKING -->
+  <!-- NAVBAR CSS CODE LINKING -->
+  <link rel="stylesheet" type="text/css" href="/CSS/navbar.css">
+  <!-- END OF NAVBAR CSS CODE LINKING -->
+  <!-- CSS STYLING -->
+  <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="/CSS/bg.css">
+  <link rel="stylesheet" type="text/css" href="/CSS/Pages/source.css">
+  <!-- END OF CSS STYLING -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+  <script src="/JavaScript/source.js" defer></script>
+  <meta name="color-scheme" content="dark">
+</head>
+
+<div id="showcode" class="showcode"></div>
+<div class="sccbuttons" id="sccbuttons">
+  <div id="scc" class="scc" onclick="scc()">Copy
+    <p class="sccpopup" id="sccpopup">Copied!</p>
+  </div>
+
+  <div class="sccescape" id="scce">ESC</div>
+</div>
+
+<body>
+  <div class="overbg" data-section="main"></div>
+  <!--Navigation bar-->
+  <div id="nav-placeholder"></div>
+
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("/HTML/Universals/main-navbar.html",
+        function () {
+          $(".sidenavbar a:contains('Source Code')").addClass("active");
+        });
+    });
+  </script>
+  <!--end of Navigation bar-->
+
+  <!-- Background Animation -->
+  <div id="bga-placeholder"></div>
+  <script>
+    $(function () {
+      $("#bga-placeholder").load("/HTML/Universals/bga.html");
+    });
+  </script>
+  <!-- End of Background Animation -->
+
+  <!-- Directory -->
+
+  <main>
+    <section class="directory" id="directory">
+      <h4></h4>
+      <ul>
+        <li><a onclick="handleDirectoryClick(0)" class="active">Background Animation</a></li>
+        <li><a onclick="handleDirectoryClick(1)">Navigation Bar</a></li>
+        <li><a onclick="handleDirectoryClick(2)">Scroll Animation</a></li>
+        <li><a onclick="handleDirectoryClick(3)">Typewriter Text</a></li>
+        <li><a onclick="handleDirectoryClick(4)">Full Page Scrolling</a></li>
+      </ul>
+      <!-- <p>This websites source code will be linked on github soon. In the meanwhile a few notable features will be
+        explained here!</p> -->
+    </section>
+    <div class="coverscreen" id="coverscreen">
+
+      <!-- End of Directory -->
+      <!-- Main Content -->
+
+      <section class="source-main">
+
+        <div class="source-header">
+          <!-- <h3>Source Code</h3> -->
+        </div>
+
+        <div class="source-content">
+          <div class="bg-text" id="bga">
+            <h4>Background Animation</h4>
+            <p>The background animation(BGA) is a simple animation that uses mainly CSS to style particles. BGA uses
+              keyframes to translate the objects upward, dimming the opacity, and slowing turning them into circles.
+              The objects consist of 10 div tags that are styled with CSS.
+            </p>
+          </div>
+          <pre>
+            <div class="htmlcode">
+              <h5>HTML</h5>
+              <p class="viewbutton" onclick="viewCode(1)">View Code</p>
+            <code class="language-html">
+&lt;div class=&quot;bg&quot;&gt; 
+    &lt;!--Background Animation--&gt;
+    &lt;div class=&quot;bga&quot;&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 1 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 2 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 3 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 4 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 5 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 6 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 7 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 8 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 9 --&gt;
+        &lt;div&gt;&lt;/div&gt; &lt;!-- 10 --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+        </div>
+
+        <div class="csscode">
+            <h5>CSS</h5>
+              <p class="viewbutton" onclick="viewCode(2)">View Code</p>
+              <code class="language-css">
+/* ---------------------- */
+/* BG Animation Particles */
+/* ---------------------- */
+
+.bga {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.bga div {
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 50%;
+}
+
+.bga div:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 5s;
+  animation-duration: 8s;
+}
+
+
+.bga div:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 5s;
+  animation-duration: 16s;
+}
+
+.bga div:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.bga div:nth-child(4) {
+  left: 93%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 2s;
+  animation-duration: 9s;
+}
+
+.bga div:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+  animation-duration: 7s;
+}
+
+.bga div:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+  animation-duration: 12s;
+}
+
+.bga div:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+}
+
+.bga div:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 10s;
+}
+
+.bga div:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 10s;
+}
+
+.circles div:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 8s;
+}
+
+@keyframes animate {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) 
+    rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+
+}
+        </code>
+        </div>
+    </pre>
+        </div>
+
+        <div class="source-content">
+          <div class="bg-text" id="navbar">
+            <h4>Navigation Bar</h4>
+            <p>The Nav Bar uses a javascript function under an event handler of onclick.
+              Once clicked the navbar's width is changed,
+              Meanwhile the navigation hamburger uses 3 div's for each hamburger line and changes position,
+              color and angle upon being clicked. </p>
+          </div>
+          <pre>
+
+          <div class="htmlcode">
+            <h5>HTML</h5>
+              <p class="viewbutton" onclick="viewCode(3)">View Code</p>
+              <code class="language-html">
+&lt;nav class=&quot;mainnavbar&quot;&gt; 
+&lt;div class=&quot;logos&quot; id=&quot;logo&quot;&gt; 
+&lt;!--For logo and left padded things--&gt;
+    &lt;a href=&quot;/&quot;&gt;
+        &lt;img class=&quot;logo&quot; src=&quot;/Images/icon.jpg&quot; alt=&quot;Photo of me&quot;&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p id=&quot;pagename&quot;&gt;HOME&lt;/p&gt;
+&lt;div id=&quot;nav-icon&quot; onclick=&quot;openNav()&quot;&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;div class=&quot;sidenavbar&quot; id=&quot;sidenavbar&quot;&gt; &lt;!--Div contains all links--&gt;
+&lt;!-- &lt;a href=&quot;javascript:void(0)&quot; class=&quot;closebtn&quot; onclick=&quot;closeNav()&quot;&gt;&amp;times;&lt;/a&gt; --&gt;
+&lt;a href=&quot;/&quot;&gt;&lt;i class=&quot;fa-solid fa-house&quot;&gt; &lt;/i&gt;Home&lt;/a&gt;
+&lt;a href=&quot;/HTML/Pages/about.html&quot;&gt;&lt;i class=&quot;fa-solid fa-user&quot;&gt; &lt;/i&gt;About&lt;/a&gt;
+&lt;a href=&quot;/HTML/Pages/contact.html&quot;&gt;&lt;i class=&quot;fa-regular fa-envelope&quot;&gt; &lt;/i&gt;Contact&lt;/a&gt;
+&lt;a href=&quot;/HTML/Pages/testimony.html&quot;&gt;&lt;i class=&quot;fa-solid fa-pencil&quot;&gt; &lt;/i&gt;Testimony&lt;/a&gt;
+&lt;a href=&quot;/HTML/Pages/projects.html&quot;&gt;&lt;i class=&quot;fa-solid fa-bars-progress&quot;&gt; &lt;/i&gt;Projects&lt;/a&gt;
+&lt;a href=&quot;/HTML/Pages/source.html&quot;&gt;&lt;i class=&quot;fa-solid fa-list-check&quot;&gt; &lt;/i&gt;Source Code&lt;/a&gt;
+
+
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;script&gt;
+/* Set the width of the sidebar to 0 (hide it) */
+let hamburger = 0
+function openNav() {
+    if(hamburger === 0) {
+        document.getElementById(&quot;sidenavbar&quot;).style.width = &quot;200px&quot;;
+        hamburger = 1;
+    } else {
+        document.getElementById(&quot;sidenavbar&quot;).style.width = &quot;0&quot;;
+        hamburger = 0;
+    }
+}
+
+  // For the animation of the Nav icon
+  $(document).ready(function(){ //Event Listener that calls a function 
+$('#nav-icon').click(function(){
+	$(this).toggleClass('open'); //Adds a class to
+});
+});
+&lt;/script&gt;
+        </code></div>
+        <div class="csscode">
+          <h5>CSS</h5>
+              <p class="viewbutton" onclick="viewCode(4)">View Code</p>
+              <code class="language-css">
+.logos {
+    font-size: 16px;
+    text-align: center;
+    padding: 4px 16px;
+    color: white;
+    margin: 0px;
+    transition-duration: 1s;
+}
+
+.logo {
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    border: none;
+}
+
+#pagename {
+    position: relative;
+    font-size: 22px;
+    top: -18px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    transition-duration: 1s;
+}
+
+.mainnavbar {
+    background-color: none;
+    margin: 0;
+    padding: 8px 6px 4px;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 6;
+    top: 0;
+    overflow: hidden;             
+    display: flex;
+
+}
+
+.sidenavbar a.active {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+.sidenavbar a.active i {
+    text-decoration: none;
+}
+
+.sidenavbar {
+    white-space: nowrap;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color: #282828;
+    overflow: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+}
+
+.sidenavbar a {
+    font-size: 16px;
+    color: #d6d6d6;
+    text-align: left;
+    padding: 8px 0px 24px 0;
+    text-decoration: none;
+    border-radius: 7px;
+    margin: 0 8px 0 32px;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenavbar a:hover {
+    border-radius: 7px;
+    white-space: nowrap;
+    transform: scale(1);
+    color: white;
+    margin: 0 0 0 26px;
+    transition: 400ms;
+    font-weight: bold;
+}
+
+#nav-icon:hover {
+    transform: scale(1.2);
+    transition: 0.7s;
+    transition-delay: 0ms;
+}
+
+#nav-icon {
+    width: 30px;
+    height: 22.5px;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 15;
+}
+
+#nav-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background: black;
+    border-radius: 0px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+}
+#nav-icon span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  #nav-icon span:nth-child(2) {
+    top: 8px;
+    transform-origin: left center;
+  }
+  
+  #nav-icon span:nth-child(3) {
+    top: 16px;
+    transform-origin: left center;
+  }
+  
+  #nav-icon.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 3.5px;
+    left: 4px;
+    background-color: white;
+  }
+  
+  #nav-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  #nav-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 4px;
+    background-color: white;
+  }
+        </code></div>
+      </pre>
+        </div>
+
+        <div class="source-content">
+          <div class="bg-text" id="scroll">
+            <h4>Scroll Animation</h4>
+            <p>The scroll animation is an animation that plays when a viewed scrolls onto an element.
+              The element then plays an animation to make it look like it came on screen. A custom
+              library is available on my github under my projects page!</p>
+          </div>
+          <pre>
+          <div class="htmlcode">
+            <h5>HTML</h5>
+              <p class="viewbutton" onclick="viewCode(5)">View Code</p>
+              <code class="language-html">
+&lt;div class= &quot;sa&quot;&gt;
+&lt;h1&gt;Stuff here&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.sa {
+    transform: translateX(-250px);
+    opacity: 0;
+    transition-delay: 1s;
+    /* position: relative; */
+}
+
+.sa.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+&lt;/style&gt;
+          </code>
+          </div>
+          <div class="jscode">
+            <h5>JavaScript</h5>
+              <p class="viewbutton" onclick="viewCode(6)">View Code</p>
+              <code class="language-javascript">
+function reveal(classNames, elementVisible) {
+  var elements = document.querySelectorAll(classNames.join(','));
+
+  for (var i = 0; i < elements.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = elements[i].getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - elementVisible) {
+          elements[i].classList.add("active");
+      } else {
+          elements[i].classList.remove("active");
+      }
+  }
+}
+// Add event listener to trigger reveal function on scroll
+window.addEventListener("scroll", function () {
+  reveal([".sa", ".sa-zoom", ".sa-flip", ".sa-right"], 250);
+});
+
+          </code>
+          
+        </pre>
+        </div>
+
+        <div class="source-content">
+          <div class="bg-text" id="typewriter">
+            <h4>Typewriter Text</h4>
+            <p>The typewriter text is text that is changed via JavaScript to have the effect of live typing.
+              It is mainly JS based and changes the content within an HTML document.</p>
+          </div>
+          <pre>
+          <div class="htmlcode">
+            <h5>HTML</h5>
+              <p class="viewbutton" onclick="viewCode(7)">View Code</p>
+              <code class="language-html">
+    &lt;div class=&quot;ITdiv&quot;&gt;
+    &lt;span class=&quot;introtext&quot; id=&quot;twtext&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;blinker&quot;&gt;|&lt;/span&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.blinker {
+  font-size: 30px;
+  color: #e6e6e6;
+  width: 2px;
+  height: 25px;
+  animation: blinking 1s infinite; 
+  /* Adjust the duration as needed */
+}
+
+@keyframes blinking {
+  0%, 50% {
+    opacity: 0;
+  }
+  51%, 100% {
+    opacity: 1;
+  }
+}
+&lt;/style&gt;
+          </code>
+          </div>
+
+          <div class="jscode">
+            <h5>JavaScript</h5>
+              <p class="viewbutton" onclick="viewCode(8)">View Code</p>
+              <code class="language-js">              
+$(document).ready(function () {
+  typeWriter();
+});
+
+let i = 0;
+let timesExecuted = 0;
+let tw1 = " Software Developer";
+let tw2 = " Web Designer";
+let tw3 = " Learn more below";
+let speed = 50; // Speed in ms
+let rspeed = 25; // Speed in ms
+let turn = tw1;
+
+function typeWriter() {
+  if (timesExecuted === 0) {
+      turn = tw1;
+  } else if (timesExecuted === 1) {
+      turn = tw2;
+  } else if (timesExecuted === 2) {
+      turn = tw3;
+  } else if (timesExecuted >= 3) {
+      turn = tw1;
+      timesExecuted = 0;
+  }
+  twAddFunc();
+}
+
+function twAddFunc() {
+  twAdd();
+
+  function twAdd() {
+      if (i < turn.length) {
+          document.getElementById("twtext")
+          .innerHTML += turn.charAt(i);
+          i++;
+          setTimeout(twAdd, speed);
+      }
+  }
+
+  setTimeout(twRemoveFunc, 3000);
+}
+
+function twRemoveFunc() {
+  twRemove();
+
+  function twRemove() {
+      if (i > 0) {
+          document.getElementById("twtext")
+          .innerHTML = turn.substr(0, i - 1);
+          i--;
+          setTimeout(twRemove, rspeed);
+      } else {
+          timesExecuted++;
+          setTimeout(typeWriter, 1000);
+      }
+  }
+}
+            </code>
+          </div>
+        </pre>
+        </div>
+
+        <div class="source-content">
+          <div class="bg-text" id="fullpage">
+            <h4>Full Page Scrolling</h4>
+            <p>Full page scroll is a feature of which the viewers scrolling will be completely controlled by JS.
+              It is run by having event handlers on the scroll wheel and tap events. It then calculates which section
+              to scroll to based on user input. Note: Can be hard to optimize every device to display each page
+              correctly.
+            </p>
+          </div>
+          <pre>
+            <div class="csscode">
+              <h5>HTML/CSS</h5>
+                <p class="viewbutton" onclick="viewCode(9)">View Code</p>
+                <code class="language-html expanded">
+&lt;div class=&quot;directory&quot;&gt;
+&lt;div class=&quot;dcontainer&quot;&gt;
+    &lt;div class=&quot;dobject do1&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gradientb&quot; id=&quot;button&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dcontainer&quot;&gt;
+    &lt;div class=&quot;dobject do2&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gradientb&quot; id=&quot;button&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dcontainer&quot;&gt;
+    &lt;div class=&quot;dobject do3&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gradientb&quot; id=&quot;button&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dcontainer&quot;&gt;
+    &lt;div class=&quot;dobject do4&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gradientb&quot; id=&quot;button&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- CARDS --&gt;
+&lt;section class=&quot;card sa sa-duration1 sa-easeinout&quot;&gt;
+    &lt;div class=&quot;flex-card&quot;&gt;
+        &lt;div class=&quot;text&quot;&gt;
+            &lt;h2&gt;About Me&lt;/h2&gt;
+            &lt;p&gt;I am a developer at GCU, in the process of mastering HTML, CSS, JavaScript, dedicated to creating
+                innovative applications.&lt;/p&gt;
+            &lt;a href=&quot;HTML/Pages/about.html&quot;&gt;Learn More&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;img src=&quot;/images/about.jpg&quot; alt=&quot;About photo&quot;
+            class=&quot;flex-right sa-flip sa-duration0_5 sa-easeinout&quot;&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;card sa sa-duration1 sa-easeinout&quot;&gt;
+    &lt;div class=&quot;flex-card&quot;&gt;
+        &lt;img src=&quot;/images/projects.png&quot; alt=&quot;Projects photo&quot;
+            class=&quot;flex-left sa-flip sa-duration0_5 sa-easeinout&quot;&gt;
+        &lt;div class=&quot;text&quot;&gt;
+            &lt;h2&gt;Projects&lt;/h2&gt;
+            &lt;p&gt;Take a look at some of my past or current projects. I'm always looking for more projects to add to my
+                portfolio!&lt;/p&gt;
+            &lt;a href=&quot;HTML/Pages/projects.html&quot;&gt;Visit my Portfolio&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;card sa sa-duration1 sa-easeinout&quot;&gt;
+    &lt;div class=&quot;flex-card&quot;&gt;
+        &lt;div class=&quot;text&quot;&gt;
+            &lt;h2&gt;Contact Points&lt;/h2&gt;
+            &lt;p&gt;Like what you see? In search of valuable employees with passion and ambition? Look no further.&lt;/p&gt;
+            &lt;a href=&quot;HTML/Pages/contact.html&quot;&gt;Click to View&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;img src=&quot;/images/contact.jpg&quot; alt=&quot;Contact photo&quot;
+            class=&quot;flex-right sa-flip sa-duration0_5 sa-easeinout&quot;&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;style&gt;
+
+/* Directory FUll PAGE */
+
+.directory {
+position: fixed;
+right: 1%;
+top: 40%;
+z-index: 2;
+}
+
+.dcontainer {
+width: 100%;
+height: 20px;
+margin: 15px 0 0 0;
+border-radius: 100%;
+}
+.directory .dobject {
+width: 20px;
+height: 20px;
+background: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+border-radius: 100%;
+/* border: 2px solid white; */
+transition-duration: 150ms;
+opacity: 0;
+}
+
+.gradientb.active {
+background-color: transparent;
+box-shadow: inset 0px 0px 6px white;
+
+}
+
+.gradientb {
+background-color: white;
+position: relative;
+top: -17.5px;
+right: -11.5%;
+width: 15px;
+height: 15px;
+border-radius: 100%;
+
+}
+
+.dcontainer:hover {
+width: 20px;
+height: 20px;
+cursor: pointer;
+transform: rotate(2560deg);
+transition: all 10s ease-out;
+background: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+opacity: 1;
+border-radius: 100%;
+}
+&lt;/style&gt;
+                </code>
+            </div>
+            <div class="csscode">
+            <h5>JavaScript</h5>
+              <p class="viewbutton" onclick="viewCode(10)">View Code</p>
+              <code class="language-js expanded">
+//-----------------
+// FULL PAGE SCROLL
+//-----------------
+
+
+$(document).ready(function () {
+    let sections, directoryObjects, currentSectionIndex;
+    // Sections are the sections of the page
+    // Directory Objects are the buttons on the side
+    // Current Section Index is the current section of the page
+
+    function init() {
+        sections = document.querySelectorAll("section"); // Gets all sections
+        directoryObjects = document.querySelectorAll(".gradientb"); // Gets main directory objects
+        currentSectionIndex = 0; //Control Section Index - Changing this will change the section the page thinks its on, not meant ot be changed.
+
+        activateSection(currentSectionIndex);
+
+        directoryObjects.forEach((object, index) => { // Creates an event listener for each directory object
+            object.addEventListener('click', () => handleDirectoryClick(index));
+        });
+
+        document.addEventListener("wheel", handleScroll, {
+            passive: false
+        });
+        document.addEventListener("keydown", handleArrowKeys);
+
+        checkScrollPosition();
+    }
+
+    // Scrolls to the section when called uses index to determine which section to scroll to
+    function scrollToSection(index) {
+        sections[index].scrollIntoView({
+            behavior: "smooth"
+        });
+        setTimeout(() => {
+            activateSection(index); //Delays the activation of the section to make sure directory buttons are in sync and doesn't flicker.
+        }, 300);
+    }
+
+    function activateSection(index) {
+        directoryObjects.forEach(object => object.classList.remove('active'));
+        directoryObjects[index].classList.add('active');
+    }
+
+    function handleDirectoryClick(index) {
+        scrollToSection(index);
+        currentSectionIndex = index;
+    }
+
+    let isScrolling = false;
+
+    function handleScroll(event) {
+        event.preventDefault();
+
+        if (!isScrolling) {
+            isScrolling = true;
+
+            const delta = event.deltaY;
+
+            if (delta > 0 && currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+            } else if (delta < 0 && currentSectionIndex > 0) {
+                currentSectionIndex--;
+            }
+
+            scrollToSection(currentSectionIndex);
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000); // Adjust the delay time (in milliseconds) as needed
+        }
+    }
+
+    function handleArrowKeys(event) {
+        if (event.key === "ArrowUp" && currentSectionIndex > 0) {
+            currentSectionIndex--;
+            event.preventDefault();
+
+        } else if (event.key === "ArrowDown" && currentSectionIndex < sections.length - 1) {
+            currentSectionIndex++;
+            event.preventDefault();
+
+        }
+
+        scrollToSection(currentSectionIndex);
+    }
+
+    function checkScrollPosition() {
+        const scrollPosition = window.scrollY;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                currentSectionIndex = index;
+            }
+        });
+
+        activateSection(currentSectionIndex);
+    }
+
+    init();
+
+
+    document.addEventListener("touchstart", handleTouchStart, {
+        passive: false
+    });
+
+    function handleTouchStart(event) {
+        touchStartY = event.touches[0].clientY;
+        isSwiping = true;
+
+        const targetElement = event.target;
+        const isClickable = isElementClickable(targetElement);
+
+        if (!isClickable) {
+            event.preventDefault();
+        }
+    }
+
+    function isElementClickable(element) {
+        while (element) {
+            if (element.id === 'button') {
+                console.log("Element with ID 'button' found");
+                return true;
+            }
+
+            if (element.tagName === 'A' || element.onclick !== null) {
+                return true;
+            }
+            element = element.parentElement;
+        }
+        return false;
+    }
+
+    document.addEventListener("touchmove", handleTouchMove, {
+        passive: false
+    });
+
+    function handleTouchMove(event) {
+        if (!isSwiping) return;
+
+        const touchEndY = event.touches[0].clientY;
+        const deltaY = touchEndY - touchStartY;
+
+        const swipeThreshold = 50;
+
+        if (deltaY > swipeThreshold && currentSectionIndex > 0) {
+            currentSectionIndex--;
+            isSwiping = false;
+        } else if (deltaY < -swipeThreshold && currentSectionIndex < sections.length - 1) {
+            currentSectionIndex++;
+            isSwiping = false;
+        }
+
+        scrollToSection(currentSectionIndex);
+        setTimeout(() => {
+            activateSection(currentSectionIndex);
+        }, 300);
+
+        event.preventDefault();
+    }
+
+    document.addEventListener("touchend", handleTouchEnd);
+
+    function handleTouchEnd() {
+        isSwiping = false;
+    }
+});
+
+//------------------------
+// END OF FULL PAGE SCROLL
+//------------------------
+              </code>
+            </div>
+        </pre>
+        </div>
+      </section>
+  </main>
+  <!-- End of Main Content -->
+  </div>
+</body>
+
+
+</html>

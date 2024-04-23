@@ -1,0 +1,56 @@
+<script src="https://kit.fontawesome.com/3116842acc.js" crossorigin="anonymous"></script>
+<script src="/JavaScript/navbar.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+
+<nav class="mainnavbar" id="mainnavbar">
+    <div class="logos" id="logo"> <!--For logo and left padded things-->
+        <a href="/">
+            <img class="logo" src="/Images/icon.jpg" alt="Photo of me">
+        </a>
+    </div>
+
+    <p id="pagename">HOME</p>
+    <div id="nav-icon" onclick="openNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <div class="sidenavbar" id="sidenavbar"> <!--Div contains all links-->
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <a href="/"><i class="fa-solid fa-house"> </i>Home</a>
+        <a href="/HTML/Pages/about.html"><i class="fa-solid fa-user"> </i>About</a>
+        <a href="/HTML/Pages/contact.html"><i class="fa-regular fa-envelope"> </i>Contact</a>
+        <a href="/HTML/Pages/testimony.html"><i class="fa-solid fa-pencil"> </i>Testimony</a>
+        <a href="/HTML/Pages/projects.html"><i class="fa-solid fa-bars-progress"> </i>Projects</a>
+        <a href="/HTML/Pages/source.html"><i class="fa-solid fa-list-check"> </i>Source Code</a>
+
+
+    </div>
+</nav>
+<script>
+    /* Set the width of the sidebar to 0 (hide it) */
+    let hamburger = 0
+    function openNav() {
+        if (hamburger === 0) {
+            document.getElementById("sidenavbar").style.width = "200px";
+            hamburger = 1;
+        } else {
+            document.getElementById("sidenavbar").style.width = "0";
+            hamburger = 0;
+        }
+    }
+
+
+
+
+    // For the animation of the Nav icon
+    $(document).ready(function () { //Event Listener that calls a function 
+        $('#nav-icon').click(function () {
+            $(this).toggleClass('open'); //Adds a class to
+        });
+    });
+</script>

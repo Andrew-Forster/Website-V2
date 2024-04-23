@@ -1,0 +1,212 @@
+/*Andrew Forster
+CST-120 
+09/12/23
+Milestone 3*/
+
+/* Navbar */
+.logos {
+    /* float: left; */
+    font-size: 16px;
+    text-align: center;
+    padding: 4px 16px;
+    /*Top, Right, Bottom, Left space around element*/
+    color: white;
+    margin: 0px;
+    transition-duration: 1s;
+}
+
+.logo {
+    /*Image of navbar*/
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    border: none;
+}
+
+#pagename {
+    position: relative;
+    font-size: 22px;
+    top: -18px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    transition-duration: 1s;
+}
+
+
+
+
+
+
+.mainnavbar {
+    background-color: none;
+    margin: 0;
+    /*Navbar colors*/
+    padding: 8px 6px 4px;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 6;
+    top: 0;
+    overflow: hidden;   
+    /*Sends the navbar a layer forward*/
+
+    display: flex;
+
+}
+
+.sidenavbar a.active {
+    color: white;
+    /* font-weight: bold; */
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+.sidenavbar a.active i {
+    text-decoration: none; /* Remove underline for the <i> elements */
+}
+
+.sidenavbar {
+    /*CHANGES THE SIDE BAR ITSELF*/
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    height: 100%;
+    width: 0;
+    /* Changes with JS */
+    position: fixed;
+    /* Makes it stay with you when scrolling */
+    z-index: 10;
+    /* Stay on top */
+    top: 0;
+    right: 0;
+    /*Changes where the nav bar comes from*/
+    background-color: #282828;
+    overflow: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* Transition effect */
+
+}
+
+/*Adding a references the anchors under the navbar class*/
+.sidenavbar a {
+    /*Edits Nav bar buttons*/
+    font-size: 16px;
+    color: #d6d6d6;
+    text-align: left;
+    padding: 8px 0px 24px 0;
+    /*Top, Right, Bottom, Left space around element*/
+    text-decoration: none;
+    /*Button Colors*/
+    border-radius: 7px;
+    margin: 0 8px 0 32px;
+    /*Edits spacing between buttons and limits size of hover bg*/
+    display: block;
+    transition: 0.3s;
+
+    /*Creates spacing between buttons*/
+}
+
+.sidenavbar a:hover {
+    border-radius: 7px;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    transform: scale(1);
+    color: white;
+    margin: 0 0 0 26px;
+    /*Determines how long the cursor needs to be on the button for it to show the color*/
+    transition: 400ms;
+    font-weight: bold;
+}
+
+#nav-icon:hover {
+    transform: scale(1.2);
+    transition: 0.7s;
+    transition-delay: 0ms;
+}
+
+#nav-icon {
+    width: 30px;
+    height: 22.5px;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 15;
+}
+
+#nav-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background: black;
+    border-radius: 0px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .5s ease-in-out;
+}
+#nav-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  #nav-icon span:nth-child(2) {
+    top: 8px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  #nav-icon span:nth-child(3) {
+    top: 16px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  
+  #nav-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 3.5px;
+    left: 4px;
+    background-color: white;
+  }
+  
+  #nav-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  #nav-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 4px;
+    background-color: white;
+  }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimony</title>
+    <!-- For Favicon -->
+    <link rel="icon" type="image/jpg" href="/Images/icon.jpg">
+    <!-- JQUERY LINKING -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- END OF JQUERY LINKING -->
+    <!-- NAVBAR CSS CODE LINKING -->
+    <link rel="stylesheet" type="text/css" href="/CSS/navbar.css">
+    <!-- END OF NAVBAR CSS CODE LINKING -->
+    <!-- CSS STYLING -->
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/Pages/testimony.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/sup3r0001/Scroll-Animator@1.0.0/Scroll%20Animator/scrollanimator.css">
+    <!-- END OF CSS STYLING -->
+    <script
+        src="https://cdn.jsdelivr.net/gh/sup3r0001/Scroll-Animator@1.0.0/Scroll%20Animator/scrollanimator.js"></script>
+    <meta name="color-scheme" content="dark">
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("/HTML/Universals/main-navbar.html",
+                function () {
+                    $(".sidenavbar a:contains('Testimony')").addClass("active");
+                });
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <main>
+        <section class="coverimg">
+            <img src="/Images/cover.jpg" alt="Cover Image">
+            <h3>Committed to serving Christ!</h3>
+        </section>
+
+        <h1>Testimony</h1>
+
+        <section class="sec sec-mexico sa sa-duration1">
+            <div class="text">
+                <h3>Mexico Missions Trip</h3>
+                <p>A trip taken to Vicente Guerrero by our local church Athey CCF. I was placed on a team of 10 where we
+                    were tasked at building a house for a local family in need. In total our church group built over 10+
+                    houses in just the span of 5 days.
+                    <br><br>
+                    This trip was done twice, once in 2021 and once in 2022
+                </p>
+            </div>
+            <div class="img">
+                <img src="/Images/mexico.jpg" alt="Mexico">
+            </div>
+        </section>
+        <div class="fixer">
+            <section class="sec sec-gcu sa-right sa-duration1">
+                <div class="img">
+                    <img src="/Images/gcu.jpg" alt="Mexico">
+                </div>
+                <div class="text">
+                    <h3>Grand Canyon University</h3>
+                    <p>I am a freshman student at Grand Canyon University. I am actively pursuing a degree in Software
+                        Development while staying close to God's word! </p>
+                    <a href="https://www.gcu.edu/" target="_blank">Go to GCU</a>
+                </div>
+            </section>
+        </div>
+        <section class="sec sec-accf sa sa-duration1">
+            <div class="text">
+                <h3>Athey Creek Christain Fellowship</h3>
+                <p>I initially began going to ACCF around 2019 after covid. I started
+                    by just going to the main services but then found a passion to go the to youth group which has been
+                    a major step in my life to bring me closer to the Lord.</p>
+                <a href="https://atheycreek.com/" target="_blank">Go to ACCF</a>
+
+            </div>
+            <div class="img">
+                <img src="/Images/accf.jpg" alt="Mexico">
+            </div>
+        </section>
+
+
+
+    </main>
+
+</body>
+
+</html>

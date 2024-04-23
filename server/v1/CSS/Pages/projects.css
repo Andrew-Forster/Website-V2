@@ -1,0 +1,138 @@
+.navbar {
+    margin: 0 0 20px 0 !important;
+}
+
+
+body {
+    caret-color: transparent;
+    background-color: #E3F2FD;
+
+}
+
+.bg-body-tertiary {
+    background-color: #E3F2FD !important;
+}
+
+.bg {
+    height: 57px;
+}
+
+.bga {
+    height: 57px;
+}
+
+.bga div {
+    animation: animate 10s linear infinite;
+}
+
+a {
+    color: black;
+}
+
+
+
+
+/* FOOTER NOTE */
+
+.footernote {
+    margin: 50px 0 0 0;
+    position: absolute;
+    left: 50%;
+    translate: 50%;
+}
+
+.card {
+    margin: 40px 0 0 15%;
+    width: 70%;
+}
+
+.scrollspy-example {
+    /* display: flex; */
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    height: 75%;
+    width: 60%;
+    overflow-y: auto;
+    border: 3px solid rgb(76, 76, 76);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.467);
+}
+
+.returnbutton {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    margin: 550px 0 50px 0;
+}
+
+.card-img-top {
+    max-height: 250px !important;
+    width: auto;
+}
+
+.toggleNavbar {
+    /* position: absolute;
+    left: 225px;
+    top: 20px; */
+    margin: 20px;
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+@media (max-width: 999px) {
+    .toggleNavbar {
+        margin: 7px 10px 0px 10px;
+    }
+}
+
+
+.dotTN {
+    width: 11px;
+    height: 11px;
+    background-color: #E3F2FD;
+    border-radius: 100%;
+    margin: 2px 0px 2px 20px;
+    transition-duration: 0.5s;
+}
+.toggleNavbar.active {
+    width: 40px;
+    height: 20px;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+.dotTN.active {
+    width: 11px;
+    height: 11px;
+    background-color: black;
+    border-radius: 100%;
+    margin: 2px 3px 2px 3px;
+    transition-duration: 0.5s;
+}
+
+@media (max-width: 1000px) {
+
+    .scrollspy-example {
+        width: 95%;
+
+    }
+
+    .card {
+        margin: 40px 0 0 0;
+        width: 90%;
+        left: 50%;
+        translate: -50%;
+    }
+
+    #navbar-example2 li {
+        font-size: 12px;
+    }
+
+}

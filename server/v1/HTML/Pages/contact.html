@@ -1,0 +1,111 @@
+<!-- Andrew Forster
+CST-120
+10/22/23
+Milestone 6
+Resources:
+- In class activities.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- For Favicon -->
+    <link rel="icon" type="image/jpg" href="/Images/icon.jpg">
+    <!-- JQUERY LINKING -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- END OF JQUERY LINKING -->
+    <!-- NAVBAR CSS CODE LINKING -->
+    <link rel="stylesheet" type="text/css" href="/CSS/navbar.css">
+    <!-- END OF NAVBAR CSS CODE LINKING -->
+    <!-- CSS STYLING -->
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/bg.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/Pages/contact.css">
+    <!-- END OF CSS STYLING -->
+</head>
+<body>
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("/HTML/Universals/main-navbar.html",
+                function () {
+                    $(".sidenavbar a:contains('Contact')").addClass("active");
+                });
+        });
+        </script>
+    <!--end of Navigation bar-->
+    
+    <!-- Background Animation -->
+    <div id="bga-placeholder"></div>
+    <script>
+        $(function () {
+            $("#bga-placeholder").load("/HTML/Universals/bga.html");
+        });
+        </script>
+    <!-- End of Background Animation -->
+    
+    <div class="overbg"></div>
+    <!------------->
+    <!-- SOCIALS -->
+    <!------------->
+    <section class="bgborder">
+        <div class='air air1'></div>
+        <div class='air air2'></div>
+        <div class='air air3'></div>
+        <div class='air air4'></div>
+    </section>
+    <div class="social">
+        <h3>Socials:</h3>
+        <div class="social-cards">
+            <!-- Blank opens in new tab -->
+            <a href="https://www.instagram.com/andrew_j_forster/" target="_blank">
+                <article class="social-card"><i class="fa-brands fa-instagram"></i></article>
+            </a> <!-- Instagram -->
+            <a href="https://www.linkedin.com/in/andrew-forster-9b0255213/" target="_blank">
+                <article class="social-card"><i class="fa-brands fa-linkedin"></i></article>
+            </a> <!-- LinkedIn -->
+            <a href="https://github.com/sup3r0001" target="_blank">
+                <article class="social-card"><i class="fa-brands fa-square-github"></i></i></article>
+            </a> <!-- GitHub -->
+            <a href="" target="_blank">
+                <article class="social-card"><i class="fa-brands fa-facebook"></i></article>
+            </a> <!-- Facebook -->
+        </div>
+    </div>
+    <section class="flip">
+        <div class='air air1'></div>
+        <div class='air air2'></div>
+        <div class='air air3'></div>
+        <div class='air air4'></div>
+    </section>
+    <div class="contact-form">
+        <h4>Contact Form</h4>
+        <form method="POST" action="https://postman-echo.com/post">
+
+            <label for="name">
+                <h6>Full Name</h6>
+            </label>
+            <input type="text" id="name" name="name" placeholder="Name...">
+
+            <label for="lname">
+                <h6>Email</h6>
+            </label>
+            <input type="text" id="email" name="email" placeholder="Email...">
+
+            <label for="subject">
+                <h6>Subject</h6>
+            </label>
+            <textarea id="subject" name="subject" placeholder="Message..." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+
+</body>
+
+</html>

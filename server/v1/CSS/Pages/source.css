@@ -1,0 +1,400 @@
+.overbg {
+    background: linear-gradient(to bottom left, #90CAF9, #1E88E5);
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: transparent;
+    /* overflow-y: scroll; */
+}
+
+.bg {
+    background: transparent;
+    overflow: hidden;
+
+}
+
+.bga {
+    position: fixed;
+    z-index: -1;
+}
+
+
+a {
+    color: black;
+}
+
+/** FOOTER NOTE */
+
+.footernote {
+    margin: 50px 0 0 0;
+    position: absolute;
+    left: 50%;
+    translate: 50%;
+}
+
+/** Directory */
+
+.directory {
+    width: 325px;
+    height: 100%;
+    background-color: transparent;
+    position: fixed;
+    /* overflow: auto; */
+}
+
+.directory p {
+    margin: 30px 0 0 20px;
+
+}
+
+.directory ul {
+    list-style-type: none;
+    margin: 75px 0 0 16px;
+    padding: 0;
+    width: 100%;
+    height: 260px;
+    overflow: auto;
+    border-radius: 8px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.directory li a {
+    text-align: left;
+    font-size: 20px;
+    display: block;
+    color: rgb(248, 248, 248);
+    padding: 10px 16px 10px 16px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+    white-space: nowrap;
+    background-color: #1976d271;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.directory li a:hover {
+    background-color: #64B5F6;
+}
+
+.directory a.active {
+    background-color: #0064b59f;
+}
+
+
+
+/** Sources */
+
+.source-main {
+
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 350px;
+    /* overflow: hidden; */
+
+}
+
+.source-content {
+    width: 90%;
+
+}
+
+.source-content h4 {
+    margin: 25px 0 0 25px;
+
+}
+
+.source-content p {
+    margin: 10px 0 0 35px;
+}
+
+pre h5 {
+    margin: 0 0 -130px 40px;
+
+}
+
+
+.source-content code {
+    margin: 0 30px 0 30px;
+    border-radius: 12px;
+    width: 400px;
+    height: 300px;
+    /* resize: both; */
+}
+
+pre {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spacedout {
+    margin: 0 0 0 50%;
+    padding: 0 0 0 0;
+}
+
+/*?Viewing Code Section*/
+
+/* Adds the blur effect when viewing code */
+.coverscreen.blur {
+    width: 100%;
+    height: 500%;
+    filter: blur(3px);
+}
+
+.directory.blur,
+.mainnavbar.blur {
+    filter: blur(3px);
+}
+
+/* The viewbutton, requires precise posistioning to stay compatible */
+.viewbutton {
+    position: relative;
+    width: 65px;
+    padding: 2px 5px 2px 5px;
+    top: 90px;
+    right: -335px;
+    background-color: #2c2c2c;
+    cursor: pointer;
+    font-size: 12px;
+    color: rgb(224, 224, 224);
+    border-radius: 4px;
+    transition-duration: 0.5s;
+}
+
+.viewbutton:hover {
+    color: rgb(247, 247, 247);
+    transition-duration: 0.5s;
+    box-shadow: inset 0px 0px 5px rgba(219, 219, 219, 0.301);
+}
+
+.showcode code.active {
+    display: block;
+    margin: 15px;
+    opacity: 1;
+    transition-duration: 1s;
+    white-space: pre-wrap;
+}
+
+
+.showcode {
+    opacity: 0;
+    transition-duration: 0.5s;
+    position: fixed;
+    width: 75%;
+    height: 0%;
+    background-color: #0C1117;
+    z-index: -1;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+
+.showcode.active {
+    opacity: 1;
+    z-index: 101;
+    width: 75%;
+    height: 75%;
+    transition-duration: 0.5s;
+}
+
+.sccbuttons {
+    width: 0;
+    height: 0;
+}
+
+.sccbuttons.active {
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 14%;
+    right: 15.3%;
+    z-index: 102;
+}
+
+.scc {
+    opacity: 0;
+    width: 50px;
+    height: 27px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    color: rgb(226, 226, 226);
+    background-color: #474747;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+    transform: translate(0%, -400%);
+
+}
+
+.scc.blur {
+    opacity: 1;
+    display: inline-block;
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+    transform: translate(0%, 0%);
+    z-index: 102;
+
+}
+
+.sccpopup {
+    position: absolute;
+    top: -220%;
+    right: -10px;
+    background-color: #aeffbb;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+    color: rgb(78, 78, 78);
+    z-index: 102;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.sccpopup::after {
+    content: "";
+    position: relative;
+    top: 35px;
+    right: 35px;
+    transform: translate(-50%, -50%);
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #aeffbb transparent transparent transparent;
+    transition-duration: 0.5s;
+
+}
+
+.sccpopup.clicked {
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.sccescape {
+    opacity: 0;
+    width: 30px;
+    height: 27px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    color: rgb(226, 226, 226);
+    z-index: 102;
+    background-color: #474747;
+    border-radius: 5px;
+    transform: translate(0%, -400%);
+
+}
+
+.sccescape.blur {
+    opacity: 1;
+    display: inline-block;
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+    z-index: 102;
+    transform: translate(0%, 0%);
+}
+
+/* !End of Viewing Code Section */
+
+@media (max-width: 875px) {
+    .directory {
+        position: relative;
+        left: 50%;
+        translate: -50%;
+        width: 95%;
+        margin: 75px 0 0 0;
+    }
+
+    .directory ul {
+        margin: 0 0 0 0;
+
+    }
+
+    .directory li a {
+        text-align: center;
+    }
+
+    .source-main {
+        position: relative;
+        left: 50%;
+        translate: -50%;
+        width: 95%;
+        margin: 50px 0 0 0;
+    }
+
+    .htmlcode,
+    .csscode,
+    .jscode,
+    .bgtext {
+        position: relative;
+        left: 50%;
+        translate: -50%;
+        width: auto;
+    }
+
+    pre {
+        display: block;
+    }
+
+    .source-content code {
+        width: 90%;
+        margin: 0 0 0 0;
+        position: relative;
+        left: 50%;
+        translate: -50%;
+        font-size: 12px;
+    }
+
+    p.viewbutton {
+        z-index: 101;
+        margin: 0 0 0 0;
+    }
+
+    .viewbutton {
+        display: unset;
+        position: absolute;
+        top: 55px;
+        right: 7%;
+
+    }
+
+    .showcode {
+        font-size: 12px;
+    }
+
+    .source-content h4 {
+        margin: 0 0 0 25px;
+
+    }
+
+    .source-content p {
+        margin: 10px 0 0 35px;
+    }
+
+    .scc {
+        padding: 2px 5px 2px 5px;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+
+    }
+
+    .sccescape {
+        padding: 2px 5px 2px 5px;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+
+    }
+
+
+}

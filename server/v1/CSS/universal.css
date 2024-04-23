@@ -1,0 +1,189 @@
+/* Animate On Scroll, Custom Library */
+html {
+    overflow-x: hidden;
+    }
+.sa {
+    transform: translateX(-250px);
+    opacity: 0;
+    transition-delay: 1s;
+    /* position: relative; */
+}
+
+.sa.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.sa-right {
+    transform: translateX(250px);
+    opacity: 0;
+    transition-delay: 1s;
+    overflow: hidden;
+
+    /* position: relative; */
+}
+
+.sa-right.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.sa-zoom {
+    transform: scale(0);
+    opacity: 0;
+    transition-delay: 1s;
+
+    /* position: relative; */
+}
+
+.sa-zoom.active{
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.sa-flip {
+    transform: rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+    transition-delay: 0s;
+
+}
+
+.sa-flip.active{
+    transform: rotate3d( 0, 1, 0, 0deg);
+    opacity: 1;
+
+}
+
+/* DURATIONS */
+.sa-duration0_1 {
+    transition: 0.1s;
+}
+.sa-duration0_2 {
+    transition: 0.2s;
+}
+.sa-duration0_3 {
+    transition: 0.3s;
+}
+.sa-duration0_4 {
+    transition: 0.4s;
+}
+.sa-duration0_5 {
+    transition: 0.5s;
+}
+.sa-duration0_6 {
+    transition: 0.6s;
+}
+.sa-duration0_7 {
+    transition: 0.7s;
+}
+.sa-duration0_8 {
+    transition: 0.8s;
+}
+.sa-duration0_9 {
+    transition: 0.9s;
+}
+.sa-duration1 {
+    transition: 1s;
+}
+.sa-duration1_5 {
+    transition: 1.5s;
+}
+.sa-duration2 {
+    transition: 2s;
+}
+.sa-duration2_5 {
+    transition: 2.5s;
+}
+.sa-duration3 {
+    transition: 3s;
+}
+.sa-duration3_5 {
+    transition: 3.5s;
+}
+.sa-duration4 {
+    transition: 4s;
+}
+.sa-duration0_4 {
+    transition: 4.5s;
+}
+.sa-duration5 {
+    transition: 5s;
+}
+
+/* END OF durationS */
+
+/* Easing Settings */
+
+.sa-ease {
+    transition-timing-function: ease;
+}
+.sa-easein {
+    transition-timing-function: ease-in;
+}
+.sa-easeinout {
+    transition-timing-function: ease-in-out;
+}
+.sa-easeout {
+    transition-timing-function: ease-out;
+}
+
+/* End of Easing Settings */
+
+/* DELAYS */
+.sa-delay0_1 {
+    transition-delay: 0.1s;
+}
+.sa-delay0_2 {
+    transition-delay: 0.2s;
+}
+.sa-delay0_3 {
+    transition-delay: 0.3s;
+}
+.sa-delay0_4 {
+    transition-delay: 0.4s;
+}
+.sa-delay0_5 {
+    transition-delay: 0.5s;
+}
+.sa-delay0_6 {
+    transition-delay: 0.6s;
+}
+.sa-delay0_7 {
+    transition-delay: 0.7s;
+}
+.sa-delay0_8 {
+    transition-delay: 0.8s;
+}
+.sa-delay0_9 {
+    transition-delay: 0.9s;
+}
+.sa-delay1 {
+    transition-delay: 1s;
+}
+.sa-delay1_5 {
+    transition-delay: 1.5s;
+}
+.sa-delay2 {
+    transition-delay: 2s;
+}
+.sa-delay2_5 {
+    transition-delay: 2.5s;
+}
+.sa-delay3 {
+    transition-delay: 3s;
+}
+.sa-delay3_5 {
+    transition-delay: 3.5s;
+}
+.sa-delay4 {
+    transition-delay: 4s;
+}
+.sa-delay0_4 {
+    transition-delay: 4.5s;
+}
+.sa-delay5 {
+    transition-delay: 5s;
+}
+

@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(/Fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/Fonts/Poppins-Regular.ttf);
+}
+
+h1 {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    margin: 0 0 16px;
+
+
+}
+
+h2 {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    margin: 0 0 8px;
+
+
+}
+
+h3 {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0 0 8px;
+
+
+}
+
+h4 {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 0 8px;
+
+
+}
+
+h5 {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 0 8px;
+
+
+}
+
+h6 {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 8px;
+
+
+}
+
+li {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-size: 24px;
+
+
+
+}
+
+p {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 24px 0 24px;
+    line-height: 25px;
+}
+
+div {
+    /* property: value */
+    color: #000;
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+a {
+    /* property: value */
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+
+
+}
+
+span {
+
+    font-family: Poppins, Montserrat, Helvetica, sans-serif;
+}

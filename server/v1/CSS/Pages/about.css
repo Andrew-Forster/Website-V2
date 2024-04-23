@@ -1,0 +1,946 @@
+
+
+
+/* Hides Scrollbar for Chrome */
+body::-webkit-scrollbar {
+    display: none;
+}
+ 
+/* Hides scrollbar for other browsers like mozilla */
+.container {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+ 
+body {
+    caret-color: transparent;
+    background-color: #E3F2FD;
+
+}
+
+.bg {
+    height: 57px;
+}
+
+.bga {
+    height: 57px;
+}
+
+.bga div {
+    animation: animate 10s linear infinite;
+}
+
+a {
+    color: black;
+}
+
+/* FOOTER NOTE */
+
+.footernote {
+    /* margin: 50px 0 0 0; */
+    /* position: absolute; */
+    left: 70%;
+    translate: -30%;
+    position: relative;
+}
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-450px) rotate(320deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.aboutsec {
+    caret-color: transparent;
+    background-color: #E3F2FD;
+    display: flex;
+}
+
+.flexsection1 {
+    width: 30%;
+    background-color: rgb(31, 31, 31);
+
+}
+
+.flexsection2 {
+    width: 70%;
+}
+
+.skills {
+    /* width: 30%; */
+    /* top: 57px; */
+    padding: 5% 0 50px;
+    /* position: absolute; */
+    transition: 0.5s;
+    
+
+}
+
+.skillsimg {
+    width: 85%;
+    /* left: 2.3%;
+    top: 12.3%; */
+    transition: 0.5s;
+    z-index: 1;
+    /* position: absolute; */
+    margin: 8%;
+
+}
+
+.tag1 {
+    background-color: #42A5F5;
+    padding: 2px;
+    margin: 0 7.5% 0 7.5%;
+    /*Adjusts size of tag */
+    height: 45px;
+    overflow: hidden;
+}
+
+.tag2 {
+    background-color: #42A5F5;
+    margin: 2% 7.5% 0 2%;
+    /*Adjusts size of tag */
+    height: 45px;
+    overflow: hidden;
+
+}
+
+.tag3 {
+    background-color: #42A5F5;
+    padding: 2px;
+    margin: 2% 7.5% 0 2%;
+    /*Adjusts size of tag */
+    overflow: hidden;
+    height: 45px;
+}
+
+.tag4 {
+    background-color: #42A5F5;
+    padding: 2px;
+    margin: 2% 7.5% 0 2%;
+    /*Adjusts size of tag */
+    overflow: hidden;
+    height: 45px;
+}
+
+
+.tagele1 {
+    background-color: rgb(31, 31, 31);
+    width: 10px;
+    height: 150px;
+    position: relative;
+    top: -90px;
+    left: 72%;
+    rotate: calc(50deg);
+}
+
+.tagele2 {
+    background-color: rgb(31, 31, 31);
+    width: 10px;
+    height: 95px;
+    position: relative;
+    top: -225px;
+    left: 88%;
+    rotate: calc(50deg);
+}
+
+.atagele1 {
+    background-color: #E3F2FD;
+    width: 10px;
+    height: 205%;
+    position: relative;
+    top: -75px;
+    left: 90.5%;
+    rotate: calc(50deg);
+}
+
+.atagele2 {
+    background-color: #E3F2FD;
+    width: 10px;
+    height: 205%;
+    position: relative;
+    top: -168px;
+    left: 96%;
+    rotate: calc(50deg);
+}
+
+.sobject {
+    margin: 0 10% 0 12%;
+    background-color: white;
+    height: 40px;
+    width: auto;
+    border-radius: 7px;
+    box-shadow: 5px 5px 3px black;
+
+}
+
+/*Problem Solving*/
+.sbar1 {
+    margin: 0 5% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(99, 213, 97);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Collaboration */
+.sbar2 {
+    margin: 0 15% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(99, 213, 97);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Communication */
+.sbar3 {
+    margin: 0 25% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(99, 213, 97);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Patience */
+.sbar4 {
+    margin: 0 10% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(99, 213, 97);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Creativity */
+.sbar5 {
+    margin: 0 20% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(99, 213, 97);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Critical Thinking */
+.sbar6 {
+    margin: 0 25% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(99, 213, 97);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.skills h3 {
+    color: white;
+    margin: -5px 20px 0;
+    /* Adjusts Skills margin */
+    /* text-decoration: underline;
+    text-underline-offset: 9px; */
+}
+
+.skill {
+    padding: 7% 0 2% 9%;
+    color: #efefef;
+}
+
+
+.asection h3 {
+    color: rgb(31, 31, 31);
+    margin: -4px 2px 2px 15px;
+
+}
+
+.about p {
+    margin: 0px 100px 0px 45px;
+    text-shadow: 0px 1px 0px rgb(173, 173, 173);
+    line-height: 35px;
+    text-indent: 50px;
+
+    &:not(:nth-child(2)) {
+        margin-bottom: 30px;
+    }
+
+    &:not(:last-child) {
+        margin-top: 30px;
+    }
+
+    ;
+}
+
+.eblock {
+    background-color: rgb(31, 31, 31);
+    border-radius: 5px;
+    margin: 30px 8.5% 0 5%;
+    padding: 20px;
+    user-select: none;
+    overflow: hidden;
+}
+
+.eblock.closed {
+    height: 50px;
+    transition: 1s;
+}
+
+.eblock1.open {
+    height: 200px;
+    transition: 1s;
+}
+
+.eblock2.open {
+    height: 385px;
+    transition: 1s;
+}
+
+@media (max-width: 400px) {
+    .eblock1.open {
+        height: 200px;
+        transition: 1s;
+    }
+    
+    .eblock2.open {
+        height: 420px;
+        transition: 1s;
+    }
+}
+
+.eblock2 p {
+    color: white;
+    padding: 15px 0 0 0;
+    width: 50%;
+    flex: 1;
+}
+
+.eblock1 p {
+    color: white;
+    padding: 15px 0 0 0;
+    width: 100%;
+}
+
+.eblock h5 {
+    color: white;
+    font-weight: 100;
+    position: relative;
+    left: 1%;
+    top: 10px;
+}
+
+.eblock h5 b {
+    font-size: 14px;
+}
+
+.eblock i {
+    font-size: 45px;
+    color: white;
+    float: right;
+
+}
+
+.eblock:hover {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.closed:hover {
+    background-color: rgb(46, 46, 46);
+    box-shadow: inset 0px 0px 7px white;
+
+}
+
+.schoolsource {
+    color: #42A5F5;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.fa-caret-down {
+    transition: 0.5s;
+}
+
+.eduflex {
+    display: flex;
+}
+
+
+.eblock2 img {
+
+    height: 170px;
+    width: 30%;
+    padding: 150px 0 0 0;
+}
+
+.clang {
+    margin: 30px;
+    width: 60%;
+}
+
+.clang h6 {
+    margin: 25px 0 0 15px;
+    padding: 8px 0 0 0;
+}
+
+/* HTML */
+.sbar7 {
+    margin: 0 25% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(143, 213, 97);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* CSS */
+.sbar8 {
+    margin: 0 50% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(211, 213, 97);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* JS */
+.sbar9 {
+    margin: 0 70% 0 0;
+    /*Adjusts bar fill*/
+    background-color: rgb(97, 101, 213);
+    height: 40px;
+    border-radius: 7px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.sbar7, .sbar8, .sbar9 {
+    text-wrap: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center 
+}
+
+.sbar7 h6, .sbar8 h6, .sbar9 h6 {
+    margin: -5px 0 0 5px;
+}
+
+.sbar7 i, .sbar8 i, .sbar9 i {
+    margin: 3px 0 0 15px;
+    font-size: 20px;
+}
+
+@media (min-width: 900px) and (max-width: 1028px) {
+    .sbar9 h6 {
+    display: none;
+}
+}
+
+
+
+@media (min-width: 550px) and (max-width: 900px) {
+
+
+    /* Changing Skills Section */
+    .skills {
+        background-color: rgb(31, 31, 31);
+        width: 100%;
+        top: 57px;
+        padding: 0 0 0px;
+        height: 275px;
+        position: absolute;
+        transition: 0.5s;
+    }
+    .flexsection1 {
+        background-color: transparent;
+    }
+
+
+    .skillsflex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        flex-direction: row;
+        position: relative;
+        top: 6%;
+        left: 240px;
+        width: 60%;
+        transition: 0.5s;
+    }
+
+    .skillsdivider {
+        width: 140px;
+        transition: 0.5s;
+        margin: 10px 0 0 2%;
+    }
+
+    .skillsimg {
+        width: 200px;
+        left: 0%;
+        top: 18px;
+        transition: 0.5s;
+        position: relative;
+        z-index: 1;
+        margin: 0% 0 0 8%;
+    }
+
+    .skill {
+        padding: 3% 0 0% 0px;
+        color: #efefef;
+        font-size: 14px;
+    }
+
+    .tag1 {
+        background-color: #42A5F5;
+        top: 7%;
+        left: 188px;
+        /*Adjusts size of tag */
+        height: 45px;
+        width: 50%;
+        transition: 0.5s;
+        position: relative;
+
+    }
+
+    .tagele1 {
+        background-color: rgb(31, 31, 31);
+        width: 10px;
+        height: 150px;
+        position: relative;
+        top: -85px;
+        left: 76%;
+        rotate: calc(50deg);
+    }
+
+    .tagele2 {
+        background-color: rgb(31, 31, 31);
+        width: 10px;
+        height: 95px;
+        position: relative;
+        top: -225px;
+        left: 88%;
+        rotate: calc(50deg);
+    }
+
+    .sobject {
+        margin: 0 0 0 12%;
+        background-color: white;
+        height: 20px;
+        width: 80px;
+        border-radius: 7px;
+        box-shadow: 5px 5px 3px black;
+        transition: 0.5s;
+
+    }
+
+    .skills h3 {
+        color: white;
+        margin: -4px 0 0 20px;
+        /* Adjusts Skills margin */
+        /* text-decoration: underline;
+        text-underline-offset: 9px; */
+    }
+
+    /*Problem Solving*/
+    .sbar1 {
+        margin: 0 5% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(99, 213, 97);
+        height: 20px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    /* Collaboration */
+    .sbar2 {
+        margin: 0 15% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(99, 213, 97);
+        height: 20px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    /* Communication */
+    .sbar3 {
+        margin: 0 25% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(99, 213, 97);
+        height: 20px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    /* Patience */
+    .sbar4 {
+        margin: 0 10% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(99, 213, 97);
+        height: 20px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    /* Creativity */
+    .sbar5 {
+        margin: 0 20% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(99, 213, 97);
+        height: 20px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    /* Critical Thinking */
+    .sbar6 {
+        margin: 0 25% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(99, 213, 97);
+        height: 20px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+
+
+
+
+    /* End of Changing Skills Section */
+
+    .aboutsec {
+        display: block;
+    }
+
+    .asection {
+        margin: 0 0 0 0;
+    }
+    .about {
+        margin: 50px 0 0 0;
+        transition: 0.5s;
+    }
+
+    .flexsection2 {
+        width: 100%;
+    }
+
+
+
+    .sobject {
+        width: 80%;
+    }
+
+    /* HTML */
+    .sbar7 {
+        margin: 0 25% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(143, 213, 97);
+        height: 40px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    /* CSS */
+    .sbar8 {
+        margin: 0 50% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(211, 213, 97);
+        height: 40px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    /* JS */
+    .sbar9 {
+        margin: 0 70% 0 0;
+        /*Adjusts bar fill*/
+        background-color: rgb(97, 101, 213);
+        height: 40px;
+        border-radius: 7px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .clang {
+        margin: 10px 100% 25px 25px;
+        width: 80%;
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 549px) {
+    
+    .skillsimg {
+        width: 85%;
+        align-self: center;
+        /* margin: 2% 2% 0 2%; */
+        transition: 0.5s;
+        position: relative;
+        top: 0px;
+        left: 50%;
+        transform: translate(-59%);
+    
+    }
+    .aboutsec {
+        display: block;
+    }
+
+    .flexsection1 {
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .flexsection2 {
+        width: 100%;
+    }
+
+    .sobject {
+        margin: 0 10% 0 12%;
+        background-color: white;
+        height: 25px;
+        width: auto;
+        border-radius: 7px;
+        box-shadow: 5px 5px 3px black;
+        transition: 0.5s;
+
+    
+    }
+    .sbar1, .sbar2, .sbar3, .sbar4, .sbar5, .sbar6 {
+        height: 25px;
+        transition: 0.5s;
+
+    }
+    
+    .tag1 {
+        background-color: #42A5F5;
+        padding: 0;
+        margin: 2% 2% 0 2%;
+        /*Adjusts size of tag */
+        height: 45px;
+        overflow: hidden;
+    }
+
+    .tag2 {
+        background-color: #42A5F5;
+        margin: 2% 2% 0 2%;
+        /*Adjusts size of tag */
+        height: 45px;
+        overflow: hidden;
+    
+    }
+    
+    .tag3 {
+        background-color: #42A5F5;
+        padding: 2px;
+        margin: 2% 2% 0 2%;
+        /*Adjusts size of tag */
+        overflow: hidden;
+        height: 45px;
+    }
+    
+    .tag4 {
+        background-color: #42A5F5;
+        padding: 2px;
+        margin: 2% 2% 0 2%;
+        /*Adjusts size of tag */
+        overflow: hidden;
+        height: 45px;
+    }
+
+    .tag1 h3, .tag2 h3, .tag3 h3, .tag4 h3 {
+        font-size: 32px;
+        margin-top: 0;
+        color: rgb(31, 31, 31) ;
+    }
+
+    .tagele1 {
+        background-color: #E3F2FD;
+        width: 10px;
+        height: 150px;
+        position: relative;
+        top: -80px;
+        left: 74%;
+        rotate: calc(50deg);
+    }
+    
+    .tagele2 {
+        background-color: #E3F2FD;
+        width: 10px;
+        height: 95px;
+        position: relative;
+        top: -220px;
+        left: 88%;
+        rotate: calc(50deg);
+    }
+
+    .atagele1 {
+        background-color: #E3F2FD;
+        width: 10px;
+        height: 150px;
+        position: relative;
+        top: -85px;
+        left: 74%;
+        rotate: calc(50deg);
+    }
+    
+    .atagele2 {
+        background-color: #E3F2FD;
+        width: 10px;
+        height: 95px;
+        position: relative;
+        top: -225px;
+        left: 88%;
+        rotate: calc(50deg);
+    }
+
+    .about p {
+        margin: 0px 24px 0px 24px;
+        text-shadow: 0px 1px 0px rgb(173, 173, 173);
+        line-height: 35px;
+        text-indent: 50px;
+        font-size: 14px;
+    }
+
+    .asection {
+        margin: 0 0 0 0;
+    }
+
+    .about {
+        order: 1;
+        margin: 0 0 0 0;
+    }
+    .skills {
+        order: 2;
+        background-color: transparent;
+        width: 100%;
+        top: 57px;
+        padding: 0 0 50px;
+        height: 100%;
+        position: static;
+        transition: 0.5s;
+    }
+
+    .skill {
+        padding: 4% 0 2% 9%;
+        color: rgb(31, 31, 31);
+    }
+
+    .education {
+        order: 3;
+    }
+
+    .eblock h5 {
+        color: white;
+        font-weight: 100;
+        position: relative;
+        left: 1%;
+        top: 10px;
+        font-size: 16px;
+    }
+    
+    .eblock h5 b {
+        font-size: 10px;
+    }
+
+    .eblock2 p {
+        color: white;
+        padding: 25px 0 0 0;
+        line-height: 15px;
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    .eblock1 p {
+        color: white;
+        padding: 25px 0 0 0;
+        width: 100%;
+        font-size: 12px;
+        line-height: 20px;
+
+    }
+
+    .eblock2 {
+        margin-bottom: 40px;
+    }
+
+    .lang {
+        order: 4;
+    }
+
+    .eduflex {
+        display: block;
+    }
+
+    .eblock2 img {
+
+        height: 115px;
+        width: auto;
+        padding: 0px 0 0 0;
+    }
+
+    /* HTML */
+.sbar7 {
+    height: 25px;
+}
+
+/* CSS */
+.sbar8 {
+    height: 25px;
+}
+
+/* JS */
+.sbar9 {
+    height: 25px;
+    text-wrap: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center
+}
+
+.clang {
+    margin: 30px;
+    width: 60%;
+}
+
+.sbar9 h6 {
+    display: none;
+}
+
+/* FOOTER NOTE */
+
+.footernote {
+    margin: 40px 0 0 0;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    width: 65%;
+}
+}
