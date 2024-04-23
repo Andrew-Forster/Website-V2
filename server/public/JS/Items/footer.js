@@ -116,7 +116,7 @@ function pullReload() {
 let pullingVal = 0;
 let gotoVal = 0;
 let gtStrength = 6; // How hard you have to pull to go to the next page [PC]
-let gotoStrength = 3; // How hard you have to pull to go to the next page [Mobile]
+let gotoStrength = 10; // How hard you have to pull to go to the next page [Mobile]
 
 function pullNextPage() {
     let body = document.querySelector("body");
@@ -191,7 +191,7 @@ function pullNextPage() {
         // Pull up
 
         if (touchDiff < 0 && pullingVal < 100) {
-            pullingVal += 10;
+            pullingVal += 20;
             // pullText.style.transform = "translateY(-" + (50 + (pullingVal / 4)) + "px)";
             pullEle.style.transform = "translateY(-" + (60 + (pullingVal / 5)) + "px)";
             pullPaths.forEach((path) => {
