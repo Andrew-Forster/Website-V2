@@ -10,11 +10,6 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Serve static files for v1
-app.use('/v1', express.static(path.join(__dirname, '/v1/public')));
-
-// Serve static files
-app.use(express.static(path.join(__dirname, '/public')));
 
 // Page Links
 const pages = ['/', '/home', '/about', '/portfolio', '/skills'];
@@ -37,6 +32,18 @@ app.get('/v1', (req, res) => {
   res.sendFile(path.join(__dirname, '/v1/index.html'));
 });
 
+// Serve static files for v1
+app.use('/v1', express.static(path.join(__dirname, '/v1/public')));
+
+// Reverse proxy for static files under /v1
+app.use('/v1', (req, res, next) => {
+  // Update the URL path to remove '/v1' prefix
+  req.url = req.url.replace(/^\/v1/, '');
+  next();
+}, express.static(path.join(__dirname, '/v1/public')));
+
+// Serve static files
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
 app.use('/api/email', emailRoutes);
