@@ -26,15 +26,17 @@ body {
 
 @font-face {
     font-family: Main Font;
-    src: url(/Fonts/Poppins/Poppins-Regular.ttf);
+    src: url('/Fonts/Poppins/Poppins-Regular.ttf') format('truetype'), 
+    url('/Fonts/Poppins/Woff/Poppins-Regular.woff') format('woff');
 }
 @font-face {
     font-family: Main-B;
-    src: url(/Fonts/Poppins/Poppins-Bold.ttf);
+    src: url('/Fonts/Poppins/Poppins-Bold.ttf') format('truetype'), 
+    url('/Fonts/Poppins/Woff/Poppins-Bold.woff') format('woff');
 }
 @font-face {
     font-family: Main-L;
-    src: url(/Fonts/Poppins/Poppins-Light.ttf);
+    src: url('/Fonts/Poppins/Poppins-Light.ttf') format('truetype');
 }
 
 h1,

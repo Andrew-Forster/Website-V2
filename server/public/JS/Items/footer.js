@@ -143,10 +143,12 @@ function pullNextPage() {
         if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 && window.location.pathname !== "/portfolio") {
             let mediaQuery = window.matchMedia('(max-width: 800px)');
             if (mediaQuery.matches) {
-                pullText.style.transform = "translateY(-" + (110) + "px)";
+                pullText.style.transform = "translateY(-" + (65) + "px)";
             } else {
                 pullText.style.transform = "translateY(-" + (40) + "px)";
             }
+        } else {
+            pullText.style.transform = "translateY(0)";
         }
     }, 100);
 
@@ -193,7 +195,7 @@ function pullNextPage() {
         if (touchDiff < 0 && pullingVal < 100) {
             pullingVal += 30;
             // pullText.style.transform = "translateY(-" + (50 + (pullingVal / 4)) + "px)";
-            pullEle.style.transform = "translateY(-" + (60 + (pullingVal / 5)) + "px)";
+            pullEle.style.transform = "translateY(-" + (60 + (pullingVal / 13)) + "px)";
             pullPaths.forEach((path) => {
                 path.style.strokeDashoffset = path.getAttribute("val") - (path.getAttribute("val") * (pullingVal / 100));
             });
@@ -260,7 +262,7 @@ function pullNextPage() {
         if (e.deltaY > 0 && pullingVal <= 75) { // Pulling down
             pullingVal += 25;
             // pullText.style.transform = "translateY(-" + (0 + (pullingVal / 1.25)) + "px)";
-            pullEle.style.transform = "translateY(-" + (0 + (pullingVal / 1.25)) + "px)";
+            pullEle.style.transform = "translateY(-" + (0 + (pullingVal / 2.2)) + "px)";
         } else if (e.deltaY > 0 && gotoVal < gtStrength) {
             gotoVal += 1;
 
