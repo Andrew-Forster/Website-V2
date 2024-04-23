@@ -16,12 +16,12 @@ const pages = ['/', '/home', '/about', '/portfolio', '/skills'];
 
 pages.forEach(page => {
   app.get(page, (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
   });
 });
 
 // Serve static files
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
 app.use('/api/email', emailRoutes);
