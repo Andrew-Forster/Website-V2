@@ -33,14 +33,7 @@ app.get('/v1', (req, res) => {
 });
 
 // Serve static files for v1
-app.use('/v1', express.static(path.join(__dirname, '/v1/public')));
-
-// Reverse proxy for static files under /v1
-app.use('/v1', (req, res, next) => {
-  // Update the URL path to remove '/v1' prefix
-  req.url = req.url.replace(/^\/v1/, '');
-  next();
-}, express.static(path.join(__dirname, '/v1/public')));
+app.use('/v1', express.static(path.join(__dirname, '/v1')));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, '/public')));
