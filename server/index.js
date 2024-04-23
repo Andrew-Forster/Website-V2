@@ -32,6 +32,9 @@ app.get('/v1', (req, res) => {
   res.sendFile(path.join(__dirname, '/v1/index.html'));
 });
 
+// Serve static files for v1
+app.use('/v1', express.static(path.join(__dirname, '/v1/public')));
+
 // Serve static files
 app.use(express.static(path.join(__dirname, '/public')));
 
