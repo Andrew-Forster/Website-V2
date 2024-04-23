@@ -258,4 +258,8 @@ input:-webkit-autofill:active {
     #pullText {
         width: 115px;
     }
+
+    #formRes {
+        margin-top: 7rem;
+    }
 }
