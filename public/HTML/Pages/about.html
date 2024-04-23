@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="/CSS/Pages/about.css">
+
+
+
+<img class="abt-img" src="/Assets/Images/about.jpg" alt="Image of Me">
+<h4 class="career-text">Aspiring Software Developer</h4>
+<p class="abt-text">
+    Entering my second year at Grand Canyon University, I maintain a strong GPA of 3.75 while majoring in Software
+    Development and minoring in
+    Cybersecurity. With a successful freelance project under my belt and collaborating seamlessly within a team
+    environment, I am dedicated to consistently delivering results. Possessing a keen aptitude for
+    problem-solving and critical thinking, I am prepared to make impactful strides in the industry.
+</p>
+
+<div class="cards">
+    <a href="/portfolio" class="card about">
+        <div class="anim"></div> <!-- Animation for border -->
+        <h6>My Portfolio</h6>
+        <img class="i i-4" src="/Assets/SVGS/link.svg">
+    </a>
+    <a href="/skills" class="card about">
+        <div class="anim"></div> <!-- Animation for border -->
+        <h6>My Skills</h6>
+        <img class="i i-4" src="/Assets/SVGS/link.svg">
+    </a>
+</div>
+
+<div class="footer"></div>
+
+<script>
+    footer();
+    async function footer() {
+        let footer = await waitForElm('.footer');
+        replace('/HTML/footer.html', footer)
+    }
+</script>

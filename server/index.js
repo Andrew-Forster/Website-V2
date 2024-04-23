@@ -1,0 +1,32 @@
+const express = require('express')
+require('dotenv').config();
+const emailRoutes = require('./routes/email');
+const path = require('path');
+const app = express()
+const port = process.env.port || 3000;
+
+// Middleware
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+// Page Links
+const pages = ['/', '/home', '/about', '/portfolio', '/skills'];
+
+pages.forEach(page => {
+  app.get(page, (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
+});
+
+// Serve static files
+app.use(express.static(path.join(__dirname, '../public')));
+
+// Routes
+app.use('/api/email', emailRoutes);
+
+
+app.listen(port, () => {
+  console.log(`Project is listening at http://localhost:${port}`)
+})    

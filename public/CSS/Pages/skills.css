@@ -1,0 +1,39 @@
+/* Particles */
+
+.particles .home {
+    opacity: 0;
+}
+
+.particles .skills {
+    opacity: 1;
+}
+
+
+
+
+.skill h6 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.skill-fill {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--c3);
+    z-index: -1;
+    border-radius: 3px;
+}
+
+
+
+
+
+@media (max-width: 800px) {
+    .skill h6 {
+        font-size: 1.5rem;
+    }
+    
+}

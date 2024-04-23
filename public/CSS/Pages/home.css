@@ -1,0 +1,247 @@
+/* ------------ */
+/* * Background */
+/* ------------ */
+
+.bg {
+    background: var(--c4);
+}
+
+/* Particle */
+
+.particles .home {
+    opacity: 1;
+}
+
+/* Main Content */
+
+main {
+    margin: 0 5rem 0 calc(20% + 40px);
+    padding: 1rem 2rem;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+main .s1 {
+    flex-direction: column;
+    width: 40%;
+}
+
+.career-text {
+    margin: 3rem 0 2rem 2rem;
+}
+
+/* Top Group */
+
+.top-group {
+    max-height: 400px;
+}
+
+/* About Card */
+
+.about {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-height: 50px;
+    cursor: pointer;
+}
+
+.about h6 {
+    width: 100%;
+    margin: 0 0 0 0;
+}
+
+
+/* Years of Exp Card */
+
+.exp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-cont {
+    padding: 0 0 1.5rem 0;
+}
+
+.exp h5, .exp p {
+    display: inline;
+}
+
+/* Gcu Card */
+
+.gcu-card img {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.gcu-card h5 {
+    margin: 0 1rem;
+}
+
+/* Bottom group */
+
+.bottom-group .card {
+    position: relative;
+}
+
+.bottom-group .card h4 {
+    margin: 0 0 1.5rem 0;
+}
+
+.bottom-group .bg-btn {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.bottom-group .bg-btn:hover {
+    border: 2px solid var(--grayl);
+    background-color: var(--gray);
+    transform: translate(0, -3px);
+}
+
+/* Projects Slider */
+
+.project-slider {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-nav {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 0 0;
+}
+
+.project-nav button {
+    background-color: var(--c3);
+    border: 2px solid var(--c5);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0.3rem;
+}
+
+.project-nav button:hover {
+    background-color: var(--c2);
+    transform: translate(0, -3px);
+}
+
+.project-nav button.active {
+    width: 5rem;
+    transform: translate(0, 0);
+    overflow: hidden;
+    cursor: default;
+}
+
+.project-nav button.active span {
+    content: '';
+    width: 0px;
+    height: 3rem;
+    background-color: var(--c1);
+    position: absolute;
+    top: 1.1rem;
+    left: 0;
+    transform: translate(0, -1.5rem);
+
+}
+
+/* Cards */
+
+.project-card {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card h5 {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    color: var(--font);
+    font-size: 2rem;
+    text-align: center;
+    border: 2px solid var(--grayl);
+    background-color: var(--gray);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.project-card.active {
+    display: block;
+}
+
+.project-card.next {
+    display: block;
+    animation: slide-next 1s forwards;
+    z-index: 2;
+}
+
+@keyframes slide-next {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 1170px) {
+    main {
+        margin: 0 0 0 0;
+    }
+
+    .career-text {
+        margin: 2rem 0 2rem 3rem;
+
+    }
+}
+
+@media (max-width: 800px) {
+
+    main .s1 {
+        width: 100%;
+    }
+
+    .exp {
+        min-height: 100px;
+    }
+
+    .exp-cont {
+        width: 80px;
+        height: 45px;
+    }
+
+    .top-group {
+        flex-direction: column;
+        max-height: 100%;
+    }
+}
+
+
+
+
+

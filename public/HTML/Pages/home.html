@@ -1,0 +1,70 @@
+<script src="/JS/Pages/home.js" defer></script>
+
+
+
+
+<h4 class="career-text">Aspiring Software Developer</h4>
+
+<div class="top-group cards">
+    <div class="s1 cards">
+        <div onclick="loadContent('about')" class="card about">
+            <div class="anim"></div> <!-- Animation for border -->
+            <h6>About Me</h6>
+            <img class="i i-4" src="/Assets/SVGS/link.svg">
+        </div>
+        <div class="card exp">
+            <div class="anim"></div> <!-- Animation for border -->
+            <div class="exp-cont">
+                <h5>1+</h5>
+                <p>Years of <br>Experience</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gcu-card card">
+        <div class="anim"></div> <!-- Animation for border -->
+        <img src="/Assets/Images/GCU.webp" alt="GCU Logo">
+        <h5>Student at Grand Canyon University</h5>
+    </div>
+</div>
+<div class="bottom-group cards">
+    <div class="card">
+        <div class="anim"></div> <!-- Animation for border -->
+        <h4>Project Portfolio</h4>
+        <button class="bg-btn" onclick="loadContent('portfolio')">View</button>
+        <div class="project-slider">
+            <div class="project-card" id="1">
+                <img src="/Assets/Images/Project 1.png" alt="Project 1">
+                <h5>Alchemy Analytics</h5>
+            </div>
+            <div class="project-card" id="2">
+                <img src="/Assets/Images/Project 2.png" alt="Project 2">
+                <h5>About Me Website V1</h5>
+            </div>
+            <div class="project-card" id="3">
+                <img src="/Assets/Images/Project 3.png" alt="Project 3">
+                <h5>Server Rift</h5>
+            </div>
+            <div class="project-card" id="4">
+                <img src="/Assets/Images/Project 4.jpg" alt="Project 4">
+                <h5>Scroll Animator</h5>
+            </div>
+        </div>
+        <div class="project-nav">
+            <button class="active"><span></span></button>
+            <button class=""><span></span></button>
+            <button class=""><span></span></button>
+            <button class=""><span></span></button>
+        </div>
+    </div>
+</div>
+
+<div class="footer"></div>
+
+<script>
+    footer();
+    async function footer() {
+        let footer = await waitForElm('.footer');
+        replace('/HTML/footer.html', footer)
+    }
+</script>

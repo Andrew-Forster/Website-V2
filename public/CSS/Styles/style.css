@@ -1,0 +1,200 @@
+html {
+    font-size: 62.5%;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    overscroll-behavior: none;
+    caret-color: transparent; 
+    width: 100%;
+}
+
+.i {
+    width: 3rem;
+    height: 3rem;
+    vertical-align: -.255em;
+    overflow: visible;
+}
+
+.i-4 {
+    width: 4rem;
+    height: 4rem;
+}
+
+body {
+    margin: 0 0 0 0;
+    width: 100%;
+}
+
+@font-face {
+    font-family: Main Font;
+    src: url(/Fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Main-B;
+    src: url(/Fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Main-L;
+    src: url(/Fonts/Poppins/Poppins-Light.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+section, 
+span,
+div,
+textarea {
+    font-family: "Main Font", Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    transition: all 0.3s ease;
+    color: var(--font);
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 8rem;
+    font-family: "Main-B", Helvetica, Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 6rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.h7 {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.h8 {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.h9 {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+
+
+li {
+    font-size: 1.8rem;
+    list-style: none;
+}
+
+p {
+    font-size: 1.8rem;
+    margin: 24px 0 24px;
+    line-height: 2.5rem;
+}
+
+div {
+    font-size: 1.4rem;
+}
+
+label {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2.4rem;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 3.8rem;
+    }
+
+    h2 {
+        font-size: 3.4rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    h4 {
+        font-size: 2.4rem;
+    }
+
+    h5 {
+        font-size: 2rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
+    }
+
+    .h7 {
+        font-size: 1.6rem;
+    }
+
+    .h8 {
+        font-size: 1.4rem;
+    }
+
+    .h9 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1.8rem;
+    }
+
+    li {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    div {
+        font-size: 1.2rem;
+    }
+
+    label {
+        font-size: 1.4rem;
+    }
+}

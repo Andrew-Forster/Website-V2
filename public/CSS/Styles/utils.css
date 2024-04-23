@@ -1,0 +1,338 @@
+/*
+Andrew Forster
+Website V2
+04/15/24
+*/
+
+:root {
+    --angle: 0deg;
+}
+
+/* ----- */
+/* Cards */
+/* ----- */
+.cards {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.card {
+    flex: 50%;
+    min-width: 230px;
+    margin: 15px;
+    box-shadow: 0px 0px 5px -1px var(--font-op);
+    border-radius: 7px;
+    padding: 20px;
+    transition-duration: 0.5s;
+    background: var(--c5);
+    position: relative;
+}
+
+.anim {
+    position: absolute;
+    transition-duration: 0.7s;
+    opacity: 0;
+    border-radius: 7px;
+    top: -1.5px;
+    left: -2.5px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    /* Border */
+
+    border: 3px dotted transparent;
+    background-image: linear-gradient(to right,
+            var(--c5),
+            var(--c5)),
+        conic-gradient(from var(--angle),
+            var(--anim) 0deg 0deg,
+            transparent 20deg 180deg,
+            var(--anim) 180deg 180deg,
+            transparent 200deg 360deg);
+    background-origin: border-box;
+    background-clip:
+        padding-box,
+        /* Clip white semi-transparent to the padding-box */
+        border-box;
+    /* Clip colored boxes to the border-box (default) */
+
+    animation: borderAnim 7s linear infinite;
+}
+
+
+
+@supports (background: paint(houdini)) {
+
+    @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+
+    @keyframes borderAnim {
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    .card:hover .anim {
+        opacity: 1;
+    }
+
+    .card-g:hover .anim {
+        opacity: 1;
+    }
+
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 16px;
+
+}
+
+.card text {
+    padding: 0 20px 20px;
+    font-size: 10px;
+}
+
+.cards-g {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.card-g {
+    width: calc(100% - 3rem - 4rem);
+    margin: 1.5rem;
+    /* border: 3px solid var(--gray); */
+    box-shadow: 0px 0px 4px -1px var(--font);
+    border-radius: 3px;
+    padding: 1rem 2rem;
+    transition: 0.1s;
+    background: transparent;
+    position: relative;
+}
+
+.card-g img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    transition: 0.1s;
+}
+
+
+
+@media (max-width: 800px) {
+    .cards-g {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page Animations */
+
+.continueAnim {
+    animation: fade 0.8s ease-in-out 0s forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+
+    }
+
+    99% {
+        opacity: 0;
+        transform: translate(0px, -500px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0px, 500px);
+    }
+}
+
+@keyframes reverseFade {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 500px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+.continue {
+    animation: reverseFade 0.8s ease-in-out 0s forwards;
+}
+
+.active {
+    opacity: 1;
+    transition-duration: 0.7s;
+}
+
+
+
+/* --------- */
+/* Alert CSS */
+/* --------- */
+
+.alert {
+    position: fixed;
+    top: -25%;
+    height: 85px;
+    z-index: 10;
+    width: calc(80% - 4rem);
+    margin: 0 0 0 20%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.alert .cont {
+    margin: 0 auto 0 auto;
+    padding: 1rem 0;
+    width: 50%;
+    display: flex;
+    position: relative;
+    background: var(--c4);
+    border-radius: 90px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--font) 2px 2px 3px 1px;
+}
+
+.alert.active {
+    animation: alert 7s cubic-bezier(.55, .085, .68, .53) 3s forwards;
+}
+
+.alert.perm {
+    animation: perm 7s cubic-bezier(.55, .085, .68, .53) 3s forwards;
+}
+
+.alert .h8 {
+    color: var(--font);
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.alert button {
+    color: var(--font);
+    background: transparent;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0px 20px 0px 20px;
+    margin: 0 auto 0 auto;
+    transition-duration: 0.5s;
+    border: 4px solid var(--error);
+    font-size: 1.6rem;
+
+}
+
+.alert button:hover {
+    background: var(--btn-confirm);
+    transition-duration: 0.3s;
+}
+
+@keyframes alert {
+    0% {
+        top: -25%;
+        opacity: 0;
+        pointer-events: all;
+    }
+
+    9.5% {
+        top: 8%;
+        opacity: 1;
+    }
+
+    12% {
+        top: 5%;
+        opacity: 1;
+    }
+
+    95% {
+        top: 5%;
+        opacity: 1;
+        pointer-events: all;
+
+    }
+
+    100% {
+        top: -25%;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes perm {
+    0% {
+        top: -25%;
+        opacity: 0;
+        pointer-events: all;
+    }
+
+    9.5% {
+        top: 8%;
+        opacity: 1;
+    }
+
+    12% {
+        top: 5%;
+        opacity: 1;
+    }
+
+    95% {
+        top: 5%;
+    }
+
+    100% {
+        top: 5%;
+        opacity: 1;
+        pointer-events: all;
+
+    }
+}
+
+@media (max-width: 1170px) {
+    .alert {
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .alert .cont {
+        width: 90%;
+        height: 80px;
+        padding: 0 0;
+    }
+
+    .alert button {
+        font-size: 1.4rem;
+        padding: 0px 10% 0px 10%;
+    }
+}

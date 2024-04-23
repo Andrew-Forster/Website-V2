@@ -1,0 +1,261 @@
+
+.footer {
+    overflow: hidden;
+    height: 550px;
+}
+
+
+.footer h4 {
+    margin: 4rem 0 1rem 2rem;
+}
+
+.footer .topic,
+.footer .msg {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg {
+    width: 50%;
+    margin: 0 2rem;
+}
+
+.side button {
+    margin: 2rem 0;
+    height: 4rem;
+    background-color: var(--c3);
+    border-radius: 3px;
+    font-size: 1.6rem;
+    transition-duration: 0.5s;
+}
+
+.side button:hover {
+    background-color: var(--c2);
+    transform: translate(0, -3px);
+}
+
+
+
+
+
+
+/* Form Designs */
+
+.footer input[type="email"] {
+    height: 4rem;
+    width: calc(100% - 1rem);
+    padding: 0 0 0 1rem;
+}
+
+.footer textarea {
+    height: 9rem;
+    width: 100%;
+    padding: 1rem 0 0 1rem;
+    resize: none;
+}
+
+textarea+.ph-text {
+    width: 100%;
+}
+
+.footer .form-design {
+    caret-color: var(--font);
+    border: 2px solid var(--font);
+    border-radius: 4px;
+    transition-duration: 0.3s;
+    background-color: var(--c4);
+    color: var(--font);
+}
+
+.ph-text {
+    position: absolute;
+    height: 40px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3px solid transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+
+    pointer-events: none;
+
+}
+
+.ph-text div {
+    padding: 0 0.5rem;
+    background-color: transparent;
+    color: var(--font);
+
+}
+
+.form-design:focus {
+    outline: none;
+    border-color: var(--c1);
+}
+
+:not(.form-design[value=""])+.ph-text div,
+.form-design:focus+.ph-text div {
+    background-color: var(--c4);
+    font-size: 1.1rem;
+    transform: translate(0, -130%);
+}
+
+.form-design:focus+.ph-text div {
+    color: var(--c1);
+}
+
+/* Footer Bottom */
+
+.footer .name {
+    margin: 4rem 0 0 2rem;
+}
+
+.footer .profession {
+    margin: 1rem 0 0 2rem;
+}
+
+.footer .copyright {
+    margin: 1rem 0 8rem 2rem;
+}
+
+/* Form Response */
+
+#formRes {
+    margin: 0 0 0 2rem;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+/* Override Email Autofill Background */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition-duration: 0ms;
+    -webkit-box-shadow: 0 0 0 1000px var(--c4) inset;
+    -webkit-text-fill-color: var(--font);
+}
+
+
+/* Pull Element */
+
+#pullEle {
+    margin: 0 auto;
+    width: 50px;
+    transition-duration: 0.5s;
+}
+
+#pullEle.bounce {
+    animation: scaleBounce ease-in-out 0.7s forwards;
+}
+
+#pullEle .stroke_1 {
+    stroke-dasharray: 96 98;
+    stroke-dashoffset: 97;
+    transition-duration: 0.5s;
+}
+
+#pullEle .stroke_2 {
+    stroke-dasharray: 57 59;
+    stroke-dashoffset: 58;
+    transition-duration: 0.5s;
+
+}
+
+#pullEle .stroke_3 {
+    stroke-dasharray: 6 8;
+    stroke-dashoffset: 7;
+    transition-duration: 0.5s;
+}
+
+#pullEle .stroke_4 {
+    stroke-dasharray: 8 10;
+    stroke-dashoffset: 9;
+    transition-duration: 0.5s;
+
+}
+
+#pullEle .stroke_5 {
+    stroke-dasharray: 6 8;
+    stroke-dashoffset: 7;
+    transition-duration: 0.5s;
+}
+
+@keyframes scaleBounce {
+    0% {
+        transform: translateY(-80px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-80px) rotate(359deg);
+    }
+
+    100% {
+        transform: translateY(-80px) rotate(360deg);
+    }
+}
+
+#pullText {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    transition-duration: 0.5s;
+}
+
+
+
+
+
+/* Responsiveness */
+
+@media (max-width: 1170px) {
+
+    #pullEle {
+        padding: 0;
+    }
+
+    #pullText {
+        padding: 0;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+    .flex {
+        position: relative;
+        display: block;
+    }
+
+    .side {
+        width: 100%;
+    }
+
+    .msg {
+        width: calc(100% - 1rem);
+        margin: 2rem 0 4rem 0;
+    }
+
+    .side button {
+        position: absolute;
+        width: calc(100% - 3.7rem);
+        bottom: -8rem;
+    }
+
+    #pullText {
+        width: 115px;
+    }
+}
