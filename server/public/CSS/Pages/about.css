@@ -19,3 +19,20 @@
 .abt-text {
     margin: 2rem 3rem;
 }
+
+
+
+
+
+@media (max-width: 800px) {
+    .abt-img {
+        margin-left: 0;
+        margin-right: 0;
+        width: calc(100%);
+    }
+
+    .abt-text {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}

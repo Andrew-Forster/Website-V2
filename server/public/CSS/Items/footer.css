@@ -238,20 +238,30 @@ input:-webkit-autofill:active {
     .flex {
         position: relative;
         display: block;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
-    .side {
+    .footer h4 {
+        margin: 4rem 0 1rem 0;
+    }
+
+    .footer input[type="email"] {
         width: 100%;
     }
 
+    .side {
+        width: calc(100% - 1.4rem);
+    }
+
     .msg {
-        width: calc(100% - 1rem);
+        width: calc(100% - 1.4rem);
         margin: 2rem 0 4rem 0;
     }
 
     .side button {
         position: absolute;
-        width: calc(100% - 3.7rem);
+        width: calc(100% - 2rem);
         bottom: -8rem;
     }
 
@@ -262,4 +272,17 @@ input:-webkit-autofill:active {
     #formRes {
         margin-top: 7rem;
     }
+
+    .footer .name {
+        margin: 4rem 0 0 1rem;
+    }
+    
+    .footer .profession {
+        margin: 1rem 0 0 1rem;
+    }
+    
+    .footer .copyright {
+        margin: 1rem 0 8rem 1rem;
+    }
+
 }

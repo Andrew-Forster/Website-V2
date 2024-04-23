@@ -133,6 +133,18 @@ Website V2
     .cards {
         flex-direction: column;
     }
+
+    .card-g {
+        width: calc(100% - 4rem);
+
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 

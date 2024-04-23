@@ -239,6 +239,10 @@ main .s1 {
         flex-direction: column;
         max-height: 100%;
     }
+
+    .career-text {
+        margin-left: 0;
+    }
 }
 
 

@@ -244,7 +244,8 @@
 
 @media (max-width: 800px) {
     .project.active {
-        margin: 100px 10% 0 10%;
+        width: 90%;
+        margin: 100px 5% 0 5%;
         height: 80%;
     }
 
@@ -258,6 +259,16 @@
 
     .project.active .banner a {
         top: 1rem;
+    }
+
+    .card-g {
+        width: 100%;
+    }
+
+    .close-project {
+        z-index: 20;
+        top: 2.2rem;
+        right: 6.5rem;
     }
 
 
