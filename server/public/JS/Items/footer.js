@@ -9,9 +9,9 @@ async function start() {
     // If browser supports @property / background: paint(houdini)
     if ('paintWorklet' in CSS) {} else {
         console.error('Houdini Paint API (@property) is not supported. Read more here: https://developer.mozilla.org/en-US/docs/Web/CSS/@property#browser_compatibility');
-        if (!localStorage.getItem("propertyClicked")) {
-            sendAlert("This browser does not support @property", "Read more here", "property", false, 1);
-        }
+        // if (!localStorage.getItem("propertyClicked")) {
+        //     sendAlert("This browser does not support @property", "Read more here", "property", false, 1);
+        // }
     }
 }
 

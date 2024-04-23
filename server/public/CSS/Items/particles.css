@@ -23,7 +23,6 @@
 }
 
 .particles .about {
-    min-width: 100%;
     top: -15rem;
     right: -40rem;
     background: radial-gradient(circle, rgba(var(--cn2), 0.8) 0%, transparent 45%);
@@ -34,7 +33,6 @@
     background: radial-gradient(circle, rgba(var(--cn1), 0.4) 0%, transparent 45%);
 }
 .particles .portfolio {
-    min-width: 100%;
     top: 15rem;
     background: radial-gradient(circle, rgba(var(--cn1), 0.5) 0%, transparent 55%);
 }
@@ -54,11 +52,13 @@
     .particles .about {
         top: -20rem;
         right: -20rem;
+        min-width: 105%;
     }
 
     .particles .skills {
         top: -15rem;
         left: -15rem;
+        min-width: 105%;
     }
     
 

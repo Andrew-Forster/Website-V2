@@ -5,6 +5,7 @@ html {
     overscroll-behavior: none;
     caret-color: transparent; 
     width: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .i {
