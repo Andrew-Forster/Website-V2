@@ -27,13 +27,14 @@ pages.forEach(page => {
 });
 
 
-
-
-
-
 // Routes
 app.use('/api/email', emailRoutes);
 
+
+// 404
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, '/public/HTML/Pages/404.html'));
+});
 
 app.listen(port, () => {
   console.log(`Project is listening at http://localhost:${port}`)

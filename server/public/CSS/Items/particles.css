@@ -19,7 +19,7 @@
 
 .particles .home {
     top: 15rem;
-    background: radial-gradient(circle, rgba(var(--cn3)) 0%, transparent 65%);
+    background: radial-gradient(circle, rgba(var(--cn3)) 0%, transparent 45%);
 }
 
 .particles .about {
@@ -34,7 +34,7 @@
 }
 .particles .portfolio {
     top: 15rem;
-    background: radial-gradient(circle, rgba(var(--cn1), 0.5) 0%, transparent 55%);
+    background: radial-gradient(circle, rgba(var(--cn1), 0.5) 0%, transparent 45%);
 }
 
 

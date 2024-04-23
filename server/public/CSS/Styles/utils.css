@@ -76,12 +76,26 @@ Website V2
         }
     }
 
-    .card:hover .anim {
-        opacity: 1;
+    
+    @media (min-width: 800px) {     
+        .card:hover .anim {
+            opacity: 1;
+        }
+    
+        .card-g:hover .anim {
+            opacity: 1;
+        }
     }
 
-    .card-g:hover .anim {
-        opacity: 1;
+    @media (max-width: 800px) {
+        .card .anim.btn {
+            opacity: 1;
+        }
+    
+        .card-g .anim.btn {
+            opacity: 1;
+        }
+        
     }
 
 }
