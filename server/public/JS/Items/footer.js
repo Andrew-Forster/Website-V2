@@ -213,6 +213,8 @@ function pullNextPage() {
 
             if (gotoVal == gotoStrength) {
                 pullEle.classList.add("bounce");
+                gotoVal = 0;
+                pullingVal = 0;
 
                 setTimeout(() => {
                     if (!pullEle) {
@@ -223,8 +225,6 @@ function pullNextPage() {
                     document.removeEventListener("touchend", touchEnd);
 
                     nextPage(window.location.pathname);
-                    pullingVal = 0;
-                    gotoVal = 0;
                 }, 400);
             }
         }
