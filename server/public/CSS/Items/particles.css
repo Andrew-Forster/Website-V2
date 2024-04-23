@@ -11,16 +11,15 @@
 
 .particles div {
     position: absolute;
-    min-width: 80%;
-    min-height: 80%;
+    min-width: 100%;
+    min-height: 100%;
     opacity: 0;
     transition-duration: 2s;
-    overflow: visible;
 }
 
 .particles .home {
     top: 15rem;
-    background: radial-gradient(circle, rgba(var(--cn3)) 0%, transparent 55%);
+    background: radial-gradient(circle, rgba(var(--cn3)) 0%, transparent 65%);
 }
 
 .particles .about {
@@ -32,7 +31,7 @@
 .particles .skills {
     top: -35rem;
     left: -30rem;
-    background: radial-gradient(circle, rgba(var(--cn1), 0.4) 0%, transparent 65%);
+    background: radial-gradient(circle, rgba(var(--cn1), 0.4) 0%, transparent 45%);
 }
 .particles .portfolio {
     min-width: 100%;
@@ -48,4 +47,20 @@
         width: 100%;
         margin: 0;
     }
+}
+
+@media (max-width: 800px)  {
+
+    .particles .about {
+        top: -20rem;
+        right: -20rem;
+    }
+
+    .particles .skills {
+        top: -15rem;
+        left: -15rem;
+    }
+    
+
+
 }

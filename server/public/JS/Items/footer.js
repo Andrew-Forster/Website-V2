@@ -143,7 +143,7 @@ function pullNextPage() {
         if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 && window.location.pathname !== "/portfolio") {
             let mediaQuery = window.matchMedia('(max-width: 800px)');
             if (mediaQuery.matches) {
-                pullText.style.transform = "translateY(-" + (80) + "px)";
+                pullText.style.transform = "translateY(-" + (110) + "px)";
             } else {
                 pullText.style.transform = "translateY(-" + (40) + "px)";
             }
