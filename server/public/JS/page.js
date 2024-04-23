@@ -160,6 +160,7 @@ async function awaitContentReplace() {
 
     setTimeout(function () {
         pullReload();
+        start(); // Run footer.js start function
         content.classList.remove("continue");
         content.classList.add("active");
         setBorderAnimationDelays(); // Set the border animation delays in utils.js
