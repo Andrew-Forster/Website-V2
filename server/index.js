@@ -10,6 +10,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Serve static files
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Page Links
 const pages = ['/', '/home', '/about', '/portfolio', '/skills'];
@@ -24,19 +26,10 @@ pages.forEach(page => {
   });
 });
 
-app.get('/v1', (req, res) => {
-  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-  res.setHeader('Pragma', 'no-cache');
-  res.setHeader('Expires', '0');
 
-  res.sendFile(path.join(__dirname, '/v1/index.html'));
-});
 
-// Serve static files for v1
-app.use('/v1', express.static(path.join(__dirname, '/v1')));
 
-// Serve static files
-app.use(express.static(path.join(__dirname, '/public')));
+
 
 // Routes
 app.use('/api/email', emailRoutes);
