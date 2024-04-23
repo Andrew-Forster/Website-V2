@@ -2,7 +2,6 @@ const reg = /[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}/;
 
 start();
 async function start() {
-    console.log("Footer started");
     await waitForElm('.copyright'); // Targets last element in the footer
     formFunction();
     pullNextPage();

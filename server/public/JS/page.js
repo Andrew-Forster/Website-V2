@@ -91,7 +91,7 @@ function instantContentReplace(page) {
 }
 let loadedScripts = []; // Array to store the loaded scripts
 
-function contentReplace(page) {
+async function contentReplace(page) {
     content.classList.remove("active");
     content.classList.add("continueAnim");
 
@@ -102,7 +102,7 @@ function contentReplace(page) {
         // Fetch the HTML content
         fetch(page)
             .then(response => response.text())
-            .then(data => {
+            .then(async data => {
                 content.innerHTML = data;
                 // Find script tags
                 let scripts = content.getElementsByTagName('script');
@@ -114,7 +114,7 @@ function contentReplace(page) {
 
                     if (src && !loadedScripts.includes(src)) {
                         // If script has a src attribute, load the external JavaScript file
-                        fetch(src)
+                        await fetch(src)
                             .then(response => response.text())
                             .then(scriptContent => {
                                 // Create a new function from the script content
@@ -135,12 +135,12 @@ function contentReplace(page) {
                         scriptFunction();
                     }
                 }
+                awaitContentReplace();
             })
             .catch(error => {
                 location.reload();
                 console.error('Error loading content:', error);
             });
-        awaitContentReplace();
     }
 
     // Add the event listener to trigger the function only once
