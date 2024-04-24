@@ -65,7 +65,8 @@ main .s1 {
     white-space: nowrap;
 }
 
-.exp h5, .exp p {
+.exp h5,
+.exp p {
     display: inline;
 }
 
@@ -170,6 +171,7 @@ main .s1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 6px;
 }
 
 .project-card h5 {
@@ -183,6 +185,7 @@ main .s1 {
     background-color: var(--gray);
     border-radius: 5px;
     padding: 0.5rem 1rem;
+    margin: 0 1rem 1rem 0;
 }
 
 .project-card.active {
@@ -236,6 +239,10 @@ main .s1 {
         height: 45px;
     }
 
+    .project-slider {
+        height: 180px;
+    }
+
     .top-group {
         flex-direction: column;
         max-height: 100%;
@@ -245,8 +252,3 @@ main .s1 {
         margin-left: 0;
     }
 }
-
-
-
-
-

@@ -125,12 +125,36 @@ textarea+.ph-text {
 }
 
 .footer .profession {
+    display: inline;
     margin: 1rem 0 0 2rem;
+}
+
+.footer .socials {
+    display: inline-flex;
+    float: right;
+    margin: 0 2rem 0 0;
+}
+
+.footer .socials a {
+    margin: 0 0 0 0.5rem;
+    transition-duration: 0.5s;
+    text-align: center;
+}
+
+.footer .line {
+    display: block;
+    width: calc(100% - 4rem);
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--font);
+    margin: 1.5rem 2rem 1rem 2rem;
 }
 
 .footer .copyright {
     margin: 1rem 0 8rem 2rem;
 }
+
+
 
 /* Form Response */
 
@@ -257,6 +281,24 @@ input:-webkit-autofill:active {
 
     .footer {
         height: 590px;
+    }
+
+    .footer .i {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .footer .socials {
+        position: absolute;
+        right: 0rem;
+        white-space: nowrap;
+        margin: 0 1rem 0 0;
+        translate: 0 5rem;
+    }
+
+    .footer .line {
+        width: calc(100% - 2rem);
+        margin: 1.5rem 1rem 1rem 1rem;
     }
 
     .footer h4 {
