@@ -62,6 +62,7 @@ main .s1 {
 
 .exp-cont {
     padding: 0 0 1.5rem 0;
+    white-space: nowrap;
 }
 
 .exp h5, .exp p {
