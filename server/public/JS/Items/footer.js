@@ -30,6 +30,10 @@ function formFunction() {
             ele.setAttribute("value", ele.value);
             validUser = true;
         });
+        ele.addEventListener("focusout", () => {
+            ele.setAttribute("value", ele.value);
+            validUser = true;
+        });
     });
 
     let submit = document.getElementById("submit");
