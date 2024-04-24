@@ -10,7 +10,7 @@
         <div onclick="loadContent('about')" class="card about">
             <div class="anim btn"></div> <!-- Animation for border -->
             <h6>About Me</h6>
-            <img class="i i-4" src="/Assets/SVGS/link.svg">
+            <img class="i i-4" src="/Assets/SVGS/link.svg" alt="">
         </div>
         <div class="card exp">
             <div class="anim"></div> <!-- Animation for border -->
@@ -31,7 +31,7 @@
     <div class="card">
         <div class="anim btn"></div> <!-- Animation for border -->
         <h4>Project Portfolio</h4>
-        <button class="bg-btn" onclick="loadContent('portfolio')">View</button>
+        <button aria-labelledby="View All Projects" class="bg-btn" onclick="loadContent('portfolio')">View</button>
         <div class="project-slider">
             <div class="project-card" id="1">
                 <img src="/Assets/Images/Project 1.png" alt="Project 1">
@@ -51,10 +51,10 @@
             </div>
         </div>
         <div class="project-nav">
-            <button class="active"><span></span></button>
-            <button class=""><span></span></button>
-            <button class=""><span></span></button>
-            <button class=""><span></span></button>
+            <button aria-label="Show Project 1" class="active"><span></span></button>
+            <button aria-label="Show Project 2" class=""><span></span></button>
+            <button aria-label="Show Project 3" class=""><span></span></button>
+            <button aria-label="Show Project 4" class=""><span></span></button>
         </div>
     </div>
 </div>

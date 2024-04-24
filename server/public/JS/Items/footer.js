@@ -102,7 +102,7 @@ function validEmail(email) {
 
 
 
-// Pull to next page
+// Pull to page
 
 let nextInterval;
 
@@ -117,9 +117,9 @@ let pullingVal = 0;
 let gotoVal = 0;
 let gtStrength = 6; // How hard you have to pull to go to the next page [PC]
 let gotoStrength = 15 // How hard you have to pull to go to the next page [Mobile]
+let changingPage = false;
 
 function pullNextPage() {
-    let body = document.querySelector("body");
     let pullEle = document.getElementById("pullEle");
     let pullText = document.getElementById("pullText");
     let main = document.querySelector("main");
@@ -153,7 +153,7 @@ function pullNextPage() {
     }, 100);
 
 
-    // Handle mobile pulling
+    // Handle mobile Pull To Page
 
     document.addEventListener("touchstart", touchStart);
     document.addEventListener("touchmove", touchMove);
@@ -235,6 +235,12 @@ function pullNextPage() {
 
     function pull(e) {
 
+        if (changingPage) {
+            pullingVal = 0;
+            gotoVal = 0;
+            return;
+        }
+
         if (time + 30 > Date.now()) {
             return;
         }
@@ -263,21 +269,28 @@ function pullNextPage() {
             pullingVal += 25;
             // pullText.style.transform = "translateY(-" + (0 + (pullingVal / 1.25)) + "px)";
             pullEle.style.transform = "translateY(-" + (0 + (pullingVal / 2.2)) + "px)";
-        } else if (e.deltaY > 0 && gotoVal < gtStrength) {
+        } else if (e.deltaY > 0 && gotoVal < gtStrength && changingPage === false) {
             gotoVal += 1;
+            console.log("gotoVal: " + gotoVal);
 
             if (gotoVal == gtStrength) {
+                changingPage = true;
                 pullEle.classList.add("bounce");
+                pullingVal = 0;
+                gotoVal = 0;
 
                 setTimeout(() => {
                     if (!pullEle) {
                         return;
                     }
                     document.removeEventListener("wheel", pull);
-
+                    document.removeEventListener("touchstart", touchStart);
+                    document.removeEventListener("touchmove", touchMove);
+                    document.removeEventListener("touchend", touchEnd);
+                    console.log("Next Page");
                     nextPage(window.location.pathname);
-                    pullingVal = 0;
-                    gotoVal = 0;
+                    
+                    changingPage = false;
                 }, 400);
             }
         }
@@ -309,8 +322,8 @@ function nextPage(page) {
             contentReplace(portfolio);
             break;
         case "/portfolio":
-            history.pushState({}, '', "/home");
-            location.reload();
+            // history.pushState({}, '', "/home");
+            // location.reload();
             break;
         default:
             history.pushState({}, '', page);

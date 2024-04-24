@@ -19,7 +19,7 @@ function btnFunctions() {
             }
 
             let page = btn.getAttribute("data-page");
-            if (page == "contact") {
+            if (page == "connect") {
                 return;
             }
             contentReplace(getLink(page));

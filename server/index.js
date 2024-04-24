@@ -26,6 +26,12 @@ pages.forEach(page => {
   });
 });
 
+// Connect Redirect
+
+app.get('/connect', (req, res) => {
+  res.redirect('https://www.linkedin.com/in/andrewjforster/');
+});
+
 
 // Routes
 app.use('/api/email', emailRoutes);

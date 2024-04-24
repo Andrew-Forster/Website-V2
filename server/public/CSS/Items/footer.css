@@ -197,15 +197,15 @@ input:-webkit-autofill:active {
 
 @keyframes scaleBounce {
     0% {
-        transform: translateY(-80px) rotate(0deg);
+        transform: translateY(-45px) rotate(0deg);
     }
 
     50% {
-        transform: translateY(-80px) rotate(359deg);
+        transform: translateY(-45px) rotate(359deg);
     }
 
     100% {
-        transform: translateY(-80px) rotate(360deg);
+        transform: translateY(-45px) rotate(360deg);
     }
 }
 

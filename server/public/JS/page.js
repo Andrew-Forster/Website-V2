@@ -1,5 +1,3 @@
-
-
 // Elements
 
 var content = document.querySelector('main');
