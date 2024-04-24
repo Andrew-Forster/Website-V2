@@ -19,7 +19,7 @@ const pages = ['/', '/home', '/about', '/portfolio', '/skills'];
 
 pages.forEach(page => {
   app.get(page, (req, res) => {
-    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.setHeader('Cache-Control', 'no-store');
     res.setHeader('Pragma', 'no-cache');
     res.setHeader('Expires', '0');
 
