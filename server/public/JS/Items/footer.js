@@ -116,8 +116,7 @@ function pullReload() {
 let pullingVal = 0;
 let gotoVal = 0;
 let gtStrength = 6; // How hard you have to pull to go to the next page [PC]
-let gotoStrength = 20 // How hard you have to pull to go to the next page [Mobile]
-let changingPage = false;
+let gotoStrength = 25 // How hard you have to pull to go to the next page [Mobile]
 
 function pullNextPage() {
     let pullEle = document.getElementById("pullEle");
@@ -167,14 +166,11 @@ function pullNextPage() {
     }
 
     function touchMove(e) {
-        if (window.location.pathname === "/portfolio") {
-            return;
-        }
-
-        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2) {
+        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 
+        && window.location.pathname !== "/portfolio"
+        && main.classList.contains("active")) {
             mobilePulling(e);
         }
-
     }
 
     function touchEnd(e) {
@@ -188,13 +184,6 @@ function pullNextPage() {
     }
 
     function mobilePulling(e) {
-
-        if (changingPage) {
-            pullingVal = 0;
-            gotoVal = 0;
-            return;
-        }
-
         let touchY = e.touches[0].clientY;
         let touchDiff = touchY - touchstartY;
         // Pull up
@@ -219,21 +208,19 @@ function pullNextPage() {
             gotoVal += 1;
 
             if (gotoVal == gotoStrength) {
-                changingPage = true;
                 pullEle.classList.add("bounce");
-                gotoVal = 0;
-                pullingVal = 0;
-
+                
                 setTimeout(() => {
                     if (!pullEle) {
                         return;
                     }
+                    gotoVal = 0;
+                    pullingVal = 0;
                     document.removeEventListener("touchstart", touchStart);
                     document.removeEventListener("touchmove", touchMove);
                     document.removeEventListener("touchend", touchEnd);
 
                     nextPage(window.location.pathname);
-                    changingPage = false;
                 }, 400);
             }
         }
@@ -243,23 +230,16 @@ function pullNextPage() {
     // Handle PC pulling
 
     function pull(e) {
-
-        if (changingPage) {
-            pullingVal = 0;
-            gotoVal = 0;
-            return;
-        }
-
         if (time + 30 > Date.now()) {
             return;
         }
 
-        if (window.location.pathname === "/portfolio") {
-            return;
-        }
         curPulling = true;
         time = Date.now();
-        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2) {
+
+        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 
+        && window.location.pathname !== "/portfolio"
+        && main.classList.contains("active")) {
             pulling(e);
         } else {
             pullingVal = 0;
@@ -278,26 +258,23 @@ function pullNextPage() {
             pullingVal += 25;
             // pullText.style.transform = "translateY(-" + (0 + (pullingVal / 1.25)) + "px)";
             pullEle.style.transform = "translateY(-" + (0 + (pullingVal / 2.2)) + "px)";
-        } else if (e.deltaY > 0 && gotoVal < gtStrength && changingPage === false) {
+        } else if (e.deltaY > 0 && gotoVal < gtStrength) {
             gotoVal += 1;
 
             if (gotoVal == gtStrength) {
-                changingPage = true;
                 pullEle.classList.add("bounce");
-                pullingVal = 0;
-                gotoVal = 0;
-
+                
                 setTimeout(() => {
                     if (!pullEle) {
                         return;
                     }
+                    pullingVal = 0;
+                    gotoVal = 0;
                     document.removeEventListener("wheel", pull);
-                    document.removeEventListener("touchstart", touchStart);
-                    document.removeEventListener("touchmove", touchMove);
-                    document.removeEventListener("touchend", touchEnd);
+
+                    console.log("Next Page");
                     nextPage(window.location.pathname);
                     
-                    changingPage = false;
                 }, 400);
             }
         }
