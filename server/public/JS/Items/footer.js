@@ -154,22 +154,16 @@ function pullNextPage() {
             curPulling = false;
             pullingVal = 0;
             gotoVal = 0;
-            pullEle.style.transform = "translateY(0)";
-            // pullText.style.transform = "translateY(0)";
+            pullEle.style.bottom = "-4rem";
             pullPaths.forEach((path) => {
                 path.style.strokeDashoffset = path.getAttribute("val");
             });
         }
 
         if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 && window.location.pathname !== "/portfolio") {
-            let mediaQuery = window.matchMedia('(max-width: 800px)');
-            if (mediaQuery.matches) {
-                pullText.style.transform = "translateY(-" + (65) + "px)";
-            } else {
-                pullText.style.transform = "translateY(-" + (40) + "px)";
-            }
+            pullText.classList.add("show");
         } else {
-            pullText.style.transform = "translateY(0)";
+            pullText.classList.remove("show");
         }
     }, 100);
 
@@ -198,8 +192,8 @@ function pullNextPage() {
     function touchEnd(e) {
         pullingVal = 0;
         gotoVal = 0;
-        pullEle.style.transform = "translateY(0)";
-        pullText.style.transform = "translateY(0)";
+        pullEle.style.bottom = "-4rem";
+        pullText.classList.remove("show");
         pullPaths.forEach((path) => {
             path.style.strokeDashoffset = path.getAttribute("val");
         });
@@ -212,17 +206,7 @@ function pullNextPage() {
 
         if (touchDiff < 0 && pullingVal < 100) {
             pullingVal += 30;
-            // pullText.style.transform = "translateY(-" + (50 + (pullingVal / 4)) + "px)";
-            pullEle.style.transform = "translateY(-" + (60 + (pullingVal / 13)) + "px)";
-            pullPaths.forEach((path) => {
-                path.style.strokeDashoffset = path.getAttribute("val") - (path.getAttribute("val") * (pullingVal / 100));
-            });
-        } // Pull down
-        else if (touchDiff > 0 && pullingVal > 40) {
-
-            pullingVal -= 10;
-            // pullText.style.transform = "translateY(-" + (0 + (pullingVal / 1.25)) + "px)";
-            pullEle.style.transform = "translateY(-" + (0 + (pullingVal / 1.25)) + "px)";
+            pullEle.style.bottom = "2.5rem";
             pullPaths.forEach((path) => {
                 path.style.strokeDashoffset = path.getAttribute("val") - (path.getAttribute("val") * (pullingVal / 100));
             });
@@ -231,6 +215,7 @@ function pullNextPage() {
 
             if (gotoVal == gotoStrength) {
                 pullEle.classList.add("bounce");
+                pullText.style.opacity = 0;
                 
                 setTimeout(() => {
                     if (!pullEle) {
@@ -279,12 +264,13 @@ function pullNextPage() {
         if (e.deltaY > 0 && pullingVal <= 75) { // Pulling down
             pullingVal += 25;
             // pullText.style.transform = "translateY(-" + (0 + (pullingVal / 1.25)) + "px)";
-            pullEle.style.transform = "translateY(-" + (0 + (pullingVal / 2.2)) + "px)";
+            pullEle.style.bottom = "2.5rem";
         } else if (e.deltaY > 0 && gotoVal < gtStrength) {
             gotoVal += 1;
 
             if (gotoVal == gtStrength) {
                 pullEle.classList.add("bounce");
+                pullText.style.opacity = 0;
                 
                 setTimeout(() => {
                     if (!pullEle) {

@@ -1,6 +1,9 @@
 {
 	"folders": [
 		{
+			"path": "../Website V2"
+		},
+		{
 			"path": "server/public"
 		},
 		{
@@ -9,9 +12,6 @@
 		{
 			"path": "server"
 		},
-		{
-			"path": "../Website V2"
-		}
 	],
 	"settings": {
 		"liveServer.settings.multiRootWorkspaceName": "public"
