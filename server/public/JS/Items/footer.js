@@ -116,7 +116,7 @@ function pullReload() {
 let pullingVal = 0;
 let gotoVal = 0;
 let gtStrength = 6; // How hard you have to pull to go to the next page [PC]
-let gotoStrength = 15 // How hard you have to pull to go to the next page [Mobile]
+let gotoStrength = 20 // How hard you have to pull to go to the next page [Mobile]
 let changingPage = false;
 
 function pullNextPage() {
@@ -188,6 +188,13 @@ function pullNextPage() {
     }
 
     function mobilePulling(e) {
+
+        if (changingPage) {
+            pullingVal = 0;
+            gotoVal = 0;
+            return;
+        }
+
         let touchY = e.touches[0].clientY;
         let touchDiff = touchY - touchstartY;
         // Pull up
@@ -212,6 +219,7 @@ function pullNextPage() {
             gotoVal += 1;
 
             if (gotoVal == gotoStrength) {
+                changingPage = true;
                 pullEle.classList.add("bounce");
                 gotoVal = 0;
                 pullingVal = 0;
@@ -225,6 +233,7 @@ function pullNextPage() {
                     document.removeEventListener("touchend", touchEnd);
 
                     nextPage(window.location.pathname);
+                    changingPage = false;
                 }, 400);
             }
         }
@@ -271,7 +280,6 @@ function pullNextPage() {
             pullEle.style.transform = "translateY(-" + (0 + (pullingVal / 2.2)) + "px)";
         } else if (e.deltaY > 0 && gotoVal < gtStrength && changingPage === false) {
             gotoVal += 1;
-            console.log("gotoVal: " + gotoVal);
 
             if (gotoVal == gtStrength) {
                 changingPage = true;
@@ -287,7 +295,6 @@ function pullNextPage() {
                     document.removeEventListener("touchstart", touchStart);
                     document.removeEventListener("touchmove", touchMove);
                     document.removeEventListener("touchend", touchEnd);
-                    console.log("Next Page");
                     nextPage(window.location.pathname);
                     
                     changingPage = false;
