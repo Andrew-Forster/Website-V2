@@ -22,6 +22,7 @@ pages.forEach(page => {
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('Pragma', 'no-cache');
     res.setHeader('Expires', '0');
+    res.setHeader('Clear-SiteData', 'cache')
 
     res.sendFile(path.join(__dirname, '/public/index.html'));
   });
