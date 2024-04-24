@@ -77,7 +77,7 @@ function formFunction() {
                             formRes.style.opacity = 1;
                             formRes.innerText = data.error || "An error occurred. Please reach out via the email provided in the footer.";
                             formRes.style.color = "var(--error)";
-                
+
                             console.log("Error: " + data.error);
                         }).catch((err) => {
                             console.error("Error parsing JSON response:", err);
@@ -160,7 +160,10 @@ function pullNextPage() {
             });
         }
 
-        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 && window.location.pathname !== "/portfolio") {
+        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 &&
+            window.location.pathname !== "/portfolio"
+            && main.classList.contains("active")
+        ) {
             pullText.classList.add("show");
         } else {
             pullText.classList.remove("show");
@@ -182,9 +185,9 @@ function pullNextPage() {
     }
 
     function touchMove(e) {
-        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 
-        && window.location.pathname !== "/portfolio"
-        && main.classList.contains("active")) {
+        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 &&
+            window.location.pathname !== "/portfolio" &&
+            main.classList.contains("active")) {
             mobilePulling(e);
         }
     }
@@ -216,11 +219,12 @@ function pullNextPage() {
             if (gotoVal == gotoStrength) {
                 pullEle.classList.add("bounce");
                 pullText.style.opacity = 0;
-                
+
                 setTimeout(() => {
                     if (!pullEle) {
                         return;
                     }
+                    pullEle.style.bottom = "-4rem";
                     gotoVal = 0;
                     pullingVal = 0;
                     document.removeEventListener("touchstart", touchStart);
@@ -244,9 +248,9 @@ function pullNextPage() {
         curPulling = true;
         time = Date.now();
 
-        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 
-        && window.location.pathname !== "/portfolio"
-        && main.classList.contains("active")) {
+        if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 &&
+            window.location.pathname !== "/portfolio" &&
+            main.classList.contains("active")) {
             pulling(e);
         } else {
             pullingVal = 0;
@@ -263,7 +267,6 @@ function pullNextPage() {
         let pullEle = document.getElementById("pullEle");
         if (e.deltaY > 0 && pullingVal <= 75) { // Pulling down
             pullingVal += 25;
-            // pullText.style.transform = "translateY(-" + (0 + (pullingVal / 1.25)) + "px)";
             pullEle.style.bottom = "2.5rem";
         } else if (e.deltaY > 0 && gotoVal < gtStrength) {
             gotoVal += 1;
@@ -271,19 +274,18 @@ function pullNextPage() {
             if (gotoVal == gtStrength) {
                 pullEle.classList.add("bounce");
                 pullText.style.opacity = 0;
-                
+
                 setTimeout(() => {
                     if (!pullEle) {
                         return;
                     }
+                    pullEle.style.bottom = "-4rem";
                     pullingVal = 0;
                     gotoVal = 0;
                     document.removeEventListener("wheel", pull);
-
-                    console.log("Next Page");
                     nextPage(window.location.pathname);
-                    
-                }, 400);
+
+                }, 500);
             }
         }
     }

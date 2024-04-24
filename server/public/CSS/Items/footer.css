@@ -157,10 +157,10 @@ input:-webkit-autofill:active {
 #pullEle {
     position: fixed;
     margin: 0 0 0 10vw;
-    bottom: -2rem;
+    bottom: -4rem;
     left: 50%;
     translate: -50% 0;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
 }
 
 #pullEle.bounce {
@@ -219,11 +219,14 @@ input:-webkit-autofill:active {
     bottom: -2rem;
     left: 50%;
     translate: -50% 0;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
+    opacity: 0;
 }
 
 #pullText.show {
+    translate: -50% 0;
     bottom: 0.7rem;
+    opacity: 1;
 }
 
 
