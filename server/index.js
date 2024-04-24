@@ -1,6 +1,7 @@
 const express = require('express')
 require('dotenv').config();
 const emailRoutes = require('./routes/email');
+const rateLimitMiddleware = require("./middlewares/ratelimit");
 const path = require('path');
 const app = express()
 const port = process.env.port || 3000;
@@ -34,7 +35,7 @@ app.get('/connect', (req, res) => {
 
 
 // Routes
-app.use('/api/email', emailRoutes);
+app.use('/api/email', rateLimitMiddleware, emailRoutes);
 
 
 // 404

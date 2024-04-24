@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 // Send email to self
 exports.sendEmail = (email, message) => {
   const mailOptions = {
-    from: process.env.email,
+    from: process.env.email_route,
     to: process.env.email, 
     subject: 'Website Contact Form',
     text: `${message} \n\n Sent from: ${email}`
@@ -30,7 +30,7 @@ exports.sendEmail = (email, message) => {
 
 exports.sendConfirmationEmail = (email, message) => {
   const mailOptions = {
-    from: process.env.email,
+    from: process.env.email_route,
     to: email,
     subject: 'We got your message!',
     text: `Hi there! \n\n I received your message and will get back to you as soon as possible. 

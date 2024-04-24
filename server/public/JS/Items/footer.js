@@ -18,12 +18,18 @@ async function start() {
 
 function formFunction() {
     let elem = document.querySelectorAll("input, textarea");
+    let validUser = false;
 
     elem.forEach((ele) => {
         ele.setAttribute("value", ele.value);
         ele.addEventListener("keyup", () => {
             ele.setAttribute("value", ele.value);
-        })
+            validUser = true;
+        });
+        ele.addEventListener("focus", () => {
+            ele.setAttribute("value", ele.value);
+            validUser = true;
+        });
     });
 
     let submit = document.getElementById("submit");
@@ -40,6 +46,10 @@ function formFunction() {
         } else if (!validEmail(email.value)) {
             formRes.style.opacity = 1;
             formRes.innerText = "Please enter a valid email";
+            formRes.style.color = "var(--error)";
+        } else if (!validUser) {
+            formRes.style.opacity = 1;
+            formRes.innerText = "Bot? Try refreshing the page.";
             formRes.style.color = "var(--error)";
         } else {
             let emailData = {
@@ -58,11 +68,19 @@ function formFunction() {
                     if (res.ok) {
                         formSuccess();
                     } else {
-                        formRes.style.opacity = 1;
-                        formRes.innerText = "An error occurred. Please reach out via the email provided in the footer.";
-                        formRes.style.color = "var(--error)";
-
-                        console.log("Error: " + res);
+                        // Parse the error message from the response body
+                        res.json().then((data) => {
+                            formRes.style.opacity = 1;
+                            formRes.innerText = data.error || "An error occurred. Please reach out via the email provided in the footer.";
+                            formRes.style.color = "var(--error)";
+                
+                            console.log("Error: " + data.error);
+                        }).catch((err) => {
+                            console.error("Error parsing JSON response:", err);
+                            formRes.style.opacity = 1;
+                            formRes.innerText = "An error occurred. Please reach out via the email provided in the footer.";
+                            formRes.style.color = "var(--error)";
+                        });
                     }
                 })
                 .catch((err) => {
