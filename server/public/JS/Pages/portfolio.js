@@ -51,14 +51,14 @@ function projects() {
 
 
 function toggleProject(project) {
-    let closeproject = document.querySelector('.close-project');
+    let closeProject = document.querySelector('.close-project');
     let projectCover = document.querySelector('.project-cover');
     let button = project.querySelector('a button');
 
     project.classList.toggle('active');
-    closeproject.classList.toggle('active');
+    closeProject.classList.toggle('active');
     projectCover.classList.toggle('active');
-    button.innerText = project.classList.contains('active') ? 'Project Link' : 'View';
+    button.innerText = project.classList.contains('active') ? 'Link' : 'View';
 }
 
 function projectClose(projects) {
