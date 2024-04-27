@@ -6,6 +6,9 @@ exports.sendEmail = (req, res) => {
   const email = req.body.email;
   const message = req.body.message;
 
+  console.log('Email:', email);
+  console.log('Message:', message);
+
   // Send email using email service
   emailService.sendEmail(email, message)
     .then(() => {
