@@ -15,6 +15,13 @@ async function start() {
     }
 }
 
+// Footer Year
+
+let date = new Date();
+let year = date.getFullYear();
+let copyright = document.querySelector(".copyright");
+copyright.innerText = `© ${year} All Rights Reserved`;
+
 
 function formFunction() {
     let elem = document.querySelectorAll("input, textarea");
