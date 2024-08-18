@@ -13,14 +13,15 @@ async function start() {
         //     sendAlert("This browser does not support @property", "Read more here", "property", false, 1);
         // }
     }
+
+    // Footer Year
+
+    let date = new Date();
+    let year = date.getFullYear();
+    let copyright = document.querySelector(".copyright");
+    copyright.innerText = `© ${year} All Rights Reserved`;
 }
 
-// Footer Year
-
-let date = new Date();
-let year = date.getFullYear();
-let copyright = document.querySelector(".copyright");
-copyright.innerText = `© ${year} All Rights Reserved`;
 
 
 function formFunction() {
@@ -168,8 +169,8 @@ function pullNextPage() {
         }
 
         if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 &&
-            window.location.pathname !== "/portfolio"
-            && main.classList.contains("active")
+            window.location.pathname !== "/portfolio" &&
+            main.classList.contains("active")
         ) {
             pullText.classList.add("show");
         } else {
