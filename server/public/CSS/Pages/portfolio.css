@@ -203,22 +203,22 @@
 
 /* Tag Colors */
 
-/* Completed */
+/* C0 - Completed */
 .project-tag.c0 {
     background-color: var(--green);
 }
 
-/* Nearing Completion */
+/* C1 - Nearing Completion */
 .project-tag.c1 {
     background-color: var(--c1);
 }
 
-/* Under Development */
+/* C2 - Under Development */
 .project-tag.c2 {
     background-color: var(--c2);
 }
 
-/* Dropped */
+/* C3 - Dropped */
 .project-tag.c3 {
     background-color: var(--error);
 }
