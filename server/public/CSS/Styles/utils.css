@@ -8,6 +8,55 @@ Website V2
     --angle: 0deg;
 }
 
+/* For Compressed Images */
+
+.pre-render {
+    opacity: 0;
+    transition-duration: 2s;
+}
+
+.loaded>.pre-render {
+    opacity: 1;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    filter: blur(5px);
+    opacity: 1;
+    /* Ensure full opacity */
+    z-index: -1;
+}
+
+.navimg-cont::before {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-image: url('/Assets/Images/MeCompressed.jpg');
+
+}
+
+@media (max-width: 1170px) {
+    .navimg-cont::before {
+        width: 5rem;
+        height: 5rem;
+        margin: 0 2rem 0 1rem;
+    }
+}
+
+.loaded::before {
+    opacity: 0;
+    transition: 2s;
+}
+
 /* ----- */
 /* Cards */
 /* ----- */
@@ -76,12 +125,12 @@ Website V2
         }
     }
 
-    
-    @media (min-width: 800px) {     
+
+    @media (min-width: 800px) {
         .card:hover .anim {
             opacity: 1;
         }
-    
+
         .card-g:hover .anim {
             opacity: 1;
         }
@@ -91,11 +140,11 @@ Website V2
         .card .anim.btn {
             opacity: 1;
         }
-    
+
         .card-g .anim.btn {
             opacity: 1;
         }
-        
+
     }
 
 }

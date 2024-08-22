@@ -9,17 +9,21 @@
 }
 
 .abt-img {
-    width: calc(100% - 4rem);
-    height: 300px;
     object-fit: cover;
     border-radius: 3px;
+    height: 300px;
+    width: 100%;
     margin: 1.5rem 2rem 0 2rem;
+    width: calc(100% - 4rem);
+}
+
+.abt-cont {
+    min-height: 300px;
 }
 
 .abt-text {
     margin: 2rem 3rem;
 }
-
 
 
 

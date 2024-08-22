@@ -23,13 +23,19 @@ aside .focus {
     position: relative;
 }
 
-aside .focus img {
+.side-img {
     width: 14rem;
     height: 14rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    transition-duration: 0.5s;
+    transition-duration: 2s;
+}
+
+.navimg-cont {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 0.5rem;
 }
 
 aside nav {
@@ -174,6 +180,11 @@ aside nav button:hover {
         height: 100%;
     }
 
+    .focus button {
+        display: flex;
+        align-items: center;
+    }
+
     aside .focus img {
         width: 5rem;
         height: 5rem;
@@ -183,6 +194,7 @@ aside nav button:hover {
     aside .focus h5 {
         font-size: 2.4rem;
         margin: 0 0 0 0;
+        display: inline-block;
     }
 
     aside nav {

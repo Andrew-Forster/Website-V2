@@ -4,8 +4,12 @@
 <!-- Side Nav / Nav -->
 
 <div class="focus">
-    <img src="/Assets/Images/Me.jpg" alt="Image of Me">
-    <h5>Andrew Forster</h5>
+    <button title="Home" data-page="home">
+        <div class="img-container navimg-cont">
+            <img class="pre-render side-img" loading="lazy" src="/Assets/Images/Me.jpg" alt="Image of Me">
+        </div>
+        <h5>Andrew Forster</h5>
+    </button>
     <div id="nav-icon">
         <span></span>
         <span></span>
@@ -15,16 +19,17 @@
 <nav id="nav" aria-expanded="true">
     <!-- Nav Bg for mobile -->
     <ul>
-        <li class="onload-shift animation-delay0_3"><button title="Home" data-page="home"><img class="i"
-                        src="/Assets/SVGS/home.svg" alt=""> Home</button></li>
-        <li class="onload-shift animation-delay0_4"><button title="About" data-page="about"><img class="i"
-                        src="/Assets/SVGS/about.svg" alt=""> About</button></li>
-        <li class="onload-shift animation-delay0_5"><button title="Skills" data-page="skills"><img class="i"
-                        src="/Assets/SVGS/skills.svg" alt=""> Skills</button></li>
-        <li class="onload-shift animation-delay0_6"><button title="Portfolio" data-page="portfolio"><img class="i"
-                        src="/Assets/SVGS/portfolio.svg" alt=""> Portfolio</button></li>
-        <li class="onload-shift animation-delay0_7"><a href="https://andrewjf.com/connect" target="_blank" aria-label="Connect (Opens New Tab)"><button title="Connect" data-page="connect"><img class="i"
-                        src="/Assets/SVGS/connect.svg"  alt=""> Connect</button></a></li>
+        <li class="active animation-delay0_3 animation-duration0_5 onload-shift"><button title="Home" data-page="home"><img class="i"
+                    src="/Assets/SVGS/home.svg" alt=""> Home</button></li>
+        <li class="active animation-delay0_4 animation-duration0_5 onload-shift"><button title="About" data-page="about"><img class="i"
+                    src="/Assets/SVGS/about.svg" alt=""> About</button></li>
+        <li class="active animation-delay0_5 animation-duration0_5 onload-shift"><button title="Skills" data-page="skills"><img class="i"
+                    src="/Assets/SVGS/skills.svg" alt=""> Skills</button></li>
+        <li class="active animation-delay0_6 animation-duration0_5 onload-shift"><button title="Portfolio" data-page="portfolio"><img class="i"
+                    src="/Assets/SVGS/portfolio.svg" alt=""> Portfolio</button></li>
+        <li class="active animation-delay0_7 animation-duration0_5 onload-shift"><a href="https://andrewjf.com/connect" target="_blank"
+                aria-label="Connect (Opens New Tab)"><button title="Connect" data-page="connect"><img class="i"
+                        src="/Assets/SVGS/connect.svg" alt=""> Connect</button></a></li>
     </ul>
 </nav>
 <div class="nav-bg"></div>
