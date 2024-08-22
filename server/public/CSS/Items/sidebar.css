@@ -183,6 +183,7 @@ aside nav button:hover {
     .focus button {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     aside .focus img {
