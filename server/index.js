@@ -33,6 +33,11 @@ app.get('/connect', (req, res) => {
   res.redirect('https://www.linkedin.com/in/andrewjforster/');
 });
 
+// Github Redirect
+app.get(['/github', 'gh', 'git'], (req, res) => {
+  res.redirect('https://andrewjf.com/github');
+});
+
 
 // Routes
 app.use('/api/email', rateLimitMiddleware, emailRoutes);
