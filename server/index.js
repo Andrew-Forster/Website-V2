@@ -34,7 +34,7 @@ app.get('/connect', (req, res) => {
 });
 
 // Github Redirect
-app.get(['/github', '/gh', '/git'], (req, res) => {
+app.get('/github', (req, res) => {
   res.redirect('https://andrewjf.com/github');
 });
 
