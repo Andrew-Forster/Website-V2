@@ -9,6 +9,10 @@ const portfolio = "/HTML/Pages/portfolio.html";
 document.addEventListener("DOMContentLoaded", async () => {
     await waitForElm(".nav-bg");
     transitionImages();
+
+    if (window.location.pathname.includes(".html")) {
+      window.location.pathname = "/";
+    }
 });
 
 // Transition Images
