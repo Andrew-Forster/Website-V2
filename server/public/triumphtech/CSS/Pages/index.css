@@ -1,0 +1,226 @@
+/* Reusable's*/
+
+.btn-custom {
+    border: 2px solid #333;
+    font-weight: 100;
+    padding: 0.5rem 2rem;
+    margin: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-custom:hover {
+    transform: translate(5px, -5px);
+    transition: 0.3s;
+}
+
+.btn-custom::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 1s;
+}
+
+.btn-custom:hover::before {
+    transform: translate(-5px, 5px);
+    transition: 0.3s;
+    border-color: #333;
+}
+
+/* Section 1 */
+
+.main-cont {
+    margin-bottom: 20vw;
+}
+
+.main-img {
+    min-width: 100%;
+    filter: brightness(0.8);
+}
+
+.person-img {
+    width: 40%;
+    aspect-ratio: 1/1;
+    object-position: 0 0;
+}
+
+.main-child {
+    width: 30%;
+}
+
+.mc-text {
+    letter-spacing: 2.5px;
+    padding: 0 10%;
+}
+
+/* Section 2 */
+
+.s2 > .container {
+    max-width: 550px;
+    align-self: center;
+}
+
+.s2 > .container h2 {
+    font-weight: 900;
+}
+
+.s2 > .container h6 {
+    font-weight: 900;
+    word-spacing: 0.2rem;
+}
+
+.s2 > .container p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.s2-img {
+    max-height: 550px;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+}
+
+/* Section 3 */
+
+.s3 p {
+    font-size: 0.9rem;
+    max-width: 520px;
+}
+
+.s3 .card {
+    background-color: transparent;
+    color: white;
+}
+
+.s3 .card img {
+    /* invert color of SVGS from black to white */
+    filter: invert(1);
+    max-width: 100px;
+}
+
+.s3 .card p {
+    max-width: 220px;
+}
+
+/* Section 4 */
+
+.s4-img {
+    aspect-ratio: 7/8;
+    max-height: 500px;
+    width: 40%;
+}
+
+.s4-svg {
+    max-height: 100px;
+}
+
+/* Media Queries */
+
+/* LG */
+@media (max-width: 991.98px) {
+
+    /* Section 1 */
+
+    .s1 {
+        margin-bottom: 0rem;
+    }
+
+
+    /* Section 2 */
+
+    .s2-img {
+        max-width: none;
+        width: 100%;
+        aspect-ratio: 2/1;
+        margin: 2rem 0 !important;
+    }
+
+}
+
+/* MD */
+
+@media (max-width: 767.98px) {
+    .s1, .s2, .s3, .s4 {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    /* Section 1 */
+
+    .main-cont {
+        margin-bottom: 100px;
+    }
+
+    .s1 {
+        position: relative !important;
+        max-width: 400px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .main-img {
+        height: 300px;
+    }
+
+    .s1 div {
+        height: auto !important;
+        margin-bottom: 5rem;
+    }
+
+    .s1-container {
+        position: static !important;
+        margin: 0 0 0 0 !important;
+    }
+
+    .s1-container img {
+        width: 50%;
+        max-height: 200px;
+        align-self: center !important;
+        position: absolute;
+        top: 150px;
+        
+    }
+
+    div.main-child {
+        width: 100%;
+        height: 200px;
+        padding: 3rem 0 3rem;
+        margin: 0 0 0 0;
+    }
+
+    /* Section 2 */
+
+    .s2 {
+        max-width: 400px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .s2 img {
+        aspect-ratio: 1/1;
+        align-self: center;
+    }
+
+    /* Section 4 */
+
+    .s4 {
+        max-width: 400px;
+
+    }
+
+    .s4-img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        margin: 2rem 0 !important;
+    }
+
+    .s4-svg {
+        max-height: 150px;
+    }
+}

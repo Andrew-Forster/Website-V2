@@ -39,10 +39,10 @@ app.get(['/github', '/gh', '/git'], (req, res) => {
   res.redirect('https://github.com/Andrew-Forster');
 });
 
-app.use('/triumphtech', express.static(path.join(__dirname, '/public/Triumph Tech Web Project')));
+app.use('/triumphtech', express.static(path.join(__dirname, '/public/triumphtech')));
 
 app.get('/triumphtech', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/Triumph Tech Web Project/index.html'));
+  res.sendFile(path.join(__dirname, '/public/triumphtech/index.html'));
 });
 
 
