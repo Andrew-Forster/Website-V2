@@ -1,9 +1,11 @@
 const express = require('express')
+const vhost = require('vhost');
 require('dotenv').config();
 const emailRoutes = require('./routes/email');
 const rateLimitMiddleware = require("./middlewares/ratelimit");
 const path = require('path');
 const app = express()
+const triumphtech = express();
 const port = process.env.port || 3000;
 
 
@@ -44,6 +46,16 @@ app.use('/triumphtech', express.static(path.join(__dirname, '/public/triumphtech
 app.get('/triumphtech', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/triumphtech/index.html'));
 });
+
+// Subdomain
+
+triumphtech.use(vhost('triumphtech.andrewjf.com', express.static(path.join(__dirname, '/public/triumphtech'))));
+
+triumphtech.get('/', (req, res) => {
+
+  res.sendFile(path.join(__dirname, '/public/triumphtech/index.html'));
+});
+
 
 
 // Routes

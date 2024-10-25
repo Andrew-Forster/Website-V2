@@ -16,7 +16,8 @@
     "express": "^4.21.0",
     "express-rate-limit": "^7.2.0",
     "nodemailer": "^6.9.13",
-    "server": "file:"
+    "server": "file:",
+    "vhost": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
