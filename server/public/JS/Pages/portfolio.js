@@ -53,12 +53,15 @@ function projects() {
 function toggleProject(project) {
     let closeProject = document.querySelector('.close-project');
     let projectCover = document.querySelector('.project-cover');
-    let button = project.querySelector('a button');
+    let button = project.querySelector('.main-btn button');
 
     project.classList.toggle('active');
     closeProject.classList.toggle('active');
     projectCover.classList.toggle('active');
-    button.innerText = project.classList.contains('active') ? 'Link' : 'View';
+
+    // Get html data
+    let btnText = button.getAttribute('data-changes-to') || 'Link';
+    button.innerText = project.classList.contains('active') ? btnText : 'View';
 }
 
 function projectClose(projects) {

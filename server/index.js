@@ -2,7 +2,8 @@ const express = require('express')
 const vhost = require('vhost');
 require('dotenv').config();
 const emailRoutes = require('./routes/email');
-const rateLimitMiddleware = require("./middlewares/ratelimit");
+const minesweeperRoutes = require('./routes/minesweeper');
+const { rateLimitMiddleware, rateLimitTime } = require('./middlewares/ratelimit');
 const path = require('path');
 const app = express()
 const triumphtech = express();
@@ -60,6 +61,8 @@ triumphtech.get('/', (req, res) => {
 
 // Routes
 app.use('/api/email', rateLimitMiddleware, emailRoutes);
+app.use('/api/minesweeper', rateLimitTime(5), minesweeperRoutes);
+
 
 
 // 404

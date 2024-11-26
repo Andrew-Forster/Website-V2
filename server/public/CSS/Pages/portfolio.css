@@ -56,7 +56,7 @@
     transform: translate(0, -3px);
 }
 
-.banner a {
+.banner .main-btn {
     position: absolute;
     pointer-events: none;
     right: 1.5rem;
@@ -115,7 +115,7 @@
     margin: 0 2rem;
 }
 
-.project.active .banner a {
+.project.active .banner .main-btn {
     right: 2rem;
     bottom: 100%;
     top: 2rem;
