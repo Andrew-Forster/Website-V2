@@ -197,10 +197,10 @@ Website V2
     }
 
     .card-g {
-        width: calc(100% - 4rem);
+        width: calc(100% - 4rem - 3rem);
 
-        margin-left: 0;
-        margin-right: 0;
+        /* margin-left: 0;
+        margin-right: 0; */
     }
 
     .card {

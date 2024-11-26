@@ -27,6 +27,10 @@
     border-radius: 3px;
 }
 
+.skills-cont {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 
 
 
@@ -36,4 +40,7 @@
         font-size: 1.5rem;
     }
     
+    div.skills-cont {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

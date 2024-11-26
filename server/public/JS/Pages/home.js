@@ -11,6 +11,7 @@ async function start() {
   await waitForElm(".bottom-group");
   carousel();
   endFunctions = false;
+  setYearsOfExperience();
 }
 
 function deleteInterval() {
@@ -31,6 +32,18 @@ function checkHome() {
   } else {
     return false;
   }
+}
+
+function setYearsOfExperience() {
+  let date = new Date();
+  let startMonth = 9;
+  let startYear = 2023;
+  let monthDiff = date.getMonth() + 1 - startMonth;
+  let years = date.getFullYear() - startYear;
+  if (monthDiff > 6) {
+    years++;
+  }
+  document.getElementById("yearsOfExp").textContent = `${years}+`;
 }
 
 // Projects Carousel Slider
