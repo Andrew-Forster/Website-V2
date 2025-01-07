@@ -7,7 +7,7 @@ const { rateLimitMiddleware, rateLimitTime } = require('./middlewares/ratelimit'
 const path = require('path');
 const app = express()
 const triumphtech = express();
-const port = process.env.port || 3000;
+const port = process.env.port || 5000;
 
 
 // Middleware
@@ -47,16 +47,6 @@ app.use('/triumphtech', express.static(path.join(__dirname, '/public/triumphtech
 app.get('/triumphtech', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/triumphtech/index.html'));
 });
-
-// Subdomain
-
-triumphtech.use(vhost('triumphtech.andrewjf.com', express.static(path.join(__dirname, '/public/triumphtech'))));
-
-triumphtech.get('/', (req, res) => {
-
-  res.sendFile(path.join(__dirname, '/public/triumphtech/index.html'));
-});
-
 
 
 // Routes
