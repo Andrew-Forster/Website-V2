@@ -8,14 +8,6 @@
     opacity: 1;
 }
 
-
-
-
-
-
-
-
-
 .card-g {
     padding: 0 0 0 0;
     width: calc(100% - 3rem);
@@ -94,7 +86,7 @@
 }
 
 
-.project.active img {
+.project.active > img {
     height: 40%;
     width: 100%;
     object-fit: cover;
@@ -197,7 +189,7 @@
 }
 
 .project.active .project-tag {
-    display: inline;
+    display: inline-block;
 }
 
 
@@ -222,6 +214,58 @@
 .project-tag.c3 {
     background-color: var(--error);
 }
+
+
+
+/* Tech Stack */
+
+.stack {
+    display: flex;
+    gap: 0.7rem;
+    transition-duration: 0.3s;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.project.active .stack {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    height: auto;
+    padding: 10px 20px;
+}
+
+.stack .i {
+    transition-duration: 0.3s;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.stack .i:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(1.15);
+}
+
+.tooltip {
+    position: absolute;
+    background-color: var(--gray);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--font);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+
 
 
 
@@ -254,12 +298,13 @@
         display: block;
     }
 
-    .project-tag {
-        margin: 0 0 2rem 2rem;
-    }
-
     .project.active .banner a {
         top: 1rem;
+    }
+
+    .project.active .project-tag {
+        margin: 10px 20px;
+        display: block;
     }
 
     .close-project {
@@ -267,6 +312,5 @@
         top: 2.2rem;
         right: 6.5rem;
     }
-
 
 }

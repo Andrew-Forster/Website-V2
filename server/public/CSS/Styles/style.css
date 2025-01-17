@@ -8,6 +8,11 @@ html {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+.i-2 {
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
 .i {
     width: 3rem;
     height: 3rem;
@@ -155,6 +160,11 @@ button {
     padding: 0 !important;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 800px) {
     h1 {
         font-size: 3.8rem;
@@ -210,5 +220,10 @@ button {
 
     label {
         font-size: 1.4rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
