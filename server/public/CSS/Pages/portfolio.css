@@ -240,10 +240,10 @@
 .stack .i {
     transition-duration: 0.3s;
     -webkit-user-drag: none;
-    user-select: none;
+    -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    -ms-user-select: none;
+    user-select: none;
 }
 
 .stack .i:hover {

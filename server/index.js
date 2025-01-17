@@ -21,13 +21,6 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Page Links
 const pages = ['/', '/home', '/about', '/portfolio', '/skills'];
 
-app.use((req, res, next) => {
-  if (req.url.match(/\.(css|js)$/)) {
-    req.url += `?v=1.2.0`; // Append a timestamp as the cache buster
-  }
-  next();
-});
-
 pages.forEach(page => {
   app.get(page, (req, res) => {
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
