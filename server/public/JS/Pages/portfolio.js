@@ -99,6 +99,10 @@ function tooltip() {
       showTooltip();
     });
 
+    img.addEventListener("touchmove", () => {
+      tooltip.style.opacity = 1;
+    });
+
     img.addEventListener("touchend", () => {
       tooltip.style.opacity = 0;
     });
