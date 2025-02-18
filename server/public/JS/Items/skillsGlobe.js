@@ -107,21 +107,24 @@ let closestSprite = null;
 let closestSpriteDistance = Infinity;
 let closestSpriteData = {};
 
+let animationFrameId;
+let scene, camera, renderer, controls;
+
 function setupGlobe() {
   const globeContainer = document.getElementById("globe");
   const { width, height } = globeContainer.getBoundingClientRect();
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
   camera.position.z = 150;
   const ambientLight = new THREE.AmbientLight(0xffffff, 1);
   scene.add(ambientLight);
 
-  const renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer();
   renderer.setClearColor(0x000000, 0);
   renderer.setSize(width, height);
   globeContainer.appendChild(renderer.domElement);
 
-  const controls = new OrbitControls(camera, renderer.domElement);
+  controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true; // Smooth dragging
   controls.enableZoom = false;
 
@@ -172,7 +175,12 @@ function setupGlobe() {
   });
 
   function animate() {
-    requestAnimationFrame(animate);
+    if (window.location.pathname !== "/about") {
+      stopGlobe();
+      return;
+    }
+
+    animationFrameId = requestAnimationFrame(animate);
 
     // Slow spin when not hovered
     if (!isHovered) {
@@ -254,6 +262,31 @@ function updateGlobeInfo(closestSpriteData) {
   }, 500);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  startGlobe();
-});
+function stopGlobe() {
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
+  }
+
+  if (renderer) {
+    renderer.dispose();
+  }
+
+  if (controls) {
+    controls.dispose();
+  }
+
+  const globeContainer = document.getElementById("globe");
+  if (globeContainer) {
+    globeContainer.innerHTML = "";
+  }
+
+  scene = null;
+  camera = null;
+  renderer = null;
+  controls = null;
+}
+
+// To be used in other scripts
+window.startGlobe = startGlobe;
+window.stopGlobe = stopGlobe;

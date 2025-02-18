@@ -14,11 +14,10 @@ window.addEventListener("popstate", () => {
 function manageNavigation(page) {
   switch (page) {
     case "/home":
-      contentReplace(home);
+      instantContentReplace(home);
       break;
     case "/about":
       contentReplace(about);
-      startGlobe()
       break;
     // case "/skills":
     //   contentReplace(skills);
@@ -89,6 +88,9 @@ let loadedScripts = []; // Array to store the loaded scripts
 async function contentReplace(page) {
   content.classList.remove("active");
   content.classList.add("continueAnim");
+  if (page == getLink("about")) {
+    stopGlobe();
+  }
 
   function handleAnimationEnd() {
     // Remove the event listener to prevent it from being triggered again
@@ -147,7 +149,7 @@ async function contentReplace(page) {
             } catch {}
           }
         }
-        awaitContentReplace();
+        awaitContentReplace(page);
       })
       .catch((error) => {
         location.reload();
@@ -159,7 +161,7 @@ async function contentReplace(page) {
   content.addEventListener("animationend", handleAnimationEnd);
 }
 
-async function awaitContentReplace() {
+async function awaitContentReplace(page) {
   content.classList.remove("continueAnim");
   scrollTo(0, 0);
   setTimeout(function () {
@@ -172,5 +174,8 @@ async function awaitContentReplace() {
     content.classList.remove("continue");
     content.classList.add("active");
     setBorderAnimationDelays(); // Set the border animation delays in utils.js
+    if (page == getLink("about")) {
+      startGlobe();
+    }
   }, 1000);
 }

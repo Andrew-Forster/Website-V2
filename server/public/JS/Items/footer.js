@@ -317,7 +317,7 @@ function nextPage(page) {
             break;
         case "/about":
             history.pushState({}, '', "/portfolio");
-            contentReplace(skills);
+            contentReplace(portfolio);
             break;
         // case "/skills":
         //     history.pushState({}, '', "/portfolio");
