@@ -34,11 +34,11 @@ const imagePaths = [
     description:
       "A modern, object-oriented programming language developed by Microsoft.",
   },
-  {
-    path: "/Assets/Stack/dbd.png",
-    title: "Discord Bot Designer",
-    description: "A visual programming language for creating bots on Discord.",
-  },
+  // {
+  //   path: "/Assets/Stack/dbd.png",
+  //   title: "Discord Bot Designer",
+  //   description: "A visual programming language for creating bots on Discord.",
+  // },
   {
     path: "/Assets/Stack/do.svg",
     title: "DigitalOcean",
