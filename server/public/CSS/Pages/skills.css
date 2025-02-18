@@ -32,14 +32,11 @@
 }
 
 
-
-
-
 @media (max-width: 800px) {
     .skill h6 {
         font-size: 1.5rem;
     }
-    
+
     div.skills-cont {
         grid-template-columns: repeat(2, 1fr);
     }

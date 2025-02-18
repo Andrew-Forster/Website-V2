@@ -4,36 +4,25 @@ var content = document.querySelector("main");
 var container = document.createElement("div");
 
 window.onload = function () {
-  switch (window.location.pathname) {
-    case "/home":
-      instantContentReplace(home);
-      break;
-    case "/about":
-      instantContentReplace(about);
-      break;
-    case "/skills":
-      instantContentReplace(skills);
-      break;
-    case "/portfolio":
-      instantContentReplace(portfolio);
-      break;
-    default:
-      instantContentReplace(home);
-      break;
-  }
+  manageNavigation(window.location.pathname);
 };
 
 window.addEventListener("popstate", () => {
-  switch (window.location.pathname) {
+  manageNavigation(window.location.pathname);
+});
+
+function manageNavigation(page) {
+  switch (page) {
     case "/home":
       contentReplace(home);
       break;
     case "/about":
       contentReplace(about);
+      startGlobe()
       break;
-    case "/skills":
-      contentReplace(skills);
-      break;
+    // case "/skills":
+    //   contentReplace(skills);
+    //   break;
     case "/portfolio":
       contentReplace(portfolio);
       break;
@@ -41,7 +30,8 @@ window.addEventListener("popstate", () => {
       contentReplace(home);
       break;
   }
-});
+};
+
 
 function instantContentReplace(page) {
   fetch(page)

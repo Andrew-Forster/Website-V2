@@ -316,13 +316,13 @@ function nextPage(page) {
             contentReplace(about);
             break;
         case "/about":
-            history.pushState({}, '', "/skills");
+            history.pushState({}, '', "/portfolio");
             contentReplace(skills);
             break;
-        case "/skills":
-            history.pushState({}, '', "/portfolio");
-            contentReplace(portfolio);
-            break;
+        // case "/skills":
+        //     history.pushState({}, '', "/portfolio");
+        //     contentReplace(portfolio);
+        //     break;
         case "/portfolio":
             // history.pushState({}, '', "/home");
             // location.reload();
