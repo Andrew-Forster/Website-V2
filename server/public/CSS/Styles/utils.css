@@ -20,7 +20,7 @@ Website V2
 
 #globe {
     max-width: 400px;
-    width: 100%;
+    width: calc(100% - 40px);
     height: 300px;
     cursor: grab;
     border-radius: 50%;
@@ -56,8 +56,9 @@ Website V2
     }
 
     #globe-info {
-        width: 100%;
-        margin: 0 0 0 20px;
+        width: calc(100% - 40px);
+        padding: 0 0 0 20px;
+        min-height: 155px;
     }
 }
 

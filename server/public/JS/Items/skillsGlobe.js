@@ -115,11 +115,12 @@ function setupGlobe() {
   const { width, height } = globeContainer.getBoundingClientRect();
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-  camera.position.z = 150;
+  camera.position.z = 9;
   const ambientLight = new THREE.AmbientLight(0xffffff, 1);
   scene.add(ambientLight);
 
   renderer = new THREE.WebGLRenderer();
+  renderer.toneMapping = THREE.NoToneMapping;
   renderer.setClearColor(0x000000, 0);
   renderer.setSize(width, height);
   globeContainer.appendChild(renderer.domElement);
@@ -128,7 +129,7 @@ function setupGlobe() {
   controls.enableDamping = true; // Smooth dragging
   controls.enableZoom = false;
 
-  const radius = 75;
+  const radius = 5;
   const amount = imagePaths.length;
   const sprites = [];
 
@@ -142,9 +143,12 @@ function setupGlobe() {
 
     const texture = new THREE.TextureLoader().load(path.path);
     texture.encoding = THREE.SRGBEncoding;
-    const material = new THREE.SpriteMaterial({ map: texture });
+    const material = new THREE.SpriteMaterial({
+      map: texture,
+      toneMapped: false,
+    });
     const sprite = new THREE.Sprite(material);
-    sprite.scale.set(20, 20, 1);
+    // sprite.scale.set(20, 20, 1);
 
     sprite.position.set(x, y, z);
     scene.add(sprite);
