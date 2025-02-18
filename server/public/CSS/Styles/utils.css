@@ -57,7 +57,8 @@ Website V2
 
     #globe-info {
         width: calc(100% - 40px);
-        padding: 0 0 0 20px;
+        padding: 0;
+        margin: 0;
         min-height: 155px;
     }
 }
