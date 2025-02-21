@@ -8,6 +8,16 @@ const imagePaths = [
     description: "A front-end framework for building responsive websites.",
   },
   {
+    path: "/Assets/Stack/spring.svg",
+    title: "Spring Boot",
+    description: "An open-source Java-based framework used for web development.",
+  },
+  {
+    path: "/Assets/Stack/netcore.svg",
+    title: ".NET Core",
+    description: "A free, open-source, cross-platform framework for building modern, cloud-based, internet-connected applications.",
+  },
+  {
     path: "/Assets/Stack/css.svg",
     title: "CSS",
     description:
@@ -43,6 +53,11 @@ const imagePaths = [
     path: "/Assets/Stack/do.svg",
     title: "DigitalOcean",
     description: "A cloud infrastructure provider.",
+  },
+  {
+    path: "/Assets/Stack/azure.svg",
+    title: "Azure",
+    description: "A cloud computing platform.",
   },
   {
     path: "/Assets/Stack/next.svg",
@@ -144,8 +159,7 @@ function setupGlobe() {
 
     const texture = new THREE.TextureLoader().load(path.path);
     texture.colorSpace = THREE.SRGBColorSpace;
-    texture.magFilter = THREE.LinearFilter;
-    texture.minFilter = THREE.LinearFilter;
+    
     const material = new THREE.SpriteMaterial({
       map: texture,
       toneMapped: false,
@@ -177,67 +191,56 @@ function setupGlobe() {
   const grid = new THREE.LineSegments(edges, gridMaterial);
   scene.add(grid);
 
-  // Handle hover events
-  globeContainer.addEventListener("mouseenter", () => {
-    isHovered = true;
-  });
-
-  globeContainer.addEventListener("mouseleave", () => {
-    isHovered = false;
-  });
-
-  globeContainer.addEventListener("touchstart", () => {
-    isHovered = true;
-  });
-
-  globeContainer.addEventListener("touchend", () => {
-    isHovered = false;
-  });
-
-  function animate() {
-    if (window.location.pathname !== "/about") {
-      stopGlobe();
-      return;
-    }
-
-    animationFrameId = requestAnimationFrame(animate);
-
-    // Slow spin when not hovered
-    if (!isHovered) {
-      if (rotationSpeed < 0.002) {
-        rotationSpeed += 0.00002;
-      }
-      scene.rotation.y += rotationSpeed;
-      scene.rotation.x += rotationSpeed;
-    } else {
-      if (rotationSpeed > 0) {
-        rotationSpeed -= 0.00002;
-      }
-      scene.rotation.y += rotationSpeed;
-      scene.rotation.x += rotationSpeed;
-    }
-
-    // Find the closest sprite based on the initial (un-rotated) positions
-    closestSpriteDistance = Infinity;
-    imagePaths.forEach(({ path, title, description }, i) => {
-      const sprite = scene.children[i + 1]; // Assuming sprites are added sequentially in the scene
-      const worldPosition = new THREE.Vector3();
-      sprite.getWorldPosition(worldPosition);
-
-      const distance = camera.position.distanceTo(worldPosition);
-      if (distance < closestSpriteDistance) {
-        closestSpriteDistance = distance;
-        closestSpriteData = { path, title, description };
-      }
+  ["mouseover", "mouseleave", "touchstart", "touchend"].forEach(event => {
+    globeContainer.addEventListener(event, () => {
+      isHovered = event === "mouseover" || event === "touchstart";
     });
-
-    updateGlobeInfo(closestSpriteData);
-
-    controls.update();
-    renderer.render(scene, camera);
-  }
+  });
 
   animate();
+}
+
+function animate() {
+  if (window.location.pathname !== "/about") {
+    stopGlobe();
+    return;
+  }
+
+  animationFrameId = requestAnimationFrame(animate);
+
+  // Slow spin when not hovered
+  if (!isHovered) {
+    if (rotationSpeed < 0.002) {
+      rotationSpeed += 0.00002;
+    }
+    scene.rotation.y += rotationSpeed;
+    scene.rotation.x += rotationSpeed;
+  } else {
+    if (rotationSpeed > 0) {
+      rotationSpeed -= 0.00002;
+    }
+    scene.rotation.y += rotationSpeed;
+    scene.rotation.x += rotationSpeed;
+  }
+
+  // Find the closest sprite based on the initial (un-rotated) positions
+  closestSpriteDistance = Infinity;
+  imagePaths.forEach(({ path, title, description }, i) => {
+    const sprite = scene.children[i + 1]; // Assuming sprites are added sequentially in the scene
+    const worldPosition = new THREE.Vector3();
+    sprite.getWorldPosition(worldPosition);
+
+    const distance = camera.position.distanceTo(worldPosition);
+    if (distance < closestSpriteDistance) {
+      closestSpriteDistance = distance;
+      closestSpriteData = { path, title, description };
+    }
+  });
+
+  updateGlobeInfo(closestSpriteData);
+
+  controls.update();
+  renderer.render(scene, camera);
 }
 
 function updateGlobeInfo(closestSpriteData) {
