@@ -7,7 +7,7 @@ const portfolio = "/HTML/Pages/portfolio.html";
 
 
 document.addEventListener("DOMContentLoaded", async () => {
-    await waitForElm(".nav-bg");
+    await waitForElm(".footer");
     transitionImages();
 
     if (window.location.pathname.includes(".html")) {
@@ -18,11 +18,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 // Transition Images
 function transitionImages() {
   const images = document.querySelectorAll(".pre-render");
-
   images.forEach((image) => {
-    image.addEventListener("load", () => {
+    if (image.complete) {
       image.parentElement.classList.add("loaded");
-    });
+    } else {
+      image.addEventListener("load", () => {
+        image.parentElement.classList.add("loaded");
+      });
+    }
   });
 }
 

@@ -95,7 +95,6 @@ Website V2
     border-radius: 50%;
     object-fit: cover;
     background-image: url('/Assets/Images/MeCompressed.jpg');
-
 }
 
 @media (max-width: 1170px) {
