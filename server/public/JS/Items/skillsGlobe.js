@@ -121,6 +121,7 @@ function setupGlobe() {
 
   renderer = new THREE.WebGLRenderer();
   renderer.toneMapping = THREE.NoToneMapping;
+  renderer.outputColorSpace = THREE.SRGBColorSpace; 
   renderer.setClearColor(0x000000, 0);
   renderer.setSize(width, height);
   globeContainer.appendChild(renderer.domElement);
@@ -142,13 +143,17 @@ function setupGlobe() {
     const z = radius * Math.cos(phi);
 
     const texture = new THREE.TextureLoader().load(path.path);
-    texture.encoding = THREE.LinearEncoding;
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.magFilter = THREE.LinearFilter;
+    texture.minFilter = THREE.LinearFilter;
     const material = new THREE.SpriteMaterial({
       map: texture,
       toneMapped: false,
+      color: 0xffffff,  
+      opacity: 1 
     });
+
     const sprite = new THREE.Sprite(material);
-    // sprite.scale.set(20, 20, 1);
 
     sprite.position.set(x, y, z);
     scene.add(sprite);
@@ -160,6 +165,17 @@ function setupGlobe() {
       initialPosition: sprite.position.clone(),
     });
   });
+
+  const sphereGeometry = new THREE.SphereGeometry(radius - 0.4, 24, 24);
+  const edges = new THREE.EdgesGeometry(sphereGeometry);
+  const gridMaterial = new THREE.LineBasicMaterial({
+    color: 0xbab9b9,
+    linewidth: 1,
+    transparent: true,
+    opacity: 0.1,
+  });
+  const grid = new THREE.LineSegments(edges, gridMaterial);
+  scene.add(grid);
 
   // Handle hover events
   globeContainer.addEventListener("mouseenter", () => {
