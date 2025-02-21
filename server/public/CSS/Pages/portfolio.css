@@ -265,6 +265,13 @@
     z-index: 1000;
   }
   
+  .flex-img {
+    display: flex;
+  }
+  .flex-img img {
+    width: 50%;
+    height: auto;
+  }
 
 
 

@@ -44,13 +44,13 @@ function projects() {
     }
   });
 
-  document.addEventListener("scroll", () => {
-    projectClose(projects);
-  });
+  // document.addEventListener("scroll", () => {
+  //   projectClose(projects);
+  // });
 
-  window.addEventListener("resize", () => {
-    projectClose(projects);
-  });
+  // window.addEventListener("resize", () => {
+  //   projectClose(projects);
+  // });
 }
 
 function toggleProject(project) {

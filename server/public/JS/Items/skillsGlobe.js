@@ -142,7 +142,7 @@ function setupGlobe() {
     const z = radius * Math.cos(phi);
 
     const texture = new THREE.TextureLoader().load(path.path);
-    texture.encoding = THREE.SRGBEncoding;
+    texture.encoding = THREE.LinearEncoding;
     const material = new THREE.SpriteMaterial({
       map: texture,
       toneMapped: false,
