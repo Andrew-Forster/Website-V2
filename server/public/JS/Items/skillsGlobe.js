@@ -198,6 +198,15 @@ function setupGlobe() {
     });
   });
 
+  window.addEventListener('resize', () => {
+    const globeContainer = document.getElementById("globe");
+    const { width, height } = globeContainer.getBoundingClientRect();
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(window.devicePixelRatio);
+  });
+
   animate();
 }
 
