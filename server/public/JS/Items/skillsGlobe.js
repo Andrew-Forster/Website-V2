@@ -139,6 +139,7 @@ function setupGlobe() {
   renderer.outputColorSpace = THREE.SRGBColorSpace; 
   renderer.setClearColor(0x000000, 0);
   renderer.setSize(width, height);
+  renderer.setPixelRatio(window.devicePixelRatio);
   globeContainer.appendChild(renderer.domElement);
 
   controls = new OrbitControls(camera, renderer.domElement);
