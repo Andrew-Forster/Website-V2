@@ -44,11 +44,11 @@ function projects() {
     }
   });
 
-  document.addEventListener("scroll", () => {
-    if (window.innerWidth < 800) {
-      projectClose(projects);
-    }
-  });
+  // document.addEventListener("scroll", () => {
+  //   if (window.innerWidth < 800) {
+  //     projectClose(projects);
+  //   }
+  // });
 
   // window.addEventListener("resize", () => {
   //   projectClose(projects);

@@ -320,4 +320,8 @@
         right: 6.5rem;
     }
 
+    .flex-img img {
+        width: 100%;
+    }
+
 }
