@@ -56,6 +56,13 @@
     transform: translateY(50%);
 }
 
+.banner .btn button {
+    font-size: 1.6rem;
+    background-color: var(--gray);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
 
 
 /* Project Functionality*/
