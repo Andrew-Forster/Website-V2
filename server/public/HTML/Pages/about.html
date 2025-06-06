@@ -1,45 +1,72 @@
-<link rel="stylesheet" type="text/css" href="/CSS/Pages/about.css">
+<link rel="stylesheet" type="text/css" href="/CSS/Pages/about.css" />
 
+<img
+  class="abt-img animation-delay0_2 animation-duration0_5 onload-shift-down"
+  height="300"
+  width="auto"
+  src="/Assets/Images/about.jpg"
+  alt="Image of Me"
+/>
 
-<img class="abt-img animation-delay0_2 animation-duration0_5 onload-shift-down"  height="300" width="auto" src="/Assets/Images/about.jpg" alt="Image of Me">
-
-
-<h4 class="animation-delay0_2 animation-duration0_5 career-text onload-shift-down">Software Developer</h4>
+<h4
+  class="animation-delay0_2 animation-duration0_5 career-text onload-shift-down"
+>
+  Software Developer
+</h4>
 <p class="abt-text animation-delay0_4 animation-duration0_5 onload-shift-down">
-    Hey, I'm Andrew! I'm currently majoring in Software Development while also minoring in Cybersecurity at Grand Canyon University. I have a passion for coding and creating projects, previously worked at Triumph Tech as a Web Developer. I'm proficient in web technologies such as HTML, CSS and JavaScript. I also have experience with frameworks such as React, NextJS, Node.js and Express. I'm always looking to learn new technologies and opportunities to grow as a developer. Feel free to check out my portfolio to see some of my projects and my blog to learn more about me & my wife!
+  Hey, I'm Andrew! I'm currently majoring in Software Development while also
+  minoring in Machine Learning at Grand Canyon University. I have a passion for
+  coding and creating projects, previously worked at Triumph Tech as a Web
+  Developer. I'm proficient in web technologies such as HTML, CSS and
+  JavaScript. I also have experience in languages such as Python, C#, and Java.
+  I'm always looking to learn new technologies and opportunities to grow as a
+  developer. Feel free to check out my portfolio to see some of my projects and
+  my blog to learn more about me & my wife!
 </p>
 
 <div class="cards">
-    <div onclick="loadContent('portfolio')" class="about animation-delay0_5 animation-duration0_5 card onload-shift-down">
-        <div class="anim btn"></div> <!-- Animation for border -->
-        <h6>My Portfolio</h6>
-        <img class="i i-4" src="/Assets/SVGS/link.svg" alt="">
-    </div>
-    <div onclick="window.open('/Github', '_blank')" class="about animation-delay0_6 animation-duration0_5 card onload-shift-down">
-        <div class="anim btn"></div> <!-- Animation for border -->
-        <h6>Github</h6>
-        <img class="i i-4" src="/Assets/SVGS/link.svg" alt="">
-    </div>
+  <div
+    onclick="loadContent('portfolio')"
+    class="about animation-delay0_5 animation-duration0_5 card onload-shift-down"
+  >
+    <div class="anim btn"></div>
+    <!-- Animation for border -->
+    <h6>My Portfolio</h6>
+    <img class="i i-4" src="/Assets/SVGS/link.svg" alt="" />
+  </div>
+  <div
+    onclick="window.open('/Github', '_blank')"
+    class="about animation-delay0_6 animation-duration0_5 card onload-shift-down"
+  >
+    <div class="anim btn"></div>
+    <!-- Animation for border -->
+    <h6>Github</h6>
+    <img class="i i-4" src="/Assets/SVGS/link.svg" alt="" />
+  </div>
 </div>
 
-<h4 class="animation-delay0_2 animation-duration0_5 career-text onload-shift-down">Technical Skills</h4>
+<h4
+  class="animation-delay0_2 animation-duration0_5 career-text onload-shift-down"
+>
+  Technical Skills
+</h4>
 <div id="globe-container">
-    <div id="globe-info">
-        <div>
-            <img src="/Assets/Stack/bootstrap.svg" alt="Bootstrap">
-            <h6>Bootstrap</h6>
-        </div>
-        <p>A front-end framework for building responsive websites.</p>
+  <div id="globe-info">
+    <div>
+      <img src="/Assets/Stack/bootstrap.svg" alt="Bootstrap" />
+      <h6>Bootstrap</h6>
     </div>
-    <div id="globe"></div>
+    <p>A front-end framework for building responsive websites.</p>
+  </div>
+  <div id="globe"></div>
 </div>
 
 <div class="footer"></div>
 
 <script>
-    footer();
-    async function footer() {
-        let footer = await waitForElm('.footer');
-        replace('/HTML/footer.html', footer)
-    }
+  footer();
+  async function footer() {
+    let footer = await waitForElm(".footer");
+    replace("/HTML/footer.html", footer);
+  }
 </script>

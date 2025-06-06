@@ -3,6 +3,7 @@ if (window.hasOwnProperty("intervalId")) {
   delete window.intervalId;
 } else {
   start();
+  console.log("Starting carousel");
   window.intervalId; // Interval for the carousel
   window.endFunctions = false;
 }

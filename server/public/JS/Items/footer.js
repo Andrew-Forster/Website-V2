@@ -50,6 +50,23 @@ function formFunction() {
 
     let formRes = document.getElementById("formRes");
 
+    const buttonText = submit.querySelector('.button-text');
+    const buttonLoader = submit.querySelector('.button-loader');
+
+    // Show loading state when form submits
+    function showLoading() {
+        submit.disabled = true;
+        buttonText.style.display = 'none';
+        buttonLoader.style.display = 'inline-block';
+    }
+
+    // Hide loading state when done
+    function hideLoading() {
+        submit.disabled = false;
+        buttonText.style.display = 'inline-block';
+        buttonLoader.style.display = 'none';
+    }
+
     submit.addEventListener("click", () => {
         if (email.value === "" || message.value === "") {
             formRes.style.opacity = 1;
@@ -64,6 +81,9 @@ function formFunction() {
             formRes.innerText = "Bot? Try refreshing the page.";
             formRes.style.color = "var(--error)";
         } else {
+            // Show loading indicator before sending request
+            showLoading();
+            
             let emailData = {
                 email: email.value,
                 message: message.value
@@ -77,6 +97,9 @@ function formFunction() {
                     body: JSON.stringify(emailData)
                 })
                 .then((res) => {
+                    // Hide loading indicator
+                    hideLoading();
+                    
                     if (res.ok) {
                         formSuccess();
                     } else {
@@ -96,12 +119,14 @@ function formFunction() {
                     }
                 })
                 .catch((err) => {
+                    // Hide loading indicator on error
+                    hideLoading();
+                    
                     formRes.style.opacity = 1;
                     formRes.innerText = "An error occurred. Please reach out via the email provided in the footer.";
                     formRes.style.color = "var(--error)";
                     console.log(err);
                 });
-
         }
     });
 

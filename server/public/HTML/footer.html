@@ -1,17 +1,43 @@
 <link rel="stylesheet" type="text/css" href="/CSS/Items/footer.css">
 
+<style>
+    /* Loading indicator styles */
+    .spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 0.8s linear infinite;
+        vertical-align: middle;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+    
+    #submit:disabled {
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+</style>
+
 <h4>Let's Get in Contact</h4>
 <form class="flex">
     <div class="side">
         <div class="topic">
-            <input class="form-design" type="email" id="email" name="Topic" autocomplete="off" value=""
+            <input class="form-design" type="email" id="email" name="Topic" value=""
                 aria-labelledby="m-topic">
             <label class="ph-text" for="email" id="m-topic">
                 <div class="text">Your Email</div>
             </label>
         </div>
 
-        <button type="button" id="submit">Send Message</button>
+        <button type="button" id="submit">
+            <span class="button-loader" style="display: none;"><span class="spinner"></span></span>
+            <span class="button-text">Send Message</span>
+        </button>
     </div>
     <div class="msg">
         <textarea class="form-design" name="Message" id="msg" cols="30" rows="10" value=""></textarea>
