@@ -7,7 +7,7 @@ const portfolioFormat = {
   statusCode: "",
   stack: [""],
   sections: [
-    // Example: { type: "header"|"bolded"|"paragraph"|"button"|"spacer"|"image"|"img-group"|"video", text: "", link: "", src: "", alt: "", class: "", style: "" }
+    // Example: { type: "header"|"bolded"|"paragraph"|"list"|"button"|"spacer"|"image"|"img-group"|"video", text: "", link: "", src: "", alt: "", class: "", style: "" }
   ],
   viewLink: "",
 };
@@ -21,7 +21,154 @@ const portfolioFormat = {
 // ---------------------------
 
 const portfolioData = [
-  // Alchemy Analytics
+  // Writing Pilot
+  {
+    id: "writing-pilot",
+    title: "Writing Pilot",
+    image: "/Assets/Images/writing-pilot.png",
+    status: "Under Active Development",
+    statusCode: "c1",
+    stack: [
+      "JavaScript.svg",
+      "NextJS.svg",
+      "Shadcn.png",
+      "TailwindCSS.svg",
+      "MongoDB.svg",
+      "Stripe.svg",
+      "OpenAI-API.png",
+    ],
+    sections: [
+      { type: "header", text: "Overview" },
+      {
+        type: "paragraph",
+        text: "Writing Pilot is your writing co-pilot — a browser extension that brings AI-powered text completions directly into the flow of writing online. Whether you're writing an email, blog post, or a comment on Reddit, it helps you stay focused, fluid, and fast.",
+      },
+      { type: "header", text: "The Big Idea" },
+      {
+        type: "paragraph",
+        text: "There’s something magical about writing when you’re in the zone. I wanted to build a tool that helps you *stay* in that zone — no tab-switching, no waiting, just helpful suggestions where you’re already typing.",
+      },
+      { type: "header", text: "Key Features" },
+      {
+        type: "list",
+        text: [
+          "🚨 Inline AI Suggestions: Suggestions appear greyed-out — hit Tab and go.",
+          "🧩 Custom Output Length: Adjust how much the AI writes, site by site or globally.",
+          "🌐 Site-Specific Rules: Want long paragraphs on Google Docs and short phrases on Twitter? Done.",
+          "🔐 Global Toggle: Turn it off everywhere in one click if you need a break.",
+          "✨ Premium Context Awareness: Extracts meaningful context from the page to make suggestions smarter.",
+          "📦 Chrome Storage: All preferences saved locally for a lightweight, privacy-focused experience.",
+        ],
+      },
+      { type: "header", text: "Technical Breakdown" },
+      {
+        type: "paragraph",
+        text: "Writing Pilot is built as a Chrome extension powered by a custom backend in NextJS. I use content scripts to inject suggestions into active editable fields, with user settings stored via the Chrome Storage API. The writing magic itself comes from the OpenAI API.",
+      },
+      {
+        type: "paragraph",
+        text: "For premium features, I added context-aware completions. The extension grabs relevant page content, sends it to the backend, and gets back smarter suggestions. Think: 'write like you’ve been paying attention this whole time.'",
+      },
+      { type: "header", text: "The Website Experience" },
+      {
+        type: "paragraph",
+        text: "The companion site lets users manage their plans, preferences, and usage. It’s built with NextJS, Tailwind, and Shadcn, with motion animations sprinkled in to keep things feeling smooth. I integrated Google Sign-In and Stripe for authentication and payments, and built a full admin dashboard to manage users, credits, and metrics.",
+      },
+      { type: "header", text: "What's Next" },
+      {
+        type: "list",
+        text: [
+          "📚 Built-in rewrite tools and tone shifting.",
+          "📈 Usage analytics so users can see their AI habits.",
+          "🧠 Smarter in-line controls for changing tone, length, or formality.",
+          "💬 Integration with more platforms like Google Docs.",
+        ],
+      },
+      { type: "header", text: "Conclusion" },
+      {
+        type: "paragraph",
+        text: "Writing Pilot is still growing, but it already feels like one of those tools I wish I’d had years ago. It’s private, fast, and genuinely useful — and building it has been a blast. Can’t wait to see how far I can take it.",
+      },
+      { type: "spacer", text: "" },
+      {
+        type: "button",
+        text: "Visit Website",
+        link: "https://writingpilot.ai",
+      },
+      { type: "spacer", text: "" },
+      { type: "spacer", text: "" },
+
+    ],
+    viewLink: "https://writingpilot.ai",
+  },
+
+  // Gloria Dei
+  {
+    id: "gloria-dei",
+    title: "Gloria Dei Website",
+    image: "/Assets/Images/GloriaDei.png", // Placeholder, update with actual path if needed
+    status: "Completed",
+    statusCode: "c0",
+    stack: [
+      "RockRMS.png",
+      "HTML.svg",
+      "CSS.svg",
+      "JavaScript.svg",
+      "Bootstrap.svg",
+    ],
+    sections: [
+      { type: "header", text: "Overview" },
+      {
+        type: "paragraph",
+        text: "While working at Triumph Tech, I was one of two main developers on the Gloria Dei Church website. Built on RockRMS, the project emphasized visual polish, consistent design, and backend integration with the RockRMS platform.",
+      },
+      { type: "header", text: "Objectives" },
+      {
+        type: "list",
+        text: [
+          "Build a modern, responsive church website using RockRMS.",
+          "Follow a strict internal style guide covering layout, spacing, components, and typography.",
+          "Reflect the church’s welcoming tone through smooth animations and thoughtful color usage.",
+          "Connect front-end pages with editable content powered by RockRMS.",
+        ],
+      },
+      { type: "header", text: "Challenges" },
+      {
+        type: "list",
+        text: [
+          "Implementing unique page layouts within the constraints of RockRMS.",
+          "Maintaining pixel-perfect design across many custom-built components.",
+          "Balancing animations with accessibility and performance.",
+          "Working with RockRMS shortcodes and control gallery for advanced content.",
+        ],
+      },
+      { type: "header", text: "Process and Highlights" },
+      {
+        type: "paragraph",
+        text: "I worked closely with another developer to design and develop each page with an eye for detail. We used the GloriaDeiV1 theme style guide created by Triumph Tech, which included resources for typography, buttons, navs, components, and layout structures.",
+      },
+      {
+        type: "paragraph",
+        text: "We implemented Triumph Swiper for rich visual interaction, created reusable shortcodes, and adhered to modular component standards for future scalability. The design paid close attention to spacing, transitions, and consistency across devices.",
+      },
+      { type: "header", text: "Results" },
+      {
+        type: "paragraph",
+        text: "The result was a highly polished, responsive website fully integrated with RockRMS. The church staff can manage content easily, and the site has been well received by both the team and the congregation.",
+      },
+      { type: "header", text: "Conclusion" },
+      {
+        type: "paragraph",
+        text: "This project was a great example of combining backend integration with front-end finesse. It deepened my experience with CMS-based projects, strict design systems, and cross-developer collaboration.",
+      },
+      { type: "spacer", text: "" },
+      { type: "button", text: "View Site", link: "https://gdlc.org" },
+      { type: "spacer", text: "" },
+      { type: "spacer", text: "" },
+    ],
+    viewLink: "https://gdlc.org",
+  },
+  // NextJS Blog
   {
     id: "nextjs-blog",
     title: "NextJS Blog",
@@ -54,7 +201,7 @@ const portfolioData = [
       {
         type: "paragraph",
         text: `<ul class='list'><li>Integrating MUI with Tailwind CSS, which led to compatibility issues.</li><li>Initial hosting attempt on Azure using Docker Compose, which caused space and performance issues.</li><li>Managing the database in a way that ensured the app's functionality while optimizing the workflow.</li><li>Setting up a reliable, automated deployment process with GitHub Actions.</li></ul><br><hr><br>`,
-      },      
+      },
       { type: "header", text: "UI and Admin Portal" },
       {
         type: "paragraph",
@@ -158,17 +305,32 @@ const portfolioData = [
         text: "I created a visually stunning website with a clean and modern interface. I incorporated sleek design elements, high-quality imagery, and intuitive navigation to enhance the user experience.",
       },
       { type: "bolded", text: "E-commerce Functionality:" },
-      { type: "paragraph", text: "I developed a dedicated shop page where users can browse and purchase stock market indicators. The shop page features detailed product listings, pricing information, and a streamlined checkout process." },
+      {
+        type: "paragraph",
+        text: "I developed a dedicated shop page where users can browse and purchase stock market indicators. The shop page features detailed product listings, pricing information, and a streamlined checkout process.",
+      },
       { type: "bolded", text: "Integration with Django Backend:" },
-      { type: "paragraph", text: "I collaborated closely with my friend who developed the backend system using Django/Python. We implemented APIs and data exchange protocols to ensure seamless communication between the frontend and backend systems." },
+      {
+        type: "paragraph",
+        text: "I collaborated closely with my friend who developed the backend system using Django/Python. We implemented APIs and data exchange protocols to ensure seamless communication between the frontend and backend systems.",
+      },
       { type: "bolded", text: "Responsive Design:" },
-      { type: "paragraph", text: "To ensure a consistent user experience across devices, I employed responsive design techniques. The website is optimized for desktop, tablet, and mobile devices, providing users with a seamless browsing and shopping experience regardless of the device they use." },
-      
+      {
+        type: "paragraph",
+        text: "To ensure a consistent user experience across devices, I employed responsive design techniques. The website is optimized for desktop, tablet, and mobile devices, providing users with a seamless browsing and shopping experience regardless of the device they use.",
+      },
+
       { type: "header", text: "Results" },
       { type: "bolded", text: "Sleek and Competitive Website:" },
-      { type: "paragraph", text: "The Alchemy Analytics website stands out in the market with its sleek design and intuitive interface." },
+      {
+        type: "paragraph",
+        text: "The Alchemy Analytics website stands out in the market with its sleek design and intuitive interface.",
+      },
       { type: "bolded", text: "Successful Integration:" },
-      { type: "paragraph", text: "The seamless integration between the frontend and backend systems has ensured smooth operation and reliable performance of the website, contributing to its overall success." },
+      {
+        type: "paragraph",
+        text: "The seamless integration between the frontend and backend systems has ensured smooth operation and reliable performance of the website, contributing to its overall success.",
+      },
 
       { type: "header", text: "Conclusion" },
       {
@@ -195,39 +357,95 @@ const portfolioData = [
     ],
     sections: [
       { type: "header", text: "Project Overview" },
-      { type: "paragraph", text: "Server Rift is an ambitious project aimed at revolutionizing the way users connect with Discord servers based on their preferences. The platform facilitates users in joining servers that align with their specific interests and requirements on a weekly basis. While the project is paused, significant strides have been made in developing the front-end interface, along with initial backend setup including a Discord bot, Express server, and MongoDB database integration." },
+      {
+        type: "paragraph",
+        text: "Server Rift is an ambitious project aimed at revolutionizing the way users connect with Discord servers based on their preferences. The platform facilitates users in joining servers that align with their specific interests and requirements on a weekly basis. While the project is paused, significant strides have been made in developing the front-end interface, along with initial backend setup including a Discord bot, Express server, and MongoDB database integration.",
+      },
       { type: "header", text: "Objectives" },
-      { type: "paragraph", text: `<ul class='list'><li>Create a modern and visually appealing website that offers a seamless user experience.</li><li>Develop backend functionality to support user authentication, server discovery, and weekly server joining.</li><li>Implement a Discord bot to enhance user interaction and automate server joining processes.</li><li>Integrate MongoDB database to securely store user preferences and server data.</li></ul>` },
+      {
+        type: "paragraph",
+        text: `<ul class='list'><li>Create a modern and visually appealing website that offers a seamless user experience.</li><li>Develop backend functionality to support user authentication, server discovery, and weekly server joining.</li><li>Implement a Discord bot to enhance user interaction and automate server joining processes.</li><li>Integrate MongoDB database to securely store user preferences and server data.</li></ul>`,
+      },
       { type: "header", text: "Key Features" },
       { type: "bolded", text: "Customizable Server Preferences:" },
-      { type: "paragraph", text: "Users can specify their preferences and interests to discover servers tailored to their liking. That will connect with our Discord bot." },
-      { type: "video", src: "/Assets/Videos/ServerRift_Login_DBUpdate.mp4", alt: "Login and DB Update Demo" },
+      {
+        type: "paragraph",
+        text: "Users can specify their preferences and interests to discover servers tailored to their liking. That will connect with our Discord bot.",
+      },
+      {
+        type: "video",
+        src: "/Assets/Videos/ServerRift_Login_DBUpdate.mp4",
+        alt: "Login and DB Update Demo",
+      },
       { type: "spacer" },
       { type: "bolded", text: "Giveaway System:" },
-      { type: "paragraph", text: "Users are able to participate in giveaways and view the giveaway happening in real-time at a URL." },
-      { type: "video", src: "/Assets/Videos/ServerRift_Giveaways.mp4", alt: "Giveaway System Demo" },
+      {
+        type: "paragraph",
+        text: "Users are able to participate in giveaways and view the giveaway happening in real-time at a URL.",
+      },
+      {
+        type: "video",
+        src: "/Assets/Videos/ServerRift_Giveaways.mp4",
+        alt: "Giveaway System Demo",
+      },
       { type: "spacer" },
       { type: "bolded", text: "Server Joining:" },
-      { type: "paragraph", text: "The platform facilitates users in joining servers that align with their specific interests." },
-      { type: "video", src: "/Assets/Videos/ServerRift_Adding_User.mp4", alt: "Server Joining Demo" },
+      {
+        type: "paragraph",
+        text: "The platform facilitates users in joining servers that align with their specific interests.",
+      },
+      {
+        type: "video",
+        src: "/Assets/Videos/ServerRift_Adding_User.mp4",
+        alt: "Server Joining Demo",
+      },
       { type: "spacer" },
       { type: "bolded", text: "Discord Bot:" },
-      { type: "paragraph", text: "The Discord bot is equipped with a help menu that pulls data from our Mongo database to display to users." },
-      { type: "video", src: "/Assets/Videos/ServerRift_Help_Menu.mp4", alt: "Bot Help Menu Demo" },
+      {
+        type: "paragraph",
+        text: "The Discord bot is equipped with a help menu that pulls data from our Mongo database to display to users.",
+      },
+      {
+        type: "video",
+        src: "/Assets/Videos/ServerRift_Help_Menu.mp4",
+        alt: "Bot Help Menu Demo",
+      },
       { type: "spacer" },
       { type: "bolded", text: "User Friend Sign-up:" },
-      { type: "paragraph", text: "Users are presented with a clean UI to quickly sign up and start using the platform." },
-      { type: "video", src: "/Assets/Videos/ServerRift_SignUp.mp4", alt: "Sign Up Demo" },
+      {
+        type: "paragraph",
+        text: "Users are presented with a clean UI to quickly sign up and start using the platform.",
+      },
+      {
+        type: "video",
+        src: "/Assets/Videos/ServerRift_SignUp.mp4",
+        alt: "Sign Up Demo",
+      },
       { type: "spacer" },
       { type: "bolded", text: "Channel Logs:" },
-      { type: "paragraph", text: "The bot itself will keep logs of all commands, errors and users being added to servers." },
-      { type: "img-group", images: [
-        { src: "/Assets/Images/ServerRift_Join_Logs.png", alt: "Image of Join Logs"},
-        { src: "/Assets/Images/ServerRift_Error_Logging.png", alt: "Image of Error Logging"}
-      ]},
+      {
+        type: "paragraph",
+        text: "The bot itself will keep logs of all commands, errors and users being added to servers.",
+      },
+      {
+        type: "img-group",
+        images: [
+          {
+            src: "/Assets/Images/ServerRift_Join_Logs.png",
+            alt: "Image of Join Logs",
+          },
+          {
+            src: "/Assets/Images/ServerRift_Error_Logging.png",
+            alt: "Image of Error Logging",
+          },
+        ],
+      },
       { type: "spacer" },
       { type: "header", text: "Conclusion" },
-      { type: "paragraph", text: "Server Rift represents an innovative approach to server discovery and joining, offering users a platform to connect with servers that match their preferences and interests seamlessly. With a focus on modern design aesthetics and user-centric functionality, the project aims to redefine the server browsing experience. As development progresses and additional features are implemented, Server Rift is poised to become a leading destination for users seeking personalized and dynamic server experiences." },
+      {
+        type: "paragraph",
+        text: "Server Rift represents an innovative approach to server discovery and joining, offering users a platform to connect with servers that match their preferences and interests seamlessly. With a focus on modern design aesthetics and user-centric functionality, the project aims to redefine the server browsing experience. As development progresses and additional features are implemented, Server Rift is poised to become a leading destination for users seeking personalized and dynamic server experiences.",
+      },
     ],
     viewLink: "https://andrew-forster.github.io/",
   },
