@@ -244,7 +244,7 @@ const portfolioData = [
     image: "/Assets/Images/Minesweeper.png",
     status: "Completed",
     statusCode: "c0",
-    stack: ["CSharp.svg", "Dot-Net-Core.svg", "Azure.svg"],
+    stack: ["csharp.svg", "dot-net-core.svg", "azure.svg"],
     sections: [
       { type: "header", text: "Minesweeper Site" },
       {

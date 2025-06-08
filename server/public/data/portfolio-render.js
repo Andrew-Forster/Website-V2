@@ -19,10 +19,7 @@ function renderProjectCard(project) {
   const stackIcons = (project.stack || [])
     .map(
       (stack) =>
-        `<img class="i i-2" src="/Assets/Stack/${stack}" alt="${stack
-          .replace(/-/g, " ")
-          .replace(".svg", "")
-          .replace(".png", "")}">`
+        `<img class="i i-2" src="/Assets/Stack/${stack}" alt="${getIconVisibleName(stack)}">`
     )
     .join("");
 
@@ -117,7 +114,8 @@ function renderProjectCard(project) {
 
 
 function getIconVisibleName(icon) {
-    const iconVisibleName = icon.replace(/\./g, "").replace(/-/g, " ").toLowerCase();
+    const iconVisibleName = icon.replace(/-/g, " ").replace(".svg", "").replace(".png", "").toLowerCase();
+    console.log(iconVisibleName);
     switch (iconVisibleName) {
         case "html":
             return "HTML";
@@ -149,7 +147,15 @@ function getIconVisibleName(icon) {
             return "RockRMS";
         case "openai":
             return "OpenAI API";
+        case "npm":
+            return "Node Package Manager";
+        case "dot net core":
+            return "ASP.NET Core";
+        case "csharp":
+            return "C#";
+        case "discord bot designer":
+            return "Discord Bot Designer";
         default:
-            return iconVisibleName;
+            return iconVisibleName.charAt(0).toUpperCase() + iconVisibleName.slice(1);
     }
 }
