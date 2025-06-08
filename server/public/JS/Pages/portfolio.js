@@ -77,7 +77,16 @@ function projectClose(projects) {
     if (project.classList.contains("active")) {
       toggleProject(project);
     }
+
+    // Unlock scroll bar on html
+    document.documentElement.style.overflow = "auto";
   });
+
+  // Needed to prevent a weird bug where the project cover and close project button don't close upon navigation then coming back.
+  let closeProject = document.querySelector(".close-project");
+  let projectCover = document.querySelector(".project-cover");
+  closeProject.classList.remove("active");
+  projectCover.classList.remove("active");
 }
 
 function tooltip() {

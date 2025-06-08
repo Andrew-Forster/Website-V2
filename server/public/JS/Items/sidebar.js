@@ -14,6 +14,8 @@ function btnFunctions() {
 
   btns.forEach((btn) => {
     btn.addEventListener("click", () => {
+      document.documentElement.style.overflow = "auto";
+      
       if (main.classList.contains("continueAnim")) {
         // toggleNav();
         return;
