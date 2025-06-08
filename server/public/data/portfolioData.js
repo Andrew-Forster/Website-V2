@@ -25,7 +25,7 @@ const portfolioData = [
   {
     id: "writing-pilot",
     title: "Writing Pilot",
-    image: "/Assets/Images/writing-pilot.png",
+    image: "/Assets/Images/Writing-Pilot.png",
     status: "Under Active Development",
     statusCode: "c1",
     stack: [
