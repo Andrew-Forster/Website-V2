@@ -1,17 +1,6 @@
-if (window.hasOwnProperty("intervalId")) {
-  clearInterval(window.intervalId);
-  delete window.intervalId;
-} else {
-  start();
-  console.log("Starting carousel");
-  window.intervalId; // Interval for the carousel
-  window.endFunctions = false;
-}
-
-async function start() {
+async function runHomepageFunctions() {
   await waitForElm(".bottom-group");
   carousel();
-  endFunctions = false;
   setYearsOfExperience();
 }
 
@@ -64,7 +53,7 @@ function carousel() {
 
     // Start carousel
     intervalId = setInterval(() => {
-      if (!checkHome() || endFunctions) {
+      if (!checkHome()) {
         return;
       }
       let currentTime = Date.now();
@@ -88,7 +77,7 @@ function carousel() {
     let currentTimer = document.querySelector(
       ".project-nav button.active span"
     );
-    if (!checkHome() || endFunctions || !currentTimer) {
+    if (!checkHome() || !currentTimer) {
       return;
     }
     let width = parseInt(currentTimer.style.width) || 0;
@@ -109,7 +98,7 @@ function carousel() {
       });
       if (!act) {
         index = i;
-        if (!checkHome() || endFunctions) {
+        if (!checkHome()) {
           return;
         }
         clearInterval(intervalId);
@@ -123,7 +112,7 @@ function carousel() {
     let currentTimer = document.querySelector(
       ".project-nav button.active span"
     );
-    if (!checkHome() || endFunctions || !currentTimer) {
+    if (!checkHome() || !currentTimer) {
       return;
     }
     nav.forEach((button) => {

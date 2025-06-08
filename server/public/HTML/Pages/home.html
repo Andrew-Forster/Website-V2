@@ -1,8 +1,3 @@
-<script src="/JS/Pages/home.js" defer></script>
-
-
-
-
 <h4 class="career-text onload-shift-down animation-delay0_2 animation-duration0_5">Software Developer</h4>
 
 <div class="top-group cards">
@@ -15,7 +10,7 @@
         <div class="card exp onload-shift-down animation-delay0_4 animation-duration0_5">
             <div class="anim"></div> <!-- Animation for border -->
             <div class="exp-cont">
-                <h5 id="yearsOfExp">1+</h5>
+                <h5 id="yearsOfExp">3+</h5>
                 <p>Years of <br>Experience</p>
             </div>
         </div>
@@ -38,16 +33,16 @@
                 <h5>Alchemy Analytics</h5>
             </div>
             <div class="project-card" id="2">
-                <img src="/Assets/Images/Project 2.png" alt="Project 2">
-                <h5>About Me Website V1</h5>
+                <img src="/Assets/Images/Writing-Pilot.png" alt="Project 2">
+                <h5>Writing Pilot AI</h5>
             </div>
             <div class="project-card" id="3">
-                <img src="/Assets/Images/Project 3.png" alt="Project 3">
-                <h5>Server Rift</h5>
+                <img src="/Assets/Images/GloriaDei.png" alt="Project 3">
+                <h5>Gloria Dei</h5>
             </div>
             <div class="project-card" id="4">
-                <img src="/Assets/Images/Project 4.jpg" alt="Project 4">
-                <h5>Scroll Animator</h5>
+                <img src="/Assets/Images/blog.png" alt="Project 4">
+                <h5>Blog Site</h5>
             </div>
         </div>
         <div class="project-nav">
@@ -63,6 +58,8 @@
 
 <script>
     footer();
+    runHomepageFunctions();
+
     async function footer() {
         let footer = await waitForElm('.footer');
         replace('/HTML/footer.html', footer)
