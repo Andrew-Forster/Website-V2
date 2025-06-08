@@ -67,6 +67,9 @@ function toggleProject(project) {
   // Get html data
   let btnText = button.getAttribute("data-changes-to") || "Link";
   button.innerText = project.classList.contains("active") ? btnText : "View";
+
+  // Lock scroll bar on html
+  document.documentElement.style.overflow = project.classList.contains("active") ? "hidden" : "auto";
 }
 
 function projectClose(projects) {

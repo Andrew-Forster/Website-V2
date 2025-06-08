@@ -8,38 +8,38 @@ const imagePaths = [
     description: "A front-end framework for building responsive websites.",
   },
   {
-    path: "/Assets/Stack/Spring-Boot.svg",
+    path: "/Assets/Stack/spring-boot.svg",
     title: "Spring Boot",
     description: "An open-source Java-based framework used for web development.",
   },
   {
-    path: "/Assets/Stack/Dot-Net-Core.svg",
+    path: "/Assets/Stack/dot-net-core.svg",
     title: ".NET Core",
     description: "A free, open-source, cross-platform framework for building modern, cloud-based, internet-connected applications.",
   },
   {
-    path: "/Assets/Stack/CSS.svg",
+    path: "/Assets/Stack/css.svg",
     title: "CSS",
     description:
       "A style sheet language used for describing the presentation of a document written in HTML.",
   },
   {
-    path: "/Assets/Stack/JavaScript.svg",
+    path: "/Assets/Stack/javascript.svg",
     title: "JavaScript",
     description: "A programming language that enables interactive web pages.",
   },
   {
-    path: "/Assets/Stack/Jquery.svg",
+    path: "/Assets/Stack/jquery.svg",
     title: "jQuery",
     description: "A fast, small, and feature-rich JavaScript library.",
   },
   {
-    path: "/Assets/Stack/NodeJS.svg",
+    path: "/Assets/Stack/nodejs.svg",
     title: "Node.js",
     description: "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
   },
   {
-    path: "/Assets/Stack/CSharp.svg",
+    path: "/Assets/Stack/csharp.svg",
     title: "C#",
     description:
       "A modern, object-oriented programming language developed by Microsoft.",
@@ -50,63 +50,89 @@ const imagePaths = [
   //   description: "A visual programming language for creating bots on Discord.",
   // },
   {
-    path: "/Assets/Stack/Digital-Ocean.svg",
+    path: "/Assets/Stack/digital-ocean.svg",
     title: "DigitalOcean",
     description: "A cloud infrastructure provider.",
   },
   {
-    path: "/Assets/Stack/Azure.svg",
+    path: "/Assets/Stack/azure.svg",
     title: "Azure",
     description: "A cloud computing platform.",
   },
   {
-    path: "/Assets/Stack/NextJS.svg",
+    path: "/Assets/Stack/nextjs.svg",
     title: "Next.js",
     description: "A React framework for building server-rendered applications.",
   },
   {
-    path: "/Assets/Stack/Docker.svg",
+    path: "/Assets/Stack/docker.svg",
     title: "Docker",
     description:
       "A platform for developing, shipping, and running applications in containers.",
   },
   {
-    path: "/Assets/Stack/GitHub.svg",
+    path: "/Assets/Stack/github.svg",
     title: "GitHub",
     description: "A platform for hosting and sharing code.",
   },
   {
-    path: "/Assets/Stack/HTML.svg",
+    path: "/Assets/Stack/html.svg",
     title: "HTML",
     description: "The standard markup language for creating web pages.",
   },
   {
-    path: "/Assets/Stack/MongoDB.svg",
+    path: "/Assets/Stack/mongodb.svg",
     title: "MongoDB",
     description: "A NoSQL database that uses a document-oriented data model.",
   },
   {
-    path: "/Assets/Stack/Node-Package-Manager.svg",
+    path: "/Assets/Stack/npm.svg",
     title: "npm",
     description: "A package manager for JavaScript and Node.js.",
   },
   {
-    path: "/Assets/Stack/Material-UI.svg",
+    path: "/Assets/Stack/material-ui.svg",
     title: "Material UI",
     description:
       "A popular React UI framework that implements Google's Material Design.",
   },
   {
-    path: "/Assets/Stack/React.svg",
+    path: "/Assets/Stack/react.svg",
     title: "React",
     description: "A JavaScript library for building user interfaces.",
   },
   {
-    path: "/Assets/Stack/TailwindCSS.svg",
+    path: "/Assets/Stack/tailwind.svg",
     title: "Tailwind CSS",
     description:
       "A utility-first CSS framework for rapidly building custom designs.",
   },
+  {
+    path: "/Assets/Stack/stripe.svg",
+    title: "Stripe",
+    description: "A payment processing platform.",
+  },
+  {
+    path: "/Assets/Stack/openai.png",
+    title: "OpenAI API",
+    description: "An AI API for generating text and images.",
+  },
+  {
+    path: "/Assets/Stack/shadcn.png",
+    title: "Shadcn UI",
+    description: "A React UI framework.",
+  },
+  {
+    path: "/Assets/Stack/three.js.png",
+    title: "Three.js",
+    description: "A JavaScript library for creating 3D graphics. (Used for this skills globe 😄)",
+  },
+  {
+    path: "/Assets/Stack/rockrms.png",
+    title: "RockRMS",
+    description: "A church management system.",
+  },
+
 ];
 
 async function startGlobe() {

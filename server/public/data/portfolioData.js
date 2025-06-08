@@ -29,13 +29,15 @@ const portfolioData = [
     status: "Under Active Development",
     statusCode: "c1",
     stack: [
-      "JavaScript.svg",
-      "NextJS.svg",
-      "Shadcn.png",
-      "TailwindCSS.svg",
-      "MongoDB.svg",
-      "Stripe.svg",
-      "OpenAI-API.png",
+      "javascript.svg",
+      "nextjs.svg",
+      "shadcn.png",
+      "tailwind.svg",
+      "mongodb.svg",
+      "stripe.svg",
+      "openai.png",
+      "github.svg",
+      "npm.svg",
     ],
     sections: [
       { type: "header", text: "Overview" },
@@ -106,15 +108,15 @@ const portfolioData = [
   {
     id: "gloria-dei",
     title: "Gloria Dei Website",
-    image: "/Assets/Images/GloriaDei.png", // Placeholder, update with actual path if needed
+    image: "/Assets/Images/GloriaDei.png",
     status: "Completed",
     statusCode: "c0",
     stack: [
-      "RockRMS.png",
-      "HTML.svg",
-      "CSS.svg",
-      "JavaScript.svg",
-      "Bootstrap.svg",
+      "rockrms.png",
+      "html.svg",
+      "css.svg",
+      "javascript.svg",
+      "bootstrap.svg",
     ],
     sections: [
       { type: "header", text: "Overview" },
@@ -176,15 +178,15 @@ const portfolioData = [
     status: "Completed",
     statusCode: "c0",
     stack: [
-      "NextJS.svg",
-      "React.svg",
-      "TailwindCSS.svg",
-      "MaterialUI.svg",
-      "MongoDB.svg",
-      "Docker.svg",
-      "Digital-Ocean.svg",
-      "Node-Package-Manager.svg",
-      "Github.svg",
+      "nextjs.svg",
+      "react.svg",
+      "tailwind.svg",
+      "material-ui.svg",
+      "mongodb.svg",
+      "docker.svg",
+      "digital-ocean.svg",
+      "npm.svg",
+      "github.svg",
     ],
     sections: [
       { type: "header", text: "Project Case Study" },
@@ -268,7 +270,7 @@ const portfolioData = [
     ],
     viewLink: "https://minesweeper-site.azurewebsites.net/",
   },
-  // Server Rift
+  // Alchemy Analytics
   {
     id: "alchemy-analytics",
     title: "Alchemy Analytics",
@@ -276,12 +278,12 @@ const portfolioData = [
     status: "Completed",
     statusCode: "c0",
     stack: [
-      "HTML.svg",
-      "CSS.svg",
-      "JavaScript.svg",
-      "Node-Package-Manager.svg",
-      "JQuery.svg",
-      "Github.svg",
+      "html.svg",
+      "css.svg",
+      "javascript.svg",
+      "npm.svg",
+      "jquery.svg",
+      "github.svg",
     ],
     sections: [
       { type: "header", text: "Project Overview" },
@@ -340,6 +342,7 @@ const portfolioData = [
     ],
     viewLink: "https://github.com/friesentyler/AlchemyAnalytics",
   },
+  // Server Rift
   {
     id: "server-rift",
     title: "Server Rift",
@@ -347,13 +350,13 @@ const portfolioData = [
     status: "Dropped",
     statusCode: "c3",
     stack: [
-      "HTML.svg",
-      "CSS.svg",
-      "JavaScript.svg",
-      "NodeJS.svg",
-      "Node-Package-Manager.svg",
-      "JQuery.svg",
-      "Github.svg",
+      "html.svg",
+      "css.svg",
+      "javascript.svg",
+      "nodejs.svg",
+      "npm.svg",
+      "jquery.svg",
+      "github.svg",
     ],
     sections: [
       { type: "header", text: "Project Overview" },
@@ -449,13 +452,14 @@ const portfolioData = [
     ],
     viewLink: "https://andrew-forster.github.io/",
   },
+  // Scroll Animator
   {
     id: "scroll-animator",
     title: "Scroll Animator",
     image: "/Assets/Images/Project 4.jpg",
     status: "Paused",
     statusCode: "c3",
-    stack: ["CSS.svg", "JavaScript.svg"],
+    stack: ["css.svg", "javascript.svg"],
     sections: [
       { type: "header", text: "Project Overview" },
       {
@@ -480,6 +484,7 @@ const portfolioData = [
     ],
     viewLink: "https://github.com/Scroll-Animator/sa/",
   },
+  // About Me Website V1
   {
     id: "aboutme-v1",
     title: "About Me Website V1",
@@ -487,11 +492,11 @@ const portfolioData = [
     status: "Completed",
     statusCode: "c0",
     stack: [
-      "HTML.svg",
-      "CSS.svg",
-      "JavaScript.svg",
-      "JQuery.svg",
-      "Bootstrap.svg",
+      "html.svg",
+      "css.svg",
+      "javascript.svg",
+      "jquery.svg",
+      "bootstrap.svg",
     ],
     sections: [
       { type: "header", text: "Project Overview" },
@@ -518,14 +523,15 @@ const portfolioData = [
       },
     ],
     viewLink: "https://v1.andrewjf.com/",
-  },
+  },  
+  // Discord GTN Bot
   {
     id: "gtn-bot",
     title: "Discord GTN Bot",
     image: "/Assets/Images/gtn.png",
     status: "Completed",
     statusCode: "c0",
-    stack: ["Discord-Bot-Designer.png"],
+    stack: ["discord-bot-designer.png"],
     sections: [
       { type: "header", text: "Project Overview" },
       {
@@ -557,6 +563,7 @@ const portfolioData = [
     ],
     viewLink: "https://sites.google.com/view/gtnbot",
   },
+  // Minecraft Realms
   {
     id: "minecraft-realms",
     title: "Minecraft Realms",

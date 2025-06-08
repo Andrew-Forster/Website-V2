@@ -26,12 +26,6 @@ function renderProjectCard(project) {
     )
     .join("");
 
-  // Helper to conditionally render a section
-  function section(label, html, tag = "div", className = "h7") {
-    if (!html || !html.trim()) return "";
-    return `<${tag} class="${className}">${label}</${tag}>${html}`;
-  }
-
   // Render flexible sections array (header, paragraph, button, spacer, image, video)
   function renderSection(section) {
     switch (section.type) {
@@ -119,4 +113,43 @@ function renderProjectCard(project) {
             </div>
         </div>
     </div>`;
+}
+
+
+function getIconVisibleName(icon) {
+    const iconVisibleName = icon.replace(/\./g, "").replace(/-/g, " ").toLowerCase();
+    switch (iconVisibleName) {
+        case "html":
+            return "HTML";
+        case "css":
+            return "CSS";
+        case "javascript":
+            return "JavaScript";
+        case "react":
+            return "React";
+        case "nextjs":
+            return "NextJS";
+        case "tailwind":
+            return "Tailwind";
+        case "nodejs":
+            return "NodeJS";
+        case "spring-boot":
+            return "Spring Boot";
+        case "stripe":
+            return "Stripe";
+        case "mongodb":
+            return "MongoDB";
+        case "github":
+            return "Github";
+        case "bootstrap":
+            return "Bootstrap";
+        case "shadcn":
+            return "Shadcn";
+        case "rockrms":
+            return "RockRMS";
+        case "openai":
+            return "OpenAI API";
+        default:
+            return iconVisibleName;
+    }
 }
