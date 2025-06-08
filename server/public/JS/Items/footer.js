@@ -193,6 +193,8 @@ function pullNextPage() {
             });
         }
 
+        if (!pullText) return;
+
         if ((main.getBoundingClientRect().bottom - window.innerHeight) <= 2 &&
             window.location.pathname !== "/portfolio" &&
             main.classList.contains("active")

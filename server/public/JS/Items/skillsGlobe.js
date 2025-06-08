@@ -8,12 +8,12 @@ const imagePaths = [
     description: "A front-end framework for building responsive websites.",
   },
   {
-    path: "/Assets/Stack/spring.svg",
+    path: "/Assets/Stack/spring-boot.svg",
     title: "Spring Boot",
     description: "An open-source Java-based framework used for web development.",
   },
   {
-    path: "/Assets/Stack/netcore.svg",
+    path: "/Assets/Stack/dot-net-core.svg",
     title: ".NET Core",
     description: "A free, open-source, cross-platform framework for building modern, cloud-based, internet-connected applications.",
   },
@@ -24,7 +24,7 @@ const imagePaths = [
       "A style sheet language used for describing the presentation of a document written in HTML.",
   },
   {
-    path: "/Assets/Stack/js.svg",
+    path: "/Assets/Stack/javascript.svg",
     title: "JavaScript",
     description: "A programming language that enables interactive web pages.",
   },
@@ -50,7 +50,7 @@ const imagePaths = [
   //   description: "A visual programming language for creating bots on Discord.",
   // },
   {
-    path: "/Assets/Stack/do.svg",
+    path: "/Assets/Stack/digital-ocean.svg",
     title: "DigitalOcean",
     description: "A cloud infrastructure provider.",
   },
@@ -60,7 +60,7 @@ const imagePaths = [
     description: "A cloud computing platform.",
   },
   {
-    path: "/Assets/Stack/next.svg",
+    path: "/Assets/Stack/nextjs.svg",
     title: "Next.js",
     description: "A React framework for building server-rendered applications.",
   },
@@ -71,7 +71,7 @@ const imagePaths = [
       "A platform for developing, shipping, and running applications in containers.",
   },
   {
-    path: "/Assets/Stack/gh.svg",
+    path: "/Assets/Stack/github.svg",
     title: "GitHub",
     description: "A platform for hosting and sharing code.",
   },
@@ -81,17 +81,17 @@ const imagePaths = [
     description: "The standard markup language for creating web pages.",
   },
   {
-    path: "/Assets/Stack/mongo.svg",
+    path: "/Assets/Stack/mongodb.svg",
     title: "MongoDB",
     description: "A NoSQL database that uses a document-oriented data model.",
   },
   {
-    path: "/Assets/Stack/npm.svg",
+    path: "/Assets/Stack/node-package-manager.svg",
     title: "npm",
     description: "A package manager for JavaScript and Node.js.",
   },
   {
-    path: "/Assets/Stack/mui.svg",
+    path: "/Assets/Stack/materialui.svg",
     title: "Material UI",
     description:
       "A popular React UI framework that implements Google's Material Design.",
@@ -102,7 +102,7 @@ const imagePaths = [
     description: "A JavaScript library for building user interfaces.",
   },
   {
-    path: "/Assets/Stack/tailwind.svg",
+    path: "/Assets/Stack/tailwindcss.svg",
     title: "Tailwind CSS",
     description:
       "A utility-first CSS framework for rapidly building custom designs.",
