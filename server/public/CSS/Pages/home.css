@@ -112,7 +112,8 @@ main .s1 {
 /* Projects Slider */
 
 .project-slider {
-    height: 300px;
+    aspect-ratio: 16/5;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -125,7 +126,6 @@ main .s1 {
 
 .project-nav button {
     background-color: var(--c3);
-    border: 2px solid var(--c5);
     cursor: pointer;
     transition: 0.3s;
     border-radius: 5px;

@@ -123,7 +123,7 @@ const imagePaths = [
     description: "A React UI framework.",
   },
   {
-    path: "/Assets/Stack/three.js.png",
+    path: "/Assets/Stack/threejs.png",
     title: "Three.js",
     description: "A JavaScript library for creating 3D graphics. (Used for this skills globe 😄)",
   },
@@ -349,3 +349,4 @@ function stopGlobe() {
 // To be used in other scripts
 window.startGlobe = startGlobe;
 window.stopGlobe = stopGlobe;
+
